@@ -1,0 +1,2299 @@
+{
+  "id": "ssat-middle-full-01",
+  "exam": "SSAT",
+  "level": "Middle",
+  "title": "Full length 1",
+  "description": "The whole SSAT Middle Level at the real length: a 25 minute writing sample, then Quantitative, Reading, a 15 minute break, Verbal and a second Quantitative section. 150 questions with five choices each, and a wrong answer costs a quarter point. Set aside three hours and sit it in one go.",
+  "format": "full",
+  "scoring": {
+    "wrongPenalty": 0.25
+  },
+  "writing": {
+    "name": "Writing sample",
+    "position": "first",
+    "timeLimitSeconds": 1500,
+    "note": "Not scored, but a copy goes to every school that receives your results. Middle Level gives you two creative starters. Pick one, spend three or four minutes planning, and write a story with a beginning, a middle and an end. Leave a minute to read it back.",
+    "prompts": [
+      "Nobody believed me when I told them what was in the box.",
+      "The lights in the whole town went out at exactly the same moment."
+    ]
+  },
+  "sections": [
+    {
+      "name": "Quantitative 1",
+      "timeLimitSeconds": 1800,
+      "questions": [
+        {
+          "id": "Q1-1",
+          "topic": "arithmetic",
+          "stem": "What is the value of 7 × 8 - 6 × 9?",
+          "choices": [
+            "-2",
+            "0",
+            "2",
+            "5",
+            "110"
+          ],
+          "answer": 2,
+          "explanation": "Multiply before you subtract: 56 - 54 = 2. The choice 110 adds the two products instead of subtracting, and -2 comes from subtracting them in the wrong order. Order of operations is tested on every quantitative section, usually dressed up as an easy question."
+        },
+        {
+          "id": "Q1-2",
+          "topic": "fractions and decimals",
+          "stem": "Which of the following is closest in value to 0.4?",
+          "choices": [
+            "3/8",
+            "4/9",
+            "1/2",
+            "3/5",
+            "2/3"
+          ],
+          "answer": 0,
+          "explanation": "3/8 is 0.375, which is 0.025 away from 0.4. The nearest rival is 4/9, which is about 0.444 and so 0.044 away. Converting each fraction to a decimal is the reliable route; guessing from how the fractions look is how 4/9 gets picked, because 4 is in it."
+        },
+        {
+          "id": "Q1-3",
+          "topic": "percent",
+          "stem": "A shirt costs $40. Its price is reduced by 15%, and then the reduced price is increased by 15%. What is the final price?",
+          "choices": [
+            "$34.00",
+            "$36.00",
+            "$38.25",
+            "$39.00",
+            "$39.10"
+          ],
+          "answer": 4,
+          "explanation": "15% of 40 is 6, so the sale price is $34. Then 15% of 34 is $5.10, and 34 + 5.10 = $39.10. The trap is $40, which is not offered, and the next trap is $34.00, which stops after the first step. A percentage drop followed by the same percentage rise never gets back to the start, because the second percentage is taken of a smaller number."
+        },
+        {
+          "id": "Q1-4",
+          "topic": "algebra",
+          "stem": "If 3n + 5 = 2n + 12, what is the value of n?",
+          "choices": [
+            "3.4",
+            "7",
+            "8.5",
+            "17",
+            "60"
+          ],
+          "answer": 1,
+          "explanation": "Subtract 2n from both sides to get n + 5 = 12, so n = 7. The choice 17 is 5 + 12, which comes from moving the 5 to the wrong side. Check by substituting: 3 × 7 + 5 = 26 and 2 × 7 + 12 = 26."
+        },
+        {
+          "id": "Q1-5",
+          "topic": "data and probability",
+          "stem": "The average of five numbers is 12. Four of the numbers are 8, 10, 15 and 17. What is the fifth number?",
+          "choices": [
+            "6",
+            "8",
+            "9",
+            "10",
+            "12"
+          ],
+          "answer": 3,
+          "explanation": "Five numbers with an average of 12 add up to 60. The four given add up to 50, so the fifth is 10. The choice 12 is the average itself, which is the number a rushed reader writes down. Averages on this test are almost always solved by finding the total first."
+        },
+        {
+          "id": "Q1-6",
+          "topic": "geometry",
+          "stem": "A rectangle is 12 cm long and 5 cm wide. What is the length of its diagonal?",
+          "choices": [
+            "7 cm",
+            "10 cm",
+            "12.5 cm",
+            "13 cm",
+            "17 cm"
+          ],
+          "answer": 3,
+          "explanation": "The diagonal is the hypotenuse of a right triangle with legs 5 and 12, so it is 13, since 25 + 144 = 169. The choice 17 adds the two sides and 7 subtracts them. The triples 3-4-5 and 5-12-13 come up so often that they are worth knowing on sight."
+        },
+        {
+          "id": "Q1-7",
+          "topic": "fractions and decimals",
+          "stem": "What is 2/3 ÷ 4/9?",
+          "choices": [
+            "8/27",
+            "3/2",
+            "5/3",
+            "2",
+            "6"
+          ],
+          "answer": 1,
+          "explanation": "Dividing by a fraction is multiplying by its reciprocal: 2/3 × 9/4 = 18/12 = 3/2. The choice 8/27 multiplies the fractions as written, which is the most common slip. Dividing by something smaller than 1 makes the answer bigger, so a result under 2/3 should look wrong straight away."
+        },
+        {
+          "id": "Q1-8",
+          "topic": "number properties",
+          "stem": "Which of the following is a factor of both 84 and 126?",
+          "choices": [
+            "14",
+            "16",
+            "18",
+            "28",
+            "36"
+          ],
+          "answer": 0,
+          "explanation": "84 = 14 × 6 and 126 = 14 × 9, so 14 divides both. 28 divides 84 but not 126, since 126 ÷ 28 is 4.5. 18 divides 126 but not 84. The fastest check is to test each choice against both numbers rather than to list every factor."
+        },
+        {
+          "id": "Q1-9",
+          "topic": "ratio and proportion",
+          "stem": "A train travels 180 miles in 2 hours 30 minutes. At the same speed, how far does it travel in 4 hours?",
+          "choices": [
+            "216 miles",
+            "240 miles",
+            "252 miles",
+            "270 miles",
+            "288 miles"
+          ],
+          "answer": 4,
+          "explanation": "2 hours 30 minutes is 2.5 hours, so the speed is 180 ÷ 2.5 = 72 miles an hour, and 72 × 4 = 288. The choice 240 comes from treating the time as 3 hours and getting 60 miles an hour. Minutes must become a decimal or a fraction of an hour before dividing."
+        },
+        {
+          "id": "Q1-10",
+          "topic": "ratio and proportion",
+          "stem": "The ratio of boys to girls in a class is 3 : 5. If there are 32 students in the class, how many are girls?",
+          "choices": [
+            "12",
+            "15",
+            "20",
+            "24",
+            "25"
+          ],
+          "answer": 2,
+          "explanation": "A ratio of 3 : 5 means 8 equal parts. Each part is 32 ÷ 8 = 4 students, so the girls are 5 × 4 = 20. The choice 12 is the number of boys, and it is the answer to the question a hurried reader thinks was asked. Always reread which group the question wants."
+        },
+        {
+          "id": "Q1-11",
+          "topic": "geometry",
+          "stem": "What is the sum of the interior angles of a hexagon?",
+          "choices": [
+            "360 degrees",
+            "540 degrees",
+            "600 degrees",
+            "630 degrees",
+            "720 degrees"
+          ],
+          "answer": 4,
+          "explanation": "A polygon with n sides has interior angles adding to (n - 2) × 180. For a hexagon that is 4 × 180 = 720. The choice 540 is a pentagon, and 360 is a quadrilateral. If the formula escapes you, split the hexagon into four triangles from one corner and add 180 for each."
+        },
+        {
+          "id": "Q1-12",
+          "topic": "algebra",
+          "stem": "If x = -3, what is the value of x² - 2x?",
+          "choices": [
+            "-15",
+            "3",
+            "15",
+            "27",
+            "33"
+          ],
+          "answer": 2,
+          "explanation": "(-3)² is 9, and -2 × (-3) is +6, so the total is 15. The choice 3 comes from writing 9 - 6, which forgets that subtracting a negative adds. The choice -15 comes from treating (-3)² as -9. Both mistakes are about signs, and a negative substituted into a squared term is the standard place they happen."
+        },
+        {
+          "id": "Q1-13",
+          "topic": "number properties",
+          "stem": "A whole number is divisible by both 6 and 8. It must also be divisible by",
+          "choices": [
+            "16",
+            "24",
+            "32",
+            "36",
+            "48"
+          ],
+          "answer": 1,
+          "explanation": "A number divisible by both 6 and 8 is a multiple of their lowest common multiple, which is 24. It need not be a multiple of 48, since 24 itself is divisible by 6 and 8 but not by 48. The choice 48 is the trap for anyone who multiplies 6 by 8 and calls that the common multiple."
+        },
+        {
+          "id": "Q1-14",
+          "topic": "algebra",
+          "stem": "Three consecutive even numbers add up to 66. What is the largest of them?",
+          "choices": [
+            "20",
+            "22",
+            "23",
+            "24",
+            "26"
+          ],
+          "answer": 3,
+          "explanation": "The middle of three consecutive even numbers is their average, 66 ÷ 3 = 22, so the numbers are 20, 22 and 24. The choice 22 answers a different question, the middle number. The choice 23 is not even at all, and should be ruled out before any arithmetic."
+        },
+        {
+          "id": "Q1-15",
+          "topic": "data and probability",
+          "stem": "A jar holds only red and blue marbles. The probability of drawing a red marble is 3/7. If there are 12 red marbles, how many blue marbles are there?",
+          "choices": [
+            "16",
+            "21",
+            "24",
+            "28",
+            "36"
+          ],
+          "answer": 0,
+          "explanation": "If 3/7 of the marbles are red and that is 12, then one seventh is 4 and the whole jar is 28. Blue marbles are the other 4/7, so 16. The choice 28 is the total rather than the blue count, and 21 is 7 × 3, a guess built from the numbers in the fraction."
+        },
+        {
+          "id": "Q1-16",
+          "topic": "fractions and decimals",
+          "stem": "Written as a fraction in lowest terms, 0.125 is",
+          "choices": [
+            "1/8",
+            "1/5",
+            "1/4",
+            "5/8",
+            "5/4"
+          ],
+          "answer": 0,
+          "explanation": "0.125 is 125/1000, and dividing top and bottom by 125 gives 1/8. The choice 1/4 is 0.25 and 5/8 is 0.625. The eighths are worth memorising as decimals: 0.125, 0.25, 0.375, 0.5, 0.625, 0.75 and 0.875, because they appear constantly."
+        },
+        {
+          "id": "Q1-17",
+          "topic": "geometry",
+          "stem": "A triangle has an area of 36 square cm and a base of 9 cm. What is its height?",
+          "choices": [
+            "2 cm",
+            "4 cm",
+            "6 cm",
+            "8 cm",
+            "16 cm"
+          ],
+          "answer": 3,
+          "explanation": "Area is half of base times height, so 36 = 9 × h ÷ 2, which gives 9h = 72 and h = 8. The choice 4 comes from 36 ÷ 9, which forgets the half. Check: 9 × 8 ÷ 2 = 36."
+        },
+        {
+          "id": "Q1-18",
+          "topic": "number properties",
+          "stem": "Which of the following has the greatest value?",
+          "choices": [
+            "5 cubed",
+            "11 squared",
+            "2 to the power of 7",
+            "3 to the power of 4",
+            "4 cubed"
+          ],
+          "answer": 2,
+          "explanation": "Work each one out: 5 cubed is 125, 11 squared is 121, 2 to the power of 7 is 128, 3 to the power of 4 is 81 and 4 cubed is 64. So 128 is greatest. Small bases with big exponents grow faster than they look, which is why 2 to the power of 7 beats 5 cubed."
+        },
+        {
+          "id": "Q1-19",
+          "topic": "ratio and proportion",
+          "stem": "A recipe for 4 people needs 300 g of rice. How much rice is needed for 10 people?",
+          "choices": [
+            "450 g",
+            "600 g",
+            "700 g",
+            "720 g",
+            "750 g"
+          ],
+          "answer": 4,
+          "explanation": "300 g for 4 people is 75 g each, and 10 × 75 = 750 g. The choice 600 doubles the recipe, which serves 8, not 10. The choice 450 adds half again, which serves 6. Find the amount for one person first and the rest follows."
+        },
+        {
+          "id": "Q1-20",
+          "topic": "data and probability",
+          "stem": "What is the median of 3, 11, 7, 7, 15, 2 and 9?",
+          "choices": [
+            "6",
+            "7",
+            "7.7",
+            "9",
+            "13"
+          ],
+          "answer": 1,
+          "explanation": "Put the numbers in order: 2, 3, 7, 7, 9, 11, 15. The middle of seven values is the fourth, which is 7. The choice 7.7 is the mean, near enough, and 13 is the range. The median is only found from an ordered list, and skipping that step is where the wrong answers come from."
+        },
+        {
+          "id": "Q1-21",
+          "topic": "algebra",
+          "stem": "Simplify 5(2a - 3) - 4(a - 2).",
+          "choices": [
+            "6a - 23",
+            "6a - 7",
+            "6a + 5",
+            "14a - 23",
+            "14a - 7"
+          ],
+          "answer": 1,
+          "explanation": "Expanding gives 10a - 15 - 4a + 8, which is 6a - 7. The choice 6a - 23 comes from writing -8 instead of +8, forgetting that -4 times -2 is positive. The 14a choices add 4a instead of subtracting it. The sign in front of a bracket applies to everything inside it."
+        },
+        {
+          "id": "Q1-22",
+          "topic": "geometry",
+          "stem": "A cube has a total surface area of 96 square cm. What is its volume?",
+          "choices": [
+            "16 cubic cm",
+            "24 cubic cm",
+            "32 cubic cm",
+            "48 cubic cm",
+            "64 cubic cm"
+          ],
+          "answer": 4,
+          "explanation": "A cube has six equal faces, so each face is 96 ÷ 6 = 16 square cm and each edge is 4 cm. The volume is 4 × 4 × 4 = 64. The choice 16 is the area of one face, and 48 is what you get by halving the surface area, which has no geometric meaning here."
+        },
+        {
+          "id": "Q1-23",
+          "topic": "measurement",
+          "stem": "On a map, 2 cm represents 15 km. Two towns are 7 cm apart on the map. How far apart are they in reality?",
+          "choices": [
+            "30 km",
+            "45 km",
+            "50 km",
+            "52.5 km",
+            "105 km"
+          ],
+          "answer": 3,
+          "explanation": "1 cm represents 7.5 km, so 7 cm represents 7 × 7.5 = 52.5 km. The choice 105 multiplies 7 by 15, forgetting that 15 km is for 2 cm, not 1. Scales are ratios, so reduce to one unit before scaling up."
+        },
+        {
+          "id": "Q1-24",
+          "topic": "number properties",
+          "stem": "What is the smallest positive whole number that leaves a remainder of 2 when divided by 3 and also leaves a remainder of 2 when divided by 5?",
+          "choices": [
+            "17",
+            "22",
+            "32",
+            "47",
+            "62"
+          ],
+          "answer": 0,
+          "explanation": "A number that is 2 more than a multiple of both 3 and 5 is 2 more than a multiple of 15. The smallest such number is 15 + 2 = 17. The choices 32, 47 and 62 all work too, but they are not the smallest. The choice 22 leaves a remainder of 1 when divided by 3."
+        },
+        {
+          "id": "Q1-25",
+          "topic": "word problems",
+          "stem": "Maya spent 1/4 of her money on a book and then 1/3 of what remained on lunch. She has $18 left. How much money did she start with?",
+          "choices": [
+            "$24",
+            "$30",
+            "$36",
+            "$42",
+            "$48"
+          ],
+          "answer": 2,
+          "explanation": "After the book, 3/4 of the money remains. Spending 1/3 of that leaves 2/3 of 3/4, which is 1/2 of the original. So half the original is $18 and the original is $36. The choice $48 treats the two fractions as if both were taken from the starting amount. Working backwards from $18 and checking is quicker than setting up an equation."
+        }
+      ]
+    },
+    {
+      "name": "Reading",
+      "timeLimitSeconds": 2400,
+      "breakAfterSeconds": 900,
+      "passages": {
+        "p1": [
+          "The clock had stopped at twenty past four, which was, Nadia thought, an odd time for anything to give up. Her grandfather had carried it down from the attic wrapped in a towel, the way you might carry something that could still be hurt.",
+          "\"It belonged to my mother,\" he said, setting it on the kitchen table between the salt and the bread. \"It has not run since before you were born. I keep meaning to see to it.\"",
+          "He did not say why today was the day, and Nadia did not ask. She had learned that her grandfather explained things in his own time or not at all, and that asking only made the second thing more likely.",
+          "He opened the back with a knife from the drawer. Inside was a tangle of brass that looked, to Nadia, like the inside of a very small city: wheels stacked on wheels, a coiled spring, a lever no thicker than a hair. Her grandfather looked at it for a long while without touching anything.",
+          "\"Most people,\" he said at last, \"think a clock stops because something breaks. Usually nothing is broken. Usually it is only dust.\" He blew gently across the works, and a grey film lifted and drifted toward the window.",
+          "\"Then why did nobody clean it?\" Nadia asked.",
+          "\"Because,\" he said, and he picked up the smallest brush she had ever seen, \"you have to want the time to start again.\" He did not look up as he said it, and she understood that the sentence was not entirely about the clock."
+        ],
+        "p2": [
+          "A glacier looks like the least mobile thing in a landscape, a slab of ice parked between mountains. It is in fact a river that happens to be frozen, and like a river it moves downhill, though at a pace measured in metres a year rather than metres a second.",
+          "The movement happens in two ways. Deep inside the glacier, the weight of the ice above squeezes the ice below so hard that its crystals slowly slide past one another, the way a stack of playing cards slumps if you press on its top. At the base, a thin film of water, melted by pressure and by heat rising from the ground, lets the whole mass slide over the rock beneath it like a puck on a wet table.",
+          "As it moves, a glacier is not gentle. It plucks boulders from the valley floor and drags them along, and the boulders scratch long parallel grooves in the bedrock. Sand and gravel frozen into the underside act like the grit on sandpaper. Over thousands of years a glacier turns a narrow V-shaped river valley into a broad U-shaped trough with steep walls and a flat floor.",
+          "When the ice finally melts, it leaves the evidence behind: scratched rock, valleys far too wide for the streams that now trickle through them, and heaps of stone dumped where the glacier's snout once stood. Geologists read these marks the way detectives read footprints. Much of what is known about past ice ages comes not from ice, which is long gone, but from the scars it left."
+        ],
+        "p3": [
+          "The Last Watch",
+          "Tonight the lamp will turn for me alone, / and I will count the beams the way I've counted / forty years of them: one, dark, one, dark, / the long pause where the sea takes back the light.",
+          "Tomorrow it will turn without me. Someone / in an office wired a box that never sleeps, / that does not climb the stair or clean the glass / or know the names of boats that pass at dusk.",
+          "I do not blame the box. It will be faithful. / It will not miss a night for grief or fever, / and grief and fever have both kept me from the stair / on nights I still remember with a wince.",
+          "But I will miss the climbing. I will miss / the moment at the top when the door swings wide / and the whole dark ocean is suddenly there, / waiting, the way a room waits for a lamp."
+        ],
+        "p4": [
+          "In the last decade of the nineteenth century, a machine arrived in small towns that changed them more than the railway had. The railway came to a town; the bicycle came to a person. For the price of a few months' wages, an ordinary clerk or a farm girl could own something that went three times as fast as walking, needed no feeding or stabling, and asked nobody's permission before it left.",
+          "The early machines had been absurd, with a front wheel as tall as a man and a saddle so high that a fall was a genuine event. The \"safety\" bicycle of the 1880s, with two equal wheels, a chain drive and, soon afterward, air-filled tyres, made cycling something a person could do without courage. Sales rose so fast that by the middle of the 1890s factories in several countries could not keep up.",
+          "The effects spread in every direction. Roads that had been left to mud were graded and surfaced, because cyclists complained loudly and in numbers, and the roads they won were ready for the motor car a generation later. Young women who cycled needed clothes they could pedal in, and the long skirt began a retreat from which it never fully returned. Courtship changed too: a couple on bicycles could be miles from any chaperone in twenty minutes.",
+          "Not everyone approved. Some doctors warned of a condition they called \"bicycle face,\" a supposedly permanent expression of strain. Preachers noted that congregations thinned on fine Sundays. But the objections came from people who were, by definition, standing still, and the cyclists were already out of earshot."
+        ],
+        "p5": [
+          "The first loaf I ever baked could have been used to prop open a door. I had followed the recipe exactly, or believed I had, and what came out of the oven was pale, dense and faintly sour, with a crust like the shell of something that did not want to be eaten.",
+          "I did what most people do, which was to blame the recipe. I found another. That loaf was worse. The third was worse still, and it was only when my neighbour, who had baked bread every week for fifty years, watched me work that the trouble became obvious. I was measuring flour by scooping the cup into the bag and packing it down, which gave me nearly a third more flour than the recipe wanted. No recipe on earth could have survived that.",
+          "She did not tell me to measure differently. She handed me a piece of her own dough and told me to feel it. It was soft and slightly tacky, and it gave under my thumb the way an earlobe does. Mine, when I went back to it, felt like modelling clay. \"The recipe is a guess,\" she said. \"Your hands are the measurement.\"",
+          "I have baked hundreds of loaves since, and I still read recipes, but I read them the way you read directions from someone who has never been to your house. They are a starting point. The dough tells you the rest, if you are willing to be told."
+        ],
+        "p6": [
+          "Most birds treat people as a single, interchangeable threat. A crow does not. Researchers who trapped and tagged crows on a university campus, wearing a particular rubber mask while they did it, found that the birds remembered the mask. For years afterward, anyone who walked across the campus in that mask was scolded, dive-bombed and followed from tree to tree, while the same person in a different mask was ignored.",
+          "More striking was what happened next. Crows that had never been trapped, and had not been present on the day of the trapping, began scolding the mask too. The knowledge was spreading. Young birds learned it from their parents; neighbours learned it from the birds that raised the alarm. A grudge held by a handful of individuals had become the shared opinion of a whole population.",
+          "This is not simple memory. It requires telling one human face from another, storing that information for a long time, and then passing it to birds that were not there. Very few animals manage even the first part. Crows appear to manage all three.",
+          "It cuts both ways. Crows also remember people who feed them, and there are households that receive small gifts, a button, a bottle cap, a bright bead, left on the doorstep where the food usually goes. Whether these are payments, or thanks, or something for which we have no word, nobody can yet say. What is clear is that the crow has noticed you, and has an opinion, and is keeping notes."
+        ],
+        "p7": [
+          "Mr. Adeyemi had beaten Theo at chess forty-one times in a row, and he kept the count on the back of an envelope, which Theo found more insulting than the losses.",
+          "\"You play the pieces,\" Mr. Adeyemi said, sliding a bishop across the board on a Thursday in March, \"and not the board. You see a knight and think, what can this knight do? You should think, what does this square need?\"",
+          "Theo did not know what that meant, and said so.",
+          "\"Good,\" said Mr. Adeyemi. \"Now you are ready to learn something. Before, you thought you knew.\"",
+          "They played on. Theo lost his queen on the ninth move, as he usually did, through a trap he could see perfectly well afterward and never at the time. But instead of resigning he sat and looked at the board for a long while, at the squares rather than the pieces, and he noticed that the old man's king had no pawns in front of it and nothing to hide behind.",
+          "He did not win. He lost in thirty-two moves instead of nineteen, and the envelope went to forty-two. But when Mr. Adeyemi wrote the number down, he added a small mark beside it, a single tick, and did not explain what it was for.",
+          "Theo did not ask. He was learning, slowly, that not every good thing needs to be announced."
+        ]
+      },
+      "questions": [
+        {
+          "id": "R1",
+          "passage": "p1",
+          "topic": "inference",
+          "stem": "The comparison of the clock to \"something that could still be hurt\" suggests that the grandfather",
+          "choices": [
+            "is afraid he will drop the clock on the stairs",
+            "believes the clock is alive in some way",
+            "handles the clock with unusual tenderness",
+            "has never seen the clock before today",
+            "thinks the clock is beyond repair"
+          ],
+          "answer": 2,
+          "explanation": "The image is about how he carries it, gently, as if it could feel pain. That is tenderness, and it fits everything else he does with the clock. The choice about believing it is alive takes the image literally, and the passage gives no sign he thinks so. He clearly knows the clock well, since it was his mother's, so the choice about never having seen it contradicts the text."
+        },
+        {
+          "id": "R2",
+          "passage": "p1",
+          "topic": "detail",
+          "stem": "Nadia does not ask her grandfather why he chose this day to fix the clock because she",
+          "choices": [
+            "has learned that asking makes him less likely to explain",
+            "is not interested in the reason",
+            "already knows the answer",
+            "is afraid of making him angry",
+            "is too busy watching the brass wheels"
+          ],
+          "answer": 0,
+          "explanation": "The third paragraph says it directly: he explains things in his own time or not at all, and asking makes the second thing, not at all, more likely. Nothing suggests fear or lack of interest. She is clearly curious, which is why she asks a question later about the dust."
+        },
+        {
+          "id": "R3",
+          "passage": "p1",
+          "topic": "vocabulary in context",
+          "stem": "The description of the clock's insides as \"the inside of a very small city\" mainly conveys that the mechanism is",
+          "choices": [
+            "noisy and confusing",
+            "old and neglected",
+            "made of many different metals",
+            "modern and efficient",
+            "intricate and densely packed"
+          ],
+          "answer": 4,
+          "explanation": "A city seen from inside is crowded with structures fitted together, and the sentence goes on to list wheels on wheels, a spring and a hairlike lever. That is intricacy and density. The clock is indeed old, but the city comparison is about complexity rather than age, and nothing in the image suggests noise."
+        },
+        {
+          "id": "R4",
+          "passage": "p1",
+          "topic": "inference",
+          "stem": "The grandfather's remark that \"usually it is only dust\" is most likely meant to suggest that",
+          "choices": [
+            "the clock will be easy to sell once it is clean",
+            "problems that seem serious are often the result of small neglect",
+            "clocks are simpler machines than most people believe",
+            "Nadia should learn to repair clocks herself",
+            "the attic was a poor place to store the clock"
+          ],
+          "answer": 1,
+          "explanation": "He contrasts what people assume, that something broke, with what is usually true, that nothing was cared for. The remark applies to more than clocks, which the last paragraph confirms. The choice about clocks being simple is a stretch the passage never makes; in fact the works are described as intricate."
+        },
+        {
+          "id": "R5",
+          "passage": "p1",
+          "topic": "inference",
+          "stem": "In the final paragraph, Nadia understands that her grandfather's last sentence is",
+          "choices": [
+            "a joke meant to make her laugh",
+            "a criticism of his own mother",
+            "an instruction about how to clean the brush",
+            "partly about his own unwillingness to face something",
+            "a sign that he has given up on the repair"
+          ],
+          "answer": 3,
+          "explanation": "The narrator says plainly that the sentence \"was not entirely about the clock.\" Wanting the time to start again, after years of leaving it, points at the grandfather himself and whatever he has been putting off. He is mid-repair, so the choice about giving up contradicts the scene, and nothing in his tone suggests a joke."
+        },
+        {
+          "id": "R6",
+          "passage": "p1",
+          "topic": "tone and purpose",
+          "stem": "The tone of the passage is best described as",
+          "choices": [
+            "quiet and reflective",
+            "tense and suspenseful",
+            "cheerful and lighthearted",
+            "bitter and resentful",
+            "formal and instructional"
+          ],
+          "answer": 0,
+          "explanation": "Two people at a kitchen table, long silences, a sentence that means more than it says: this is a reflective scene. There is no danger, so it is not suspense, and no anger, so it is not bitterness. The choice about instruction picks up on the clock repair but misses that the passage is about the people, not the method."
+        },
+        {
+          "id": "R7",
+          "passage": "p2",
+          "topic": "main idea",
+          "stem": "The passage is primarily concerned with",
+          "choices": [
+            "arguing that glaciers are disappearing",
+            "explaining how glaciers move and shape the land",
+            "comparing glaciers with rivers",
+            "describing the work of geologists",
+            "warning about the dangers of glacier travel"
+          ],
+          "answer": 1,
+          "explanation": "The second paragraph explains movement, the third explains carving, and the fourth explains what is left behind. That is the whole passage. The comparison with rivers is one sentence used to introduce the idea, and geologists appear only at the end. Nothing is said about glaciers disappearing or about danger to travellers."
+        },
+        {
+          "id": "R8",
+          "passage": "p2",
+          "topic": "detail",
+          "stem": "According to the passage, the film of water at the base of a glacier is produced by",
+          "choices": [
+            "rain seeping down through cracks in the ice",
+            "streams flowing beneath the glacier",
+            "sunlight warming the surface",
+            "pressure and heat rising from the ground",
+            "the friction of boulders scraping the bedrock"
+          ],
+          "answer": 3,
+          "explanation": "The second paragraph says the water is \"melted by pressure and by heat rising from the ground.\" The choice about friction sounds plausible and uses details from the next paragraph, which is the standard trap: a real detail attached to the wrong cause. Rain, streams and sunlight are never mentioned."
+        },
+        {
+          "id": "R9",
+          "passage": "p2",
+          "topic": "structure",
+          "stem": "The comparison to \"a stack of playing cards\" is used to illustrate",
+          "choices": [
+            "how ice crystals slide past one another under weight",
+            "how thin the layers of a glacier are",
+            "how easily a glacier can collapse",
+            "how glaciers are built up year by year",
+            "how a glacier slides over wet rock"
+          ],
+          "answer": 0,
+          "explanation": "The cards appear in the sentence about crystals sliding past one another when pressed from above, and a slumping stack of cards is exactly that motion. The choice about sliding over wet rock belongs to the other comparison in the same paragraph, the puck on a wet table. Keeping the two images attached to the right mechanisms is the point of the question."
+        },
+        {
+          "id": "R10",
+          "passage": "p2",
+          "topic": "vocabulary in context",
+          "stem": "As used in the passage, \"plucks\" most nearly means",
+          "choices": [
+            "polishes",
+            "measures",
+            "avoids",
+            "buries",
+            "tears loose"
+          ],
+          "answer": 4,
+          "explanation": "The glacier plucks boulders from the valley floor and drags them along, so the boulders are being pulled free of the ground. Tears loose is the only choice that fits dragging. Buries is the opposite of what happens, and polishes describes the effect of sand and gravel, not the removal of boulders."
+        },
+        {
+          "id": "R11",
+          "passage": "p2",
+          "topic": "inference",
+          "stem": "It can be inferred from the passage that a wide valley with steep walls, a flat floor and only a small stream running through it",
+          "choices": [
+            "is unusually young",
+            "was formed by an earthquake",
+            "was once occupied by a glacier",
+            "will soon fill with water",
+            "has never been studied by geologists"
+          ],
+          "answer": 2,
+          "explanation": "The third paragraph describes glaciers carving broad U-shaped troughs with steep walls and flat floors, and the fourth lists valleys \"far too wide for the streams that now trickle through them\" as evidence of past ice. Put together, the valley in the question is a glacial one. Nothing in the passage connects such valleys to earthquakes or to flooding."
+        },
+        {
+          "id": "R12",
+          "passage": "p2",
+          "topic": "tone and purpose",
+          "stem": "The author compares geologists to detectives in order to emphasise that they",
+          "choices": [
+            "work mostly at crime scenes",
+            "are rarely believed by the public",
+            "must travel to remote places",
+            "compete with one another for evidence",
+            "reconstruct past events from indirect clues"
+          ],
+          "answer": 4,
+          "explanation": "Detectives read footprints to work out what happened when they were not there, and the next sentence says knowledge of ice ages comes from the scars, not the ice. The comparison is about reasoning from traces. The other choices take the word detective and invent a story around it that the passage never tells."
+        },
+        {
+          "id": "R13",
+          "passage": "p3",
+          "topic": "main idea",
+          "stem": "The speaker of the poem is best described as",
+          "choices": [
+            "a sailor returning to port after many years",
+            "an engineer installing a new lamp",
+            "a child visiting a lighthouse for the first time",
+            "a lighthouse keeper on the last night before being replaced by a machine",
+            "a ghost haunting an abandoned tower"
+          ],
+          "answer": 3,
+          "explanation": "The speaker has counted the beams for forty years, climbs the stair and cleans the glass, and says that tomorrow a box wired by someone in an office will turn the lamp instead. That is a keeper being automated out of a job. The engineer choice describes the person who wired the box, not the speaker."
+        },
+        {
+          "id": "R14",
+          "passage": "p3",
+          "topic": "structure",
+          "stem": "The words \"one, dark, one, dark\" in the first stanza most likely represent",
+          "choices": [
+            "the speaker losing count of the years",
+            "the rhythm of the beam sweeping past and the darkness between",
+            "the sound of waves against the rocks",
+            "the speaker's heartbeat",
+            "the names of two boats"
+          ],
+          "answer": 1,
+          "explanation": "The line is about counting beams, and the next line names the pause \"where the sea takes back the light.\" So each \"one\" is a flash and each \"dark\" is the gap. The heartbeat and wave choices are plausible sounds but do not connect to counting the beams, which is what the stanza says the speaker is doing."
+        },
+        {
+          "id": "R15",
+          "passage": "p3",
+          "topic": "tone and purpose",
+          "stem": "The speaker's attitude toward \"the box\" is best described as",
+          "choices": [
+            "open hostility",
+            "eager admiration",
+            "fair-minded acceptance mixed with regret",
+            "complete indifference",
+            "fear of being harmed by it"
+          ],
+          "answer": 2,
+          "explanation": "\"I do not blame the box. It will be faithful\" is acceptance, and even an admission that the machine will do the job more reliably. The final stanza's \"But I will miss\" is the regret. Hostility would blame the box, and indifference would not bother to write the poem."
+        },
+        {
+          "id": "R16",
+          "passage": "p3",
+          "topic": "detail",
+          "stem": "In the third stanza, the speaker admits that",
+          "choices": [
+            "illness and sorrow sometimes kept him from tending the light",
+            "he never learned how the lamp worked",
+            "he has forgotten the names of the boats",
+            "he once let a ship run aground",
+            "he plans to sabotage the new machine"
+          ],
+          "answer": 0,
+          "explanation": "\"Grief and fever have both kept me from the stair on nights I still remember with a wince\" is a confession of missed nights, caused by sorrow and illness. The passage never mentions a wreck, and the second stanza says the box, not the speaker, does not know the boats' names."
+        },
+        {
+          "id": "R17",
+          "passage": "p3",
+          "topic": "inference",
+          "stem": "The closing comparison, \"the way a room waits for a lamp,\" suggests that the speaker feels the ocean",
+          "choices": [
+            "is dangerous after dark",
+            "is smaller than it appears",
+            "belongs to the new machine now",
+            "has always frightened him",
+            "seemed incomplete until he brought the light to it"
+          ],
+          "answer": 4,
+          "explanation": "A dark room waiting for a lamp is a space that needs light to become itself. By comparing the ocean to that room, the speaker suggests it was waiting for him each night. The choice about danger is a reasonable thing to say about the sea but is not what the image says, and nothing in the poem shows fear."
+        },
+        {
+          "id": "R18",
+          "passage": "p4",
+          "topic": "structure",
+          "stem": "The author contrasts the railway with the bicycle in the first paragraph mainly to show that the bicycle",
+          "choices": [
+            "was faster than a train",
+            "was cheaper to build than a railway line",
+            "arrived in towns before the railway did",
+            "was more dangerous than rail travel",
+            "gave independence to individuals rather than to places"
+          ],
+          "answer": 4,
+          "explanation": "\"The railway came to a town; the bicycle came to a person\" is the contrast, and the rest of the paragraph lists what a person could now do without permission. That is individual independence. The bicycle was certainly not faster than a train, and the passage says the railway had already arrived."
+        },
+        {
+          "id": "R19",
+          "passage": "p4",
+          "topic": "detail",
+          "stem": "According to the passage, the \"safety\" bicycle differed from earlier machines in that it",
+          "choices": [
+            "had a much taller front wheel",
+            "was made entirely of steel",
+            "had two equal-sized wheels and a chain drive",
+            "could only be ridden by men",
+            "was manufactured in one country"
+          ],
+          "answer": 2,
+          "explanation": "The second paragraph names the changes: two equal wheels, a chain drive and, soon after, air-filled tyres. The tall front wheel belonged to the earlier, absurd machines, so that choice reverses the facts. Manufacturing in several countries is mentioned, not one."
+        },
+        {
+          "id": "R20",
+          "passage": "p4",
+          "topic": "inference",
+          "stem": "The passage suggests that the improved roads of the 1890s",
+          "choices": [
+            "were built mainly for horse-drawn carriages",
+            "were demanded by cyclists and later served motor cars",
+            "were paid for by bicycle manufacturers",
+            "made cycling less popular",
+            "were opposed by doctors"
+          ],
+          "answer": 1,
+          "explanation": "Roads were surfaced \"because cyclists complained loudly and in numbers,\" and those roads \"were ready for the motor car a generation later.\" Both halves of the correct choice are stated. The passage never says who paid, and the doctors objected to cycling, not to roads."
+        },
+        {
+          "id": "R21",
+          "passage": "p4",
+          "topic": "vocabulary in context",
+          "stem": "As used in the passage, \"retreat\" most nearly means",
+          "choices": [
+            "a quiet holiday",
+            "a sudden attack",
+            "a place of safety",
+            "a gradual withdrawal",
+            "a fashionable return"
+          ],
+          "answer": 3,
+          "explanation": "The long skirt \"began a retreat from which it never fully returned,\" so it was going away, gradually and for good. That is withdrawal. A quiet holiday and a place of safety are real meanings of retreat in other contexts, which is why they are offered, but a skirt cannot take a holiday."
+        },
+        {
+          "id": "R22",
+          "passage": "p4",
+          "topic": "tone and purpose",
+          "stem": "The author's attitude toward those who objected to the bicycle is best described as",
+          "choices": [
+            "gently mocking",
+            "deeply sympathetic",
+            "openly angry",
+            "carefully neutral",
+            "puzzled"
+          ],
+          "answer": 0,
+          "explanation": "Putting \"bicycle face\" in quotation marks, adding \"supposedly,\" and ending with the objectors \"standing still\" while the cyclists ride out of earshot is teasing, not rage. A neutral author would not have written that last sentence. Sympathy would take the objections seriously, which the passage plainly does not."
+        },
+        {
+          "id": "R23",
+          "passage": "p4",
+          "topic": "main idea",
+          "stem": "Which of the following best states the main idea of the passage?",
+          "choices": [
+            "Early bicycles were dangerous and badly designed.",
+            "The bicycle reshaped everyday life in ways that reached far beyond transport.",
+            "Doctors and preachers were wrong about most inventions.",
+            "The motor car owes its success to the bicycle.",
+            "Nineteenth-century roads were in poor condition."
+          ],
+          "answer": 1,
+          "explanation": "Roads, clothing, courtship and the objections of the cautious are all effects of the bicycle on daily life, which is what the passage is built to show. The other choices each take a single paragraph or a single detail and inflate it. That is the standard wrong answer on a main idea question: true, but too narrow."
+        },
+        {
+          "id": "R24",
+          "passage": "p5",
+          "topic": "structure",
+          "stem": "The statement that the first loaf \"could have been used to prop open a door\" is an example of",
+          "choices": [
+            "humorous exaggeration",
+            "a precise measurement",
+            "a scientific comparison",
+            "a quotation from the neighbour",
+            "a description of the recipe"
+          ],
+          "answer": 0,
+          "explanation": "Nobody used the loaf as a doorstop. The author is overstating how heavy and hard it was to make the reader smile, which is exaggeration for comic effect. The neighbour has not been introduced yet, so the quotation choice is out, and the sentence describes the loaf, not the recipe."
+        },
+        {
+          "id": "R25",
+          "passage": "p5",
+          "topic": "detail",
+          "stem": "According to the passage, the early loaves failed because the author",
+          "choices": [
+            "used the wrong kind of flour",
+            "did not let the dough rise long enough",
+            "baked them at too low a temperature",
+            "packed too much flour into the measuring cup",
+            "followed three different recipes at once"
+          ],
+          "answer": 3,
+          "explanation": "The second paragraph explains it: scooping and packing the cup gave \"nearly a third more flour than the recipe wanted.\" The choices about rising time and oven temperature are common baking problems, which is why they are tempting, but the passage never mentions either."
+        },
+        {
+          "id": "R26",
+          "passage": "p5",
+          "topic": "detail",
+          "stem": "The neighbour's way of teaching relied mainly on",
+          "choices": [
+            "correcting the author's measuring technique",
+            "lending the author a better recipe",
+            "showing the author a video",
+            "baking a loaf while the author watched",
+            "having the author feel the difference between two doughs"
+          ],
+          "answer": 4,
+          "explanation": "\"She did not tell me to measure differently. She handed me a piece of her own dough and told me to feel it.\" The lesson was in the hands. The choice about correcting the measuring technique is exactly what the passage says she did not do, and it is the natural trap for a reader who expected her to."
+        },
+        {
+          "id": "R27",
+          "passage": "p5",
+          "topic": "inference",
+          "stem": "The neighbour's statement \"The recipe is a guess\" is meant to suggest that",
+          "choices": [
+            "recipes are usually written by people who cannot bake",
+            "the author should stop using recipes entirely",
+            "written instructions cannot allow for the conditions in every kitchen",
+            "the neighbour never learned to read",
+            "bread is impossible to make consistently"
+          ],
+          "answer": 2,
+          "explanation": "A recipe cannot know your flour, your humidity or how you fill a cup, so its numbers are an estimate and the dough itself is the check. The final paragraph confirms the author still reads recipes, which rules out the choice about abandoning them. The other choices attack recipes or the neighbour in ways the passage never does."
+        },
+        {
+          "id": "R28",
+          "passage": "p5",
+          "topic": "inference",
+          "stem": "The comparison in the final paragraph to \"directions from someone who has never been to your house\" implies that recipes are",
+          "choices": [
+            "always wrong in some detail",
+            "useful starting points that need the baker's own judgement",
+            "written mainly for beginners",
+            "more reliable than experience",
+            "impossible to follow without help"
+          ],
+          "answer": 1,
+          "explanation": "Directions from someone who has not been to your house get you close, and the last stretch you work out yourself. The next sentence says so directly: \"They are a starting point.\" The choice calling recipes more reliable than experience reverses the passage, which puts the dough's feedback above the written numbers."
+        },
+        {
+          "id": "R29",
+          "passage": "p6",
+          "topic": "main idea",
+          "stem": "The main point of the first paragraph is that crows",
+          "choices": [
+            "are more aggressive than other birds",
+            "dislike rubber masks",
+            "can recognise and remember individual human faces",
+            "live mainly on university campuses",
+            "attack anyone who comes near their nests"
+          ],
+          "answer": 2,
+          "explanation": "The paragraph opens by saying most birds treat people as interchangeable and a crow does not, then gives the mask experiment as proof: the same person is attacked in one mask and ignored in another. The mask itself is only the tool of the experiment, so the choice about disliking masks mistakes the method for the finding."
+        },
+        {
+          "id": "R30",
+          "passage": "p6",
+          "topic": "vocabulary in context",
+          "stem": "As used in the first paragraph, \"scolded\" most nearly means",
+          "choices": [
+            "followed quietly",
+            "fed",
+            "ignored",
+            "photographed",
+            "called at harshly"
+          ],
+          "answer": 4,
+          "explanation": "Scolded sits beside dive-bombed and followed from tree to tree, all hostile actions, and it describes what an angry crow does with its voice. Ignored is what happened to the person in the other mask, so it is the opposite. Followed quietly borrows one nearby word but drops the noise."
+        },
+        {
+          "id": "R31",
+          "passage": "p6",
+          "topic": "inference",
+          "stem": "The author calls the spread of the grudge \"more striking\" than the original memory because it shows that crows",
+          "choices": [
+            "have better eyesight than people",
+            "forget nothing for their entire lives",
+            "prefer to live in large groups",
+            "pass information to birds that never witnessed the event",
+            "can be trained to attack on command"
+          ],
+          "answer": 3,
+          "explanation": "The second paragraph is about birds that were never trapped and were not present learning to scold the mask anyway. That is transmission of knowledge, which the third paragraph calls the hardest of the three abilities. Nothing in the passage supports lifelong perfect memory or training on command."
+        },
+        {
+          "id": "R32",
+          "passage": "p6",
+          "topic": "detail",
+          "stem": "According to the third paragraph, which of the following is NOT one of the abilities the crows' behaviour requires?",
+          "choices": [
+            "mimicking human speech",
+            "telling one human face from another",
+            "storing information for a long time",
+            "passing information to other crows",
+            "all of the above are required"
+          ],
+          "answer": 0,
+          "explanation": "The paragraph lists three abilities: distinguishing faces, storing the information, and passing it on. Mimicking speech is never mentioned. On a NOT question, three of the choices will be straight from the text, and the job is to find the one that is not there."
+        },
+        {
+          "id": "R33",
+          "passage": "p6",
+          "topic": "structure",
+          "stem": "The \"gifts\" described in the final paragraph are offered as",
+          "choices": [
+            "proof that crows understand money",
+            "evidence that crows also remember people who treat them well",
+            "a warning to stop feeding wild birds",
+            "an example of crows stealing from houses",
+            "a reason to doubt the mask experiment"
+          ],
+          "answer": 1,
+          "explanation": "\"It cuts both ways\" introduces the paragraph: the same memory that holds a grudge also holds a kindness, and the gifts appear at houses that feed the crows. The author explicitly refuses to say whether the gifts are payments, so the choice about understanding money goes further than the passage does."
+        },
+        {
+          "id": "R34",
+          "passage": "p6",
+          "topic": "tone and purpose",
+          "stem": "The tone of the final sentence, \"the crow has noticed you, and has an opinion, and is keeping notes,\" is best described as",
+          "choices": [
+            "alarmed",
+            "scientific and detached",
+            "sorrowful",
+            "wry and slightly teasing",
+            "reverent"
+          ],
+          "answer": 3,
+          "explanation": "Describing a bird as keeping notes on you is a joke with an edge, treating the crow as a small watchful official. That is wry. The passage as a whole is informative, but this sentence steps out of the detached register on purpose, which is why the question asks about it."
+        },
+        {
+          "id": "R35",
+          "passage": "p7",
+          "topic": "inference",
+          "stem": "Theo finds the envelope \"more insulting than the losses\" most likely because",
+          "choices": [
+            "Mr. Adeyemi refuses to let him see it",
+            "it turns his defeats into a permanent, growing record",
+            "it is written in a language he cannot read",
+            "the count on it is wrong",
+            "he wanted to keep the envelope himself"
+          ],
+          "answer": 1,
+          "explanation": "Losing a game is over when it ends, but a written tally keeps every loss and adds to it. That is what makes the envelope worse than the games. Nothing suggests the count is wrong; Theo himself knows it is forty-one, and later forty-two."
+        },
+        {
+          "id": "R36",
+          "passage": "p7",
+          "topic": "inference",
+          "stem": "Mr. Adeyemi's advice to think about what a square needs rather than what a piece can do means that Theo should",
+          "choices": [
+            "consider what each position requires instead of only what each piece can do",
+            "move his knights more often",
+            "memorise the names of the squares",
+            "play faster and think less",
+            "sacrifice his queen early"
+          ],
+          "answer": 0,
+          "explanation": "The contrast in his speech is between pieces and board, between asking what a knight can do and asking what a square needs. That is a shift from looking at individual pieces to reading the whole position. The knight is only his example, so the choice about moving knights more often takes the example for the lesson."
+        },
+        {
+          "id": "R37",
+          "passage": "p7",
+          "topic": "inference",
+          "stem": "When Theo admits he does not understand, Mr. Adeyemi says \"Good\" because he believes that",
+          "choices": [
+            "Theo will now give up chess",
+            "the advice was meant to be confusing",
+            "admitting confusion is the first step toward learning",
+            "Theo has finally beaten him",
+            "the lesson is over for the day"
+          ],
+          "answer": 2,
+          "explanation": "\"Now you are ready to learn something. Before, you thought you knew\" explains the approval: a student who thinks he understands cannot be taught, and one who knows he does not can be. Theo has not won, and the game continues, so the last two choices contradict the text."
+        },
+        {
+          "id": "R38",
+          "passage": "p7",
+          "topic": "vocabulary in context",
+          "stem": "The phrase \"a trap he could see perfectly well afterward and never at the time\" suggests that Theo's difficulty is",
+          "choices": [
+            "poor eyesight",
+            "a bad memory for past games",
+            "not knowing the rules of chess",
+            "a fear of losing his queen",
+            "recognising danger while the game is still in progress"
+          ],
+          "answer": 4,
+          "explanation": "He can see the trap afterward, so memory and eyesight are fine, and he knows the rules well enough to have played forty-one games. The problem is timing: the danger is invisible while it matters and obvious once it is too late. That is a description of judgement under pressure, not of knowledge."
+        },
+        {
+          "id": "R39",
+          "passage": "p7",
+          "topic": "inference",
+          "stem": "The \"single tick\" that Mr. Adeyemi adds beside the number most likely indicates that",
+          "choices": [
+            "Theo has finally won a game",
+            "the count has reached a round number",
+            "Mr. Adeyemi made a mistake in the tally",
+            "he noticed that Theo played differently and better",
+            "the envelope is full and needs replacing"
+          ],
+          "answer": 3,
+          "explanation": "Theo lost, but he lasted thirty-two moves instead of nineteen and, for the first time, studied the board and saw a real weakness. The tick marks that change. The choice about winning contradicts the text, which says \"He did not win\" and adds the loss to the count."
+        },
+        {
+          "id": "R40",
+          "passage": "p7",
+          "topic": "main idea",
+          "stem": "The final sentence suggests that Theo has begun to learn that",
+          "choices": [
+            "chess is not worth the effort",
+            "Mr. Adeyemi will never explain anything",
+            "some progress is acknowledged quietly rather than announced",
+            "he should stop asking questions in general",
+            "losing is more enjoyable than winning"
+          ],
+          "answer": 2,
+          "explanation": "Theo chooses not to ask about the tick because he is learning \"that not every good thing needs to be announced.\" The tick is a good thing, and it was given silently. The choice about never asking questions stretches one moment into a rule the passage does not state, and the others contradict the warm ending."
+        }
+      ]
+    },
+    {
+      "name": "Verbal",
+      "timeLimitSeconds": 1800,
+      "questions": [
+        {
+          "id": "V1",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ABUNDANT",
+          "choices": [
+            "expensive",
+            "plentiful",
+            "hidden",
+            "ancient",
+            "noisy"
+          ],
+          "answer": 1,
+          "explanation": "Abundant means existing in large quantities. Plentiful is the match. Expensive is a trap for anyone who associates abundance with wealth, but a thing can be abundant and worthless, like weeds."
+        },
+        {
+          "id": "V2",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "RELUCTANT",
+          "choices": [
+            "eager",
+            "tired",
+            "polite",
+            "unwilling",
+            "confused"
+          ],
+          "answer": 3,
+          "explanation": "Reluctant means hesitant and unwilling to do something. Eager is its opposite, which is the trap on any synonym question where a word sounds vaguely positive. Tired can cause reluctance but is not the same thing."
+        },
+        {
+          "id": "V3",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "CANDID",
+          "choices": [
+            "honest",
+            "sweet",
+            "hidden",
+            "clever",
+            "nervous"
+          ],
+          "answer": 0,
+          "explanation": "Candid means truthful and direct, especially when it is uncomfortable to be. Honest is the match. Sweet is a trap from the sound of candy, and hidden is close to the opposite, since a candid remark hides nothing."
+        },
+        {
+          "id": "V4",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "FRAGILE",
+          "choices": [
+            "smelly",
+            "small",
+            "expensive",
+            "rare",
+            "easily broken"
+          ],
+          "answer": 4,
+          "explanation": "Fragile means delicate and easily broken. Small and expensive describe things that often are fragile, which makes them tempting, but neither is the meaning of the word. A large cheap vase can be fragile."
+        },
+        {
+          "id": "V5",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "HOSTILE",
+          "choices": [
+            "welcoming",
+            "foreign",
+            "unfriendly",
+            "hungry",
+            "brave"
+          ],
+          "answer": 2,
+          "explanation": "Hostile means showing strong dislike or opposition. Unfriendly is the match. Welcoming is the exact opposite. Foreign is a trap from phrases like hostile territory, where the two ideas sit together without meaning the same thing."
+        },
+        {
+          "id": "V6",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "PROSPER",
+          "choices": [
+            "thrive",
+            "propose",
+            "wander",
+            "gamble",
+            "shrink"
+          ],
+          "answer": 0,
+          "explanation": "To prosper is to do well and grow, especially in wealth or health. Thrive is the match. Propose is a sound-alike trap, and shrink is the opposite. Gamble is offered because prosperity sometimes follows luck, but the word says nothing about risk."
+        },
+        {
+          "id": "V7",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "CONCISE",
+          "choices": [
+            "exact",
+            "confusing",
+            "lengthy",
+            "brief",
+            "loud"
+          ],
+          "answer": 3,
+          "explanation": "Concise means saying a lot in few words. Brief is the match. Exact is the trap, because concise writing is often precise, but a statement can be exact and very long. Lengthy is the opposite."
+        },
+        {
+          "id": "V8",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "OBSOLETE",
+          "choices": [
+            "obvious",
+            "out of date",
+            "enormous",
+            "expensive",
+            "forgotten"
+          ],
+          "answer": 1,
+          "explanation": "Obsolete means no longer in use because something better has replaced it. Out of date is the match. Obvious is a sound-alike trap. Forgotten is close but wrong: an obsolete machine can be well remembered and still obsolete."
+        },
+        {
+          "id": "V9",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "VIGILANT",
+          "choices": [
+            "violent",
+            "strong",
+            "sleepy",
+            "cheerful",
+            "watchful"
+          ],
+          "answer": 4,
+          "explanation": "Vigilant means keeping careful watch for danger. Watchful is the match. Violent is a trap from the first syllable. Sleepy is the opposite of vigilant, and strong is a different quality altogether."
+        },
+        {
+          "id": "V10",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "SUBTLE",
+          "choices": [
+            "underground",
+            "colourful",
+            "not obvious",
+            "stubborn",
+            "very quiet"
+          ],
+          "answer": 2,
+          "explanation": "Subtle means so fine or delicate that it is hard to notice. Not obvious is the match. Very quiet is the trap, since a subtle sound is quiet, but subtle also describes flavours, colours and arguments, none of which have a volume."
+        },
+        {
+          "id": "V11",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "FEEBLE",
+          "choices": [
+            "furious",
+            "fearful",
+            "fake",
+            "foolish",
+            "weak"
+          ],
+          "answer": 4,
+          "explanation": "Feeble means lacking strength, whether in the body or in an argument. Weak is the match. Every wrong choice starts with the same letter, which is the trap: the eye matches the shape of the word instead of its meaning."
+        },
+        {
+          "id": "V12",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "AMBIGUOUS",
+          "choices": [
+            "unclear",
+            "ambitious",
+            "two-sided",
+            "false",
+            "generous"
+          ],
+          "answer": 0,
+          "explanation": "Ambiguous means open to more than one interpretation. Unclear is the match. Ambitious is a sound-alike trap with no connection in meaning. Two-sided is tempting, because an ambiguous statement has more than one reading, but the word does not mean having two sides."
+        },
+        {
+          "id": "V13",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "BENEVOLENT",
+          "choices": [
+            "violent",
+            "wealthy",
+            "kind",
+            "religious",
+            "elderly"
+          ],
+          "answer": 2,
+          "explanation": "Benevolent means well meaning and kindly. Kind is the match. Violent is a trap from the middle of the word. Wealthy is offered because benevolent people are often described giving money away, but generosity is the meaning, not riches."
+        },
+        {
+          "id": "V14",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "TEDIOUS",
+          "choices": [
+            "difficult",
+            "boring",
+            "tiny",
+            "dangerous",
+            "tidy"
+          ],
+          "answer": 1,
+          "explanation": "Tedious means too long, slow or dull to hold interest. Boring is the match. Difficult is the trap, since tedious tasks feel like work, but a tedious job is often easy and simply endless. Tidy is a sound-alike."
+        },
+        {
+          "id": "V15",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ADVERSARY",
+          "choices": [
+            "advertisement",
+            "advisor",
+            "helper",
+            "opponent",
+            "judge"
+          ],
+          "answer": 3,
+          "explanation": "An adversary is someone you are fighting or competing against. Opponent is the match. Advisor and advertisement share the first syllable and nothing else. Helper is the opposite."
+        },
+        {
+          "id": "V16",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "FRUGAL",
+          "choices": [
+            "thrifty",
+            "fruity",
+            "wasteful",
+            "greedy",
+            "poor"
+          ],
+          "answer": 0,
+          "explanation": "Frugal means careful not to waste money or resources. Thrifty is the match. Poor is the trap, because frugal people spend little, but a rich person can be frugal by choice. Wasteful is the opposite."
+        },
+        {
+          "id": "V17",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "DIMINISH",
+          "choices": [
+            "dim",
+            "measure",
+            "expand",
+            "divide",
+            "lessen"
+          ],
+          "answer": 4,
+          "explanation": "To diminish is to make or become smaller. Lessen is the match. Dim is a trap from the first syllable, though a diminishing light does get dimmer. Expand is the opposite, and divide is a different operation."
+        },
+        {
+          "id": "V18",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "STERN",
+          "choices": [
+            "rear",
+            "strict",
+            "gentle",
+            "steep",
+            "salty"
+          ],
+          "answer": 1,
+          "explanation": "Stern, as an adjective, means serious and strict. Strict is the match. Rear is a real meaning of stern as a noun, the back of a boat, which is why it is offered, but synonym questions want the meaning that matches the part of speech of the other choices. Gentle is the opposite."
+        },
+        {
+          "id": "V19",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "REMOTE",
+          "choices": [
+            "controlled",
+            "rocky",
+            "cold",
+            "distant",
+            "wireless"
+          ],
+          "answer": 3,
+          "explanation": "Remote means far away from other places or people. Distant is the match. Controlled and wireless come from remote control, a phrase where remote keeps its usual meaning of at a distance. Cold and rocky describe many remote places without being what the word means."
+        },
+        {
+          "id": "V20",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ARTICULATE",
+          "choices": [
+            "artistic",
+            "jointed",
+            "well spoken",
+            "noisy",
+            "famous"
+          ],
+          "answer": 2,
+          "explanation": "Articulate, as an adjective, means able to express ideas clearly in words. Well spoken is the match. Artistic shares letters and nothing else. Noisy is a trap, since articulate people speak, but the word is about clarity, not volume."
+        },
+        {
+          "id": "V21",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "DWELLING",
+          "choices": [
+            "delay",
+            "thought",
+            "home",
+            "shrinking",
+            "cave"
+          ],
+          "answer": 2,
+          "explanation": "A dwelling is a place where someone lives. Home is the match. Cave is one kind of dwelling, so it is too narrow, like answering fruit with apple. Delay and thought come from the verb dwell, as in to dwell on something, which is a different sense."
+        },
+        {
+          "id": "V22",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "PERSEVERE",
+          "choices": [
+            "protect",
+            "give up",
+            "prepare",
+            "perspire",
+            "keep going"
+          ],
+          "answer": 4,
+          "explanation": "To persevere is to continue despite difficulty. Keep going is the match. Give up is the opposite. Perspire is a sound-alike trap, and protect and prepare share the first letter and nothing else."
+        },
+        {
+          "id": "V23",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "NOVEL",
+          "choices": [
+            "long",
+            "new",
+            "fictional",
+            "famous",
+            "written"
+          ],
+          "answer": 1,
+          "explanation": "Novel, as an adjective, means new and unusual. New is the match. Fictional, written and long all describe a novel, the book, which is the noun and a different word for this purpose. When a familiar word appears as a stem, expect the less familiar meaning."
+        },
+        {
+          "id": "V24",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "WARY",
+          "choices": [
+            "cautious",
+            "exhausted",
+            "warlike",
+            "wet",
+            "reckless"
+          ],
+          "answer": 0,
+          "explanation": "Wary means careful and on guard against danger or trickery. Cautious is the match. Exhausted is a trap from the sound of weary, a different word. Reckless is the opposite, and warlike is a guess from the first three letters."
+        },
+        {
+          "id": "V25",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ELABORATE",
+          "choices": [
+            "expensive",
+            "elastic",
+            "simple",
+            "detailed",
+            "laboured"
+          ],
+          "answer": 3,
+          "explanation": "Elaborate means involving many carefully arranged parts. Detailed is the match. Simple is the opposite. Expensive is a trap, because elaborate things often cost a lot, but a child's elaborate drawing costs nothing. Laboured shares letters and a hint of effort, but means strained."
+        },
+        {
+          "id": "V26",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "SCARCE",
+          "choices": [
+            "frightening",
+            "rare",
+            "cheap",
+            "spread out",
+            "sharp"
+          ],
+          "answer": 1,
+          "explanation": "Scarce means in short supply. Rare is the match. Frightening is a trap from the sound of scare. Cheap is close to the opposite, since scarce things tend to be expensive. Spread out describes how something might be arranged, not how much there is."
+        },
+        {
+          "id": "V27",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ORDEAL",
+          "choices": [
+            "agreement",
+            "order",
+            "ceremony",
+            "meal",
+            "hardship"
+          ],
+          "answer": 4,
+          "explanation": "An ordeal is a painful or difficult experience. Hardship is the match. Order and agreement are traps from the first syllable and from deal. Ceremony is offered because ordeals were once formal trials, but the modern word means only the suffering."
+        },
+        {
+          "id": "V28",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "HUMBLE",
+          "choices": [
+            "funny",
+            "poor",
+            "modest",
+            "quiet",
+            "humid"
+          ],
+          "answer": 2,
+          "explanation": "Humble means having a low opinion of your own importance. Modest is the match. Poor is a trap from phrases like humble origins, but a wealthy person can be humble. Quiet is close but wrong, since a humble person can talk a great deal without boasting."
+        },
+        {
+          "id": "V29",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "IMITATE",
+          "choices": [
+            "copy",
+            "annoy",
+            "improve",
+            "invent",
+            "imagine"
+          ],
+          "answer": 0,
+          "explanation": "To imitate is to copy the way someone or something behaves or looks. Copy is the match. Annoy is a trap from the sound of irritate. Invent is close to the opposite, since imitation creates nothing new."
+        },
+        {
+          "id": "V30",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "TRANQUIL",
+          "choices": [
+            "transparent",
+            "tropical",
+            "trembling",
+            "calm",
+            "tired"
+          ],
+          "answer": 3,
+          "explanation": "Tranquil means free from disturbance. Calm is the match. Trembling is close to the opposite. Transparent and tropical share the opening letters, and tropical is offered because tranquil is often used for beaches, which is association rather than meaning."
+        },
+        {
+          "id": "V31",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Petal is to flower as",
+          "choices": [
+            "root is to soil",
+            "bee is to honey",
+            "vase is to table",
+            "garden is to fence",
+            "page is to book"
+          ],
+          "answer": 4,
+          "explanation": "A petal is one of the parts that make up a flower, so the relationship is part to whole. A page is one of the parts that make up a book. Root is to soil puts a part next to something it sits in, not the whole it belongs to. Bee is to honey is maker to product."
+        },
+        {
+          "id": "V32",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Thermometer is to temperature as",
+          "choices": [
+            "ruler is to pencil",
+            "clock is to hour",
+            "scale is to weight",
+            "doctor is to fever",
+            "oven is to heat"
+          ],
+          "answer": 2,
+          "explanation": "A thermometer is the instrument that measures temperature, so the relationship is instrument to what it measures. A scale measures weight. Clock is to hour is close, but an hour is a unit rather than the quantity itself, and time would have been the right pairing. An oven produces heat rather than measuring it."
+        },
+        {
+          "id": "V33",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Sculptor is to chisel as",
+          "choices": [
+            "surgeon is to scalpel",
+            "painter is to gallery",
+            "author is to library",
+            "carpenter is to sawdust",
+            "baker is to oven"
+          ],
+          "answer": 0,
+          "explanation": "A chisel is the tool a sculptor holds and works with, so the relationship is worker to hand tool. A surgeon works with a scalpel. A baker uses an oven, but an oven is equipment rather than a tool held in the hand, and sawdust is a by-product of the carpenter's work, not a tool."
+        },
+        {
+          "id": "V34",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Whisper is to shout as",
+          "choices": [
+            "sing is to song",
+            "speak is to listen",
+            "run is to walk",
+            "glance is to stare",
+            "laugh is to cry"
+          ],
+          "answer": 3,
+          "explanation": "A whisper and a shout are the same action at very different intensities, quiet and loud. A glance and a stare are the same action, looking, at very different intensities, brief and prolonged. Run is to walk is also a matter of degree, but the order is reversed, going from more intense to less."
+        },
+        {
+          "id": "V35",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Drought is to rain as",
+          "choices": [
+            "flood is to river",
+            "famine is to food",
+            "storm is to wind",
+            "winter is to snow",
+            "desert is to sand"
+          ],
+          "answer": 1,
+          "explanation": "A drought is a long shortage of rain, so the relationship is a shortage to the thing lacking. A famine is a long shortage of food. Flood is to river and storm is to wind pair a condition with the thing there is too much of, the reverse relationship. Desert is to sand is a place to what it contains."
+        },
+        {
+          "id": "V36",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Kitten is to cat as",
+          "choices": [
+            "puppy is to kennel",
+            "bird is to egg",
+            "cow is to calf",
+            "tadpole is to frog",
+            "lamb is to wool"
+          ],
+          "answer": 3,
+          "explanation": "A kitten is the young form of a cat, so the relationship is young to adult. A tadpole is the young form of a frog. Cow is to calf has the right animals in the wrong order, adult to young, which is the trap for anyone who matches the pair without checking direction. Bird is to egg is also reversed and skips a stage."
+        },
+        {
+          "id": "V37",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Chapter is to novel as",
+          "choices": [
+            "act is to play",
+            "cover is to magazine",
+            "author is to book",
+            "line is to poem",
+            "verse is to song"
+          ],
+          "answer": 0,
+          "explanation": "A chapter is one of the large sections a novel is divided into, so the relationship is major section to whole work. An act is a major section of a play. Verse is to song and line is to poem are also part to whole, which is why they tempt, but a verse or a line is a much smaller unit than a chapter. The best answer matches the scale as well as the type."
+        },
+        {
+          "id": "V38",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Miser is to money as",
+          "choices": [
+            "thief is to jail",
+            "banker is to vault",
+            "artist is to paint",
+            "athlete is to trophy",
+            "glutton is to food"
+          ],
+          "answer": 4,
+          "explanation": "A miser is someone who hoards money to excess, so the relationship is a person to the thing they want too much of. A glutton is someone who wants too much food. Banker is to vault connects money with a place, not a craving, and artist is to paint is a worker with a material."
+        },
+        {
+          "id": "V39",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Rehearse is to perform as",
+          "choices": [
+            "sleep is to dream",
+            "practise is to compete",
+            "read is to write",
+            "cook is to eat",
+            "win is to lose"
+          ],
+          "answer": 1,
+          "explanation": "Rehearsing is the preparation done before performing, so the relationship is preparation to the real event. Practising is the preparation before competing. Cook is to eat is close, since cooking comes before eating, but cooking is not a trial run of eating. Rehearsing and practising are both the same activity done in advance."
+        },
+        {
+          "id": "V40",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Judge is to courtroom as",
+          "choices": [
+            "lawyer is to verdict",
+            "pilot is to airport",
+            "chef is to kitchen",
+            "student is to homework",
+            "actor is to script"
+          ],
+          "answer": 2,
+          "explanation": "A courtroom is the room where a judge does the work, so the relationship is worker to workplace. A chef works in a kitchen. Pilot is to airport is the trap: a pilot passes through an airport, but the actual work happens in a cockpit. Actor is to script is worker to a tool of the trade."
+        },
+        {
+          "id": "V41",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Frigid is to cold as",
+          "choices": [
+            "damp is to wet",
+            "scorching is to hot",
+            "warm is to hot",
+            "dim is to bright",
+            "chilly is to freezing"
+          ],
+          "answer": 1,
+          "explanation": "Frigid means extremely cold, so the relationship is the extreme form of a quality to the ordinary word for it. Scorching means extremely hot. Chilly is to freezing has the intensity reversed, going from mild to extreme, and warm is to hot goes from less to more. Damp is to wet is milder to stronger as well."
+        },
+        {
+          "id": "V42",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Compass is to direction as",
+          "choices": [
+            "map is to journey",
+            "anchor is to ship",
+            "sail is to wind",
+            "telescope is to star",
+            "clock is to time"
+          ],
+          "answer": 4,
+          "explanation": "A compass is an instrument for finding direction, so the relationship is instrument to what it tells you. A clock tells you the time. Telescope is to star is close but a telescope shows you an object rather than telling you a measure. Map is to journey pairs a tool with an activity, not with the information it gives."
+        },
+        {
+          "id": "V43",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Reckless is to caution as",
+          "choices": [
+            "brave is to courage",
+            "honest is to truth",
+            "stingy is to generosity",
+            "careful is to accident",
+            "curious is to question"
+          ],
+          "answer": 2,
+          "explanation": "A reckless person lacks caution, so the relationship is a quality to what it is missing. A stingy person lacks generosity. Brave is to courage and honest is to truth pair a quality with what it has, the opposite relationship, and they are the trap for anyone who only notices that the words go together."
+        },
+        {
+          "id": "V44",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Herd is to cattle as",
+          "choices": [
+            "flock is to sheep",
+            "barn is to horse",
+            "school is to teacher",
+            "leash is to dog",
+            "shepherd is to lamb"
+          ],
+          "answer": 0,
+          "explanation": "A herd is the word for a group of cattle, so the relationship is group name to animal. A flock is the group name for sheep. School is to teacher is a trap: a school is a group word for fish, not for teachers, and here it is being used as a building. Shepherd is to lamb is keeper to animal."
+        },
+        {
+          "id": "V45",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Pedal is to bicycle as",
+          "choices": [
+            "wheel is to car",
+            "wing is to bird",
+            "road is to bus",
+            "oar is to boat",
+            "engine is to train"
+          ],
+          "answer": 3,
+          "explanation": "A pedal is the part a person pushes to make a bicycle move, so the relationship is the human-powered part to the vehicle it drives. An oar is the part a person pulls to move a boat. Engine is to train and wheel is to car are part to whole, but neither part is worked by the rider. Wing is to bird is not a vehicle at all."
+        },
+        {
+          "id": "V46",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Author is to manuscript as",
+          "choices": [
+            "reader is to library",
+            "printer is to ink",
+            "composer is to score",
+            "singer is to microphone",
+            "editor is to mistake"
+          ],
+          "answer": 2,
+          "explanation": "A manuscript is the written work an author produces, so the relationship is creator to the document created. A composer produces a score, the written form of a piece of music. Singer is to microphone is performer to equipment, and printer is to ink is machine to material. Neither pair ends in a created work."
+        },
+        {
+          "id": "V47",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Antidote is to poison as",
+          "choices": [
+            "disease is to germ",
+            "bandage is to scissors",
+            "doctor is to nurse",
+            "symptom is to fever",
+            "remedy is to illness"
+          ],
+          "answer": 4,
+          "explanation": "An antidote is what counteracts a poison, so the relationship is cure to the harm it undoes. A remedy counteracts an illness. Disease is to germ is effect to cause, the reverse direction, and symptom is to fever is a category to an example of it."
+        },
+        {
+          "id": "V48",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Brittle is to break as",
+          "choices": [
+            "heavy is to lift",
+            "wet is to dry",
+            "sharp is to cut",
+            "flammable is to burn",
+            "loud is to hear"
+          ],
+          "answer": 3,
+          "explanation": "Something brittle is liable to break, so the relationship is a quality to what happens easily to a thing with that quality. Something flammable is liable to burn. Sharp is to cut is the trap: a sharp thing does the cutting rather than having it done to it. Heavy is to lift describes what is hard to do, not what happens easily."
+        },
+        {
+          "id": "V49",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Archipelago is to island as",
+          "choices": [
+            "ocean is to wave",
+            "constellation is to star",
+            "forest is to leaf",
+            "river is to lake",
+            "continent is to country"
+          ],
+          "answer": 1,
+          "explanation": "An archipelago is a group of islands, so the relationship is a named group to one of its members. A constellation is a group of stars. Forest is to leaf skips a level, since a forest is a group of trees and a leaf is part of a tree. Continent is to country is close, but a continent is a landmass rather than a grouping of countries in the same sense."
+        },
+        {
+          "id": "V50",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Gill is to fish as",
+          "choices": [
+            "lung is to human",
+            "fin is to swimmer",
+            "scale is to snake",
+            "net is to fisherman",
+            "feather is to flight"
+          ],
+          "answer": 0,
+          "explanation": "A gill is the organ a fish uses to breathe, so the relationship is breathing organ to creature. A lung is the breathing organ of a human. Scale is to snake is part to creature, which is why it tempts, but a scale is a covering rather than a breathing organ. The best answer matches the function, not only the fact of being a part."
+        },
+        {
+          "id": "V51",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Stanza is to poem as",
+          "choices": [
+            "rhyme is to song",
+            "title is to story",
+            "word is to sentence",
+            "paragraph is to essay",
+            "poet is to verse"
+          ],
+          "answer": 3,
+          "explanation": "A stanza is one of the grouped sections a poem is built from, so the relationship is section to whole. A paragraph is the equivalent section of an essay. Word is to sentence is part to whole at a much smaller scale, and title is to story pairs a label with a work rather than a section of it."
+        },
+        {
+          "id": "V52",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Deceive is to trick as",
+          "choices": [
+            "forgive is to punish",
+            "assist is to help",
+            "whisper is to shout",
+            "borrow is to lend",
+            "arrive is to leave"
+          ],
+          "answer": 1,
+          "explanation": "Deceive and trick mean the same thing, so the relationship is a pair of synonyms. Assist and help are synonyms. Every other pair is a set of opposites, which is the trap on a synonym analogy: the words go together, but in the wrong way."
+        },
+        {
+          "id": "V53",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Famished is to hungry as",
+          "choices": [
+            "asleep is to awake",
+            "thirsty is to water",
+            "full is to empty",
+            "damp is to soaked",
+            "exhausted is to tired"
+          ],
+          "answer": 4,
+          "explanation": "Famished means extremely hungry, so the relationship is the extreme form of a feeling to the ordinary word for it. Exhausted means extremely tired. Damp is to soaked is a matter of degree in the wrong direction, going from mild to extreme. Thirsty is to water is a need to what satisfies it."
+        },
+        {
+          "id": "V54",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Mason is to stone as",
+          "choices": [
+            "carpenter is to wood",
+            "plumber is to water",
+            "farmer is to tractor",
+            "tailor is to needle",
+            "miner is to lamp"
+          ],
+          "answer": 0,
+          "explanation": "A mason is a worker who builds with stone, so the relationship is worker to the material worked. A carpenter builds with wood. Tailor is to needle and farmer is to tractor pair workers with tools rather than materials, and cloth would have been the tailor's material. Plumber is to water is worker to what flows through the work, not the material shaped."
+        },
+        {
+          "id": "V55",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Camouflage is to hide as",
+          "choices": [
+            "uniform is to soldier",
+            "mirror is to glass",
+            "alarm is to warn",
+            "lock is to key",
+            "helmet is to head"
+          ],
+          "answer": 2,
+          "explanation": "The purpose of camouflage is to hide something, so the relationship is a thing to its function. The purpose of an alarm is to warn. Helmet is to head pairs a thing with what it protects rather than with what it does; protect would have matched. Lock is to key is a pair of objects that work together."
+        },
+        {
+          "id": "V56",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Ambitious is to succeed as",
+          "choices": [
+            "curious is to learn",
+            "lazy is to work",
+            "generous is to receive",
+            "timid is to lead",
+            "wealthy is to spend"
+          ],
+          "answer": 0,
+          "explanation": "An ambitious person wants to succeed, so the relationship is a quality to what a person with it wants to do. A curious person wants to learn. Lazy is to work and timid is to lead pair a quality with what that person avoids, the reverse. Generous is to receive is also reversed, since a generous person gives."
+        },
+        {
+          "id": "V57",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Transparent is to see as",
+          "choices": [
+            "fragile is to touch",
+            "silent is to hear",
+            "solid is to lift",
+            "audible is to hear",
+            "invisible is to find"
+          ],
+          "answer": 3,
+          "explanation": "Transparent describes something that can be seen through, so the relationship is a quality to the sense it allows. Audible describes something that can be heard. Silent is to hear is the trap, since silent means it cannot be heard, the reverse. Invisible is to find is also a negative."
+        },
+        {
+          "id": "V58",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Scale is to fish as",
+          "choices": [
+            "nest is to bird",
+            "shell is to beach",
+            "bark is to tree",
+            "hoof is to horse",
+            "leaf is to branch"
+          ],
+          "answer": 2,
+          "explanation": "Scales are the protective outer covering of a fish, so the relationship is covering to living thing. Bark is the protective outer covering of a tree. Hoof is to horse is part to animal, which is why it tempts, but a hoof is a foot, not a covering. Shell is to beach pairs a covering with a place, not with the creature it covers."
+        },
+        {
+          "id": "V59",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Orchard is to apples as",
+          "choices": [
+            "bakery is to flour",
+            "kitchen is to meals",
+            "field is to farmer",
+            "ocean is to salt",
+            "vineyard is to grapes"
+          ],
+          "answer": 4,
+          "explanation": "An orchard is the place where apples are grown, so the relationship is growing place to crop. A vineyard is where grapes are grown. Kitchen is to meals is a place to what is made there, not grown, and bakery is to flour is a place to what is used there. The best match keeps the idea of cultivation."
+        },
+        {
+          "id": "V60",
+          "type": "analogy",
+          "topic": "analogies",
+          "stem": "Interrupt is to conversation as",
+          "choices": [
+            "applaud is to performance",
+            "detour is to journey",
+            "chapter is to book",
+            "listen is to speech",
+            "finish is to race"
+          ],
+          "answer": 1,
+          "explanation": "An interruption breaks the flow of a conversation, so the relationship is a disruption to the thing disrupted. A detour breaks the flow of a journey. Finish is to race is an ending rather than a disruption, and applaud is to performance is a response, not a break in the flow."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative 2",
+      "timeLimitSeconds": 1800,
+      "questions": [
+        {
+          "id": "Q2-1",
+          "topic": "percent",
+          "stem": "What is 15% of 60 plus 60% of 15?",
+          "choices": [
+            "9",
+            "18",
+            "27",
+            "36",
+            "75"
+          ],
+          "answer": 1,
+          "explanation": "15% of 60 is 9, and 60% of 15 is also 9, so the total is 18. The two are equal because a% of b is always the same as b% of a. The choice 9 stops after one half, and 75 is 60 + 15, which ignores the percentages entirely."
+        },
+        {
+          "id": "Q2-2",
+          "topic": "ratio and proportion",
+          "stem": "A shop sells pencils at 3 for $1.20. At that rate, how much do 10 pencils cost?",
+          "choices": [
+            "$3.60",
+            "$3.80",
+            "$3.90",
+            "$4.00",
+            "$4.20"
+          ],
+          "answer": 3,
+          "explanation": "One pencil costs $1.20 ÷ 3 = $0.40, so ten cost $4.00. The choice $3.60 is the price of 9 pencils, three groups of three, which is what you get by rounding 10 down to a multiple of 3. Find the price of one and multiply."
+        },
+        {
+          "id": "Q2-3",
+          "topic": "fractions and decimals",
+          "stem": "Which of the following fractions is equal to 0.6?",
+          "choices": [
+            "3/5",
+            "5/8",
+            "2/3",
+            "7/10",
+            "5/6"
+          ],
+          "answer": 0,
+          "explanation": "0.6 is 6/10, which reduces to 3/5. The choice 2/3 is about 0.667 and 5/8 is 0.625, both near enough to tempt a guess. Converting 0.6 to tenths first and then reducing is faster than converting every choice to a decimal."
+        },
+        {
+          "id": "Q2-4",
+          "topic": "geometry",
+          "stem": "A regular octagon has a perimeter of 60 cm. What is the length of one side?",
+          "choices": [
+            "6 cm",
+            "6.5 cm",
+            "7 cm",
+            "7.2 cm",
+            "7.5 cm"
+          ],
+          "answer": 4,
+          "explanation": "Regular means every side is equal, and an octagon has 8 sides, so each is 60 ÷ 8 = 7.5 cm. The choice 6 divides by 10, as if the shape were a decagon, and 10 is the number the word octagon does not mean. Count the sides from the name: oct means eight."
+        },
+        {
+          "id": "Q2-5",
+          "topic": "fractions and decimals",
+          "stem": "If 2/5 of a number is 26, what is 3/4 of that number?",
+          "choices": [
+            "39",
+            "45",
+            "48.75",
+            "52",
+            "65"
+          ],
+          "answer": 2,
+          "explanation": "If 2/5 of the number is 26, then 1/5 is 13 and the number is 65. Three quarters of 65 is 48.75. The choice 65 is the number itself, which answers only the first half of the problem. The choice 39 is 3/5 of 65, from mixing the two fractions together."
+        },
+        {
+          "id": "Q2-6",
+          "topic": "algebra",
+          "stem": "Points A, B and C lie on a line in that order. If AB = 2x + 1, BC = 3x - 4 and AC = 27, what is the value of x?",
+          "choices": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "answer": 2,
+          "explanation": "Since B is between A and C, the two pieces add up to the whole: 2x + 1 + 3x - 4 = 27, so 5x - 3 = 27 and x = 6. Check: AB = 13 and BC = 14, which add to 27. The choice 5 comes from writing 5x + 3 = 27 and getting a slightly wrong sign."
+        },
+        {
+          "id": "Q2-7",
+          "topic": "measurement",
+          "stem": "How many minutes are there in 3 3/4 hours?",
+          "choices": [
+            "195",
+            "200",
+            "205",
+            "215",
+            "225"
+          ],
+          "answer": 4,
+          "explanation": "3 hours is 180 minutes and 3/4 of an hour is 45 minutes, so the total is 225. The choice 195 uses 15 minutes for the fraction, as if 3/4 of an hour were a quarter, and 215 uses 35, treating the 3/4 as 0.35 rather than 0.75."
+        },
+        {
+          "id": "Q2-8",
+          "topic": "data and probability",
+          "stem": "The mean of six test scores is 82. When a seventh score is added, the mean becomes 84. What is the seventh score?",
+          "choices": [
+            "94",
+            "96",
+            "98",
+            "100",
+            "102"
+          ],
+          "answer": 1,
+          "explanation": "Six scores with a mean of 82 total 492. Seven scores with a mean of 84 total 588. The seventh score is 588 - 492 = 96. The choice 98 comes from 84 + 14, adding the two-point rise once for each of the seven scores; the rise applies to the six old scores only, plus the new one at 84, which is 6 × 2 + 84 = 96."
+        },
+        {
+          "id": "Q2-9",
+          "topic": "number properties",
+          "stem": "Which of the following is a prime number?",
+          "choices": [
+            "53",
+            "57",
+            "63",
+            "87",
+            "91"
+          ],
+          "answer": 0,
+          "explanation": "53 has no factors other than 1 and itself. The others all look prime but are not: 57 = 3 × 19, 63 = 7 × 9, 87 = 3 × 29 and 91 = 7 × 13. The test for 3 is quick, since a number is divisible by 3 when its digits add to a multiple of 3, and that catches 57, 63 and 87. The one that catches most people is 91."
+        },
+        {
+          "id": "Q2-10",
+          "topic": "fractions and decimals",
+          "stem": "A tank is 3/8 full. After 40 litres are added, it is 5/8 full. What is the capacity of the tank?",
+          "choices": [
+            "100 litres",
+            "120 litres",
+            "140 litres",
+            "160 litres",
+            "200 litres"
+          ],
+          "answer": 3,
+          "explanation": "Adding 40 litres moved the tank from 3/8 to 5/8, a difference of 2/8, or one quarter. If a quarter of the tank is 40 litres, the whole tank holds 160. The choice 120 treats 40 litres as one third of the tank, and 200 treats it as one fifth."
+        },
+        {
+          "id": "Q2-11",
+          "topic": "arithmetic",
+          "stem": "What is the value of 3 + 2 × (7 - 5)² ÷ 4?",
+          "choices": [
+            "5",
+            "8",
+            "10",
+            "11",
+            "25"
+          ],
+          "answer": 0,
+          "explanation": "Brackets first: 7 - 5 = 2. Then the square: 4. Then multiply and divide from left to right: 2 × 4 = 8 and 8 ÷ 4 = 2. Finally add: 3 + 2 = 5. The choice 25 comes from working strictly left to right, adding 3 + 2 first and squaring later. The choice 11 forgets to divide by 4."
+        },
+        {
+          "id": "Q2-12",
+          "topic": "ratio and proportion",
+          "stem": "A car uses 6 litres of fuel for every 100 km. How many litres does it use on a journey of 250 km?",
+          "choices": [
+            "12 litres",
+            "14 litres",
+            "15 litres",
+            "16 litres",
+            "18 litres"
+          ],
+          "answer": 2,
+          "explanation": "250 km is 2.5 times 100 km, so the fuel is 2.5 × 6 = 15 litres. The choice 12 doubles the fuel, as if the journey were 200 km, and 18 triples it, as if it were 300. The half matters."
+        },
+        {
+          "id": "Q2-13",
+          "topic": "geometry",
+          "stem": "A circle is drawn inside a square of side 10 cm so that it touches all four sides. Using 3.14 for pi, what is the area of the square that lies outside the circle?",
+          "choices": [
+            "15 square cm",
+            "18.5 square cm",
+            "20 square cm",
+            "21.5 square cm",
+            "78.5 square cm"
+          ],
+          "answer": 3,
+          "explanation": "The square's area is 100. The circle touches all four sides, so its diameter is 10 and its radius is 5, giving an area of 3.14 × 25 = 78.5. The region outside the circle is 100 - 78.5 = 21.5. The choice 78.5 is the circle itself, which is the answer to a question that was not asked."
+        },
+        {
+          "id": "Q2-14",
+          "topic": "arithmetic",
+          "stem": "The temperature at dawn was -7 degrees. It rose 12 degrees by noon and then fell 4 degrees by evening. What was the temperature in the evening?",
+          "choices": [
+            "-3 degrees",
+            "1 degree",
+            "3 degrees",
+            "9 degrees",
+            "15 degrees"
+          ],
+          "answer": 1,
+          "explanation": "Start at -7, add 12 to reach 5, then subtract 4 to reach 1. The choice 15 comes from treating the starting temperature as +7. The choice -3 comes from subtracting 4 from -7 and then losing the rise altogether. A quick number line keeps the signs straight."
+        },
+        {
+          "id": "Q2-15",
+          "topic": "number properties",
+          "stem": "How many two-digit whole numbers are multiples of 7?",
+          "choices": [
+            "9",
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "answer": 4,
+          "explanation": "The multiples of 7 from 14 up to 98 are 7 × 2 through 7 × 14, which is 13 numbers. The choice 12 comes from subtracting 2 from 14 instead of 1, forgetting to count the first multiple. The choice 14 is not offered, but counting 7 × 1 = 7 as two-digit would produce it."
+        },
+        {
+          "id": "Q2-16",
+          "topic": "algebra",
+          "stem": "Sam is 3 years older than twice Ana's age. If Sam is 19, how old is Ana?",
+          "choices": [
+            "5",
+            "6",
+            "6.5",
+            "7",
+            "8"
+          ],
+          "answer": 4,
+          "explanation": "Twice Ana's age plus 3 is 19, so twice her age is 16 and she is 8. The choice 6.5 comes from subtracting 3 and then a further 3 before halving, and 7 comes from halving 19 and then subtracting a rounded 3. Write the equation, 2a + 3 = 19, and the arithmetic takes care of itself."
+        },
+        {
+          "id": "Q2-17",
+          "topic": "number properties",
+          "stem": "Which of the following is equal to 4 to the power of 6 divided by 4 to the power of 2?",
+          "choices": [
+            "4 to the power of 4",
+            "4 to the power of 3",
+            "4 to the power of 8",
+            "4 to the power of 12",
+            "1 to the power of 4"
+          ],
+          "answer": 0,
+          "explanation": "Dividing powers of the same base subtracts the exponents: 6 - 2 = 4, so the result is 4 to the power of 4, which is 256. The choice 4 to the power of 3 divides the exponents instead of subtracting them. The choice 4 to the power of 8 adds them, which is the rule for multiplying, not dividing."
+        },
+        {
+          "id": "Q2-18",
+          "topic": "geometry",
+          "stem": "A rectangular lawn is 15 m long and 8 m wide. A path 1 m wide runs all the way around the outside of the lawn. What is the area of the path?",
+          "choices": [
+            "23 square m",
+            "46 square m",
+            "50 square m",
+            "54 square m",
+            "170 square m"
+          ],
+          "answer": 2,
+          "explanation": "The lawn plus path is a 17 m by 10 m rectangle, since the path adds 1 m on each of the four sides. Its area is 170, the lawn is 120, and the path is 170 - 120 = 50. The choice 46 is the perimeter of the lawn, which misses the four corner squares. The choice 170 is the outer rectangle with the lawn still inside it."
+        },
+        {
+          "id": "Q2-19",
+          "topic": "fractions and decimals",
+          "stem": "What is 3.6 ÷ 0.04?",
+          "choices": [
+            "0.9",
+            "9",
+            "45",
+            "90",
+            "900"
+          ],
+          "answer": 3,
+          "explanation": "Multiply both numbers by 100 to clear the decimals: 360 ÷ 4 = 90. The choice 9 comes from moving the point one place instead of two, and 900 from moving it three. Dividing by a number less than 1 must give something larger than 3.6, which rules out 0.9 straight away."
+        },
+        {
+          "id": "Q2-20",
+          "topic": "geometry",
+          "stem": "The three angles of a triangle are in the ratio 2 : 3 : 4. What is the size of the largest angle?",
+          "choices": [
+            "40 degrees",
+            "80 degrees",
+            "90 degrees",
+            "100 degrees",
+            "120 degrees"
+          ],
+          "answer": 1,
+          "explanation": "The ratio has 2 + 3 + 4 = 9 parts, and the angles total 180, so each part is 20 degrees. The largest angle is 4 × 20 = 80. The choice 40 is the smallest angle. The choice 90 is a guess that the triangle must be right-angled, which the ratio does not support."
+        },
+        {
+          "id": "Q2-21",
+          "topic": "data and probability",
+          "stem": "In a class of 28 students, 16 play football and 13 play basketball. If 5 students play neither sport, how many play both?",
+          "choices": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "8"
+          ],
+          "answer": 3,
+          "explanation": "28 - 5 = 23 students play at least one sport. Adding 16 and 13 gives 29, which counts the students who play both sports twice, so 29 - 23 = 6 play both. The choice 5 repeats the number who play neither, and 3 comes from 16 + 13 - 28, forgetting to remove the five first."
+        },
+        {
+          "id": "Q2-22",
+          "topic": "number properties",
+          "stem": "In the sequence 2, 6, 18, 54, ..., each term is 3 times the term before it. What is the 7th term?",
+          "choices": [
+            "486",
+            "1458",
+            "2916",
+            "4374",
+            "13122"
+          ],
+          "answer": 1,
+          "explanation": "Continue multiplying by 3: 162, 486, 1458. That is the 5th, 6th and 7th terms, so the 7th is 1458. The choice 486 is the 6th term, the usual off-by-one from starting the count at the wrong place. The choice 4374 is the 8th."
+        },
+        {
+          "id": "Q2-23",
+          "topic": "geometry",
+          "stem": "If the length of a rectangle is doubled and its width is tripled, the area of the rectangle is multiplied by",
+          "choices": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answer": 4,
+          "explanation": "Area is length times width, so doubling one and tripling the other multiplies the area by 2 × 3 = 6. The choice 5 adds the two factors instead of multiplying them. Try it with a 1 by 1 rectangle: it becomes 2 by 3, and the area goes from 1 to 6."
+        },
+        {
+          "id": "Q2-24",
+          "topic": "algebra",
+          "stem": "Which of the following is equivalent to 5 - (x - 3)?",
+          "choices": [
+            "2 - x",
+            "2 + x",
+            "8 - x",
+            "8 + x",
+            "x - 8"
+          ],
+          "answer": 2,
+          "explanation": "Subtracting a bracket changes the sign of everything inside it: 5 - x + 3 = 8 - x. The choice 2 - x comes from subtracting the 3 instead of adding it, which is the classic error with a minus sign in front of a bracket. Substitute x = 0 to check: 5 - (0 - 3) = 8, and only 8 - x gives 8."
+        },
+        {
+          "id": "Q2-25",
+          "topic": "ratio and proportion",
+          "stem": "Lena reads 24 pages in 40 minutes. At the same rate, how long will it take her to read 60 pages?",
+          "choices": [
+            "100 minutes",
+            "110 minutes",
+            "120 minutes",
+            "144 minutes",
+            "150 minutes"
+          ],
+          "answer": 0,
+          "explanation": "24 pages in 40 minutes is 0.6 pages a minute, or 5 minutes for every 3 pages. Sixty pages is 20 groups of 3, so 20 × 5 = 100 minutes. The choice 120 doubles the time as if 60 pages were twice 24, when it is two and a half times. The choice 144 multiplies 24 by 6 for no reason the problem supports."
+        }
+      ]
+    }
+  ]
+}

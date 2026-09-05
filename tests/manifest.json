@@ -1,5 +1,16 @@
 [
   {
+    "id": "ssat-middle-full-01",
+    "exam": "SSAT",
+    "kind": "mock",
+    "format": "full",
+    "title": "Full length 1",
+    "blurb": "The real thing at the real length: writing sample, Quantitative, Reading, a fifteen minute break, Verbal and a second Quantitative. About three hours. Sit it in one go.",
+    "covers": ["Writing", "Quantitative", "Reading", "Verbal"],
+    "questions": 150,
+    "minutes": 170
+  },
+  {
     "id": "ssat-middle-diagnostic-01",
     "exam": "SSAT",
     "kind": "mock",
