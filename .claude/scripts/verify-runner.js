@@ -101,8 +101,8 @@ class Page {
     if (r.exceptionDetails) throw new Error("In page: " + (r.exceptionDetails.exception && r.exceptionDetails.exception.description || r.exceptionDetails.text));
     return r.result.value;
   }
-  async shot(name) {
-    const r = await this.send("Page.captureScreenshot", { format: "png" });
+  async shot(name, full) {
+    const r = await this.send("Page.captureScreenshot", full ? { format: "png", captureBeyondViewport: true } : { format: "png" });
     const f = path.join(shots, name + ".png");
     fs.writeFileSync(f, Buffer.from(r.data, "base64"));
     return f;
@@ -216,6 +216,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("results screen", await page.eval("state.phase === 'results'"), await page.eval("state.phase"));
     check("attempt saved to localStorage", await page.eval("state.saved && JSON.parse(localStorage.getItem('prep:attempts')).length === 1"));
     check("review items rendered", (await page.eval("document.querySelectorAll('.review-item').length")) > 0);
+    if (hasWriting) check("writing is readable on results", await page.eval("(document.querySelector('.essay-view') || {}).textContent.includes('written by the verifier')"));
     check("no history block after one attempt", (await page.eval("document.body.innerHTML.includes('Across ')")) === false);
     await page.shot("06-results");
     const takenAt = await page.eval("state.attempt.takenAt");
@@ -260,7 +261,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("restored answers", (await page.eval("Object.keys(state.answers).length")) > 0);
     check("retake button present", await page.eval("!!document.querySelector('a[href^=\"test.html?id=\"]')"));
     check("no duplicate save on review", await page.eval("JSON.parse(localStorage.getItem('prep:attempts')).length === 2"));
-    await page.shot("08-review");
+    if (hasWriting) check("writing is readable in review mode", await page.eval("(document.querySelector('.essay-view') || {}).textContent.includes('written by the verifier')"));
+    await page.shot("08-review", true);
 
     console.log("Home page with attempts");
     await page.goto(base + "index.html");
@@ -276,6 +278,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("lists both attempts", (await page.eval("document.querySelectorAll('#list .review-item').length")) === 2);
     check("Review buttons present", (await page.eval("document.querySelectorAll('#list a[data-review]').length")) >= 2);
     check("Across attempts summary present", await page.eval("document.body.innerHTML.includes('Across attempts')"));
+    if (hasWriting) check("writing is readable on past attempts", (await page.eval("document.querySelectorAll('#list .essay-view').length")) >= 1);
     await page.shot("10-past-attempts");
 
     check("no uncaught page errors", errors.length === 0, errors);

@@ -93,6 +93,11 @@ function renderAttempt(a, i) {
     '<p class="why">' + t.right + " right, " + t.wrong + " wrong, " + t.blank + " blank in " +
     mmss(t.seconds) + (a.wrongPenalty ? ". Raw score " + t.raw.toFixed(2) : "") +
     (a.writing && a.writing.words ? ". Writing sample " + a.writing.words + " words." : "") + "</p>" +
+    (a.writing && a.writing.text && a.writing.text.trim()
+      ? "<details class=\"essay-details\"><summary>Read the writing</summary>" +
+        (a.writing.prompt ? '<p class="stem" style="font-size:1rem;margin-top:0.8rem">' + esc(a.writing.prompt) + "</p>" : "") +
+        '<div class="essay-view">' + esc(a.writing.text) + "</div></details>"
+      : "") +
     '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.9rem">' +
     '<a class="btn btn-primary" data-review href="test.html?id=' + encodeURIComponent(a.testId) +
       "&attempt=" + encodeURIComponent(a.takenAt) + '">Review</a>' +

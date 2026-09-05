@@ -707,6 +707,8 @@ function renderResults() {
           : "This browser would not let the attempt be saved, so download it now if you want to keep it."
       }</p>
 
+      ${writingView()}
+
       ${attemptHistory()}
 
       <h3 style="margin-top:2.5rem;font-family:var(--serif);font-size:1.3rem">Review</h3>
@@ -755,6 +757,20 @@ function attemptTotals(a) {
   let right = 0, wrong = 0, blank = 0, total = 0, seconds = 0;
   a.sections.forEach((s) => { right += s.right; wrong += s.wrong; blank += s.blank; total += s.total; seconds += s.seconds; });
   return { right, wrong, blank, total, seconds, raw: right - wrong * (a.wrongPenalty || 0) };
+}
+
+/* The writing sample or essay, readable in place. It is unscored, so this is the only review it
+   gets, and a parent or tutor reading it here is the point. */
+function writingView() {
+  const w = writing();
+  const saved = state.attempt && state.attempt.writing;
+  if (!w || !saved || !(saved.text || "").trim()) return "";
+  return `
+    <h3 style="margin-top:2.5rem;font-family:var(--serif);font-size:1.3rem">${esc(w.name)}</h3>
+    <p style="font-size:0.95rem;color:var(--muted);max-width:60ch">${plural(saved.words || 0, "word")}.
+      Not scored by the real test, but every school that receives the results reads it.</p>
+    ${saved.prompt ? `<p class="stem" style="font-size:1rem">${esc(saved.prompt)}</p>` : ""}
+    <div class="essay-view">${esc(saved.text)}</div>`;
 }
 
 /* Every saved attempt on this test, oldest first, so a repeat sitting can be read as a trend. */

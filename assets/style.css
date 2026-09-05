@@ -623,3 +623,22 @@ main { padding: 2rem 0 7rem; }
 .topic-row .bar { margin-top: 0; }
 .topic-row.weak .bar span { background: var(--wrong); }
 .topic-row.weak .score { color: var(--wrong); }
+
+/* ---------- writing, readable on review ---------- */
+
+.essay-view {
+  white-space: pre-wrap;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  background: var(--slide);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.4rem;
+  max-width: 68ch;
+  margin: 0.6rem 0 0;
+}
+
+.essay-details { margin-top: 0.9rem; }
+
+.essay-details summary { cursor: pointer; color: var(--stain); font-weight: 500; }
