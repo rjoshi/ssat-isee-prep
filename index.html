@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSAT and ISEE practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <h1>SSAT and ISEE practice, Middle Level</h1>
+    <p>Each exam has mocks, which run every section in the order the real test does, and drills,
+    which take one skill at a time. Start with a mock to find the weak spot, then drill it. Both
+    exams are here because they are not the same test, and the habits they reward are opposite.</p>
+  </header>
+
+  <div id="groups">
+    <p class="empty">Loading the test list.</p>
+  </div>
+
+  <p style="margin:2.5rem 0 0"><a class="btn" href="results.html">Past attempts</a></p>
+
+  <p class="note">Middle Level is the right level on both exams for a student applying to grade 7
+  or 8. Before test day, take a full length official sample:
+  <a href="https://www.ssat.org/">EMA</a> for the SSAT and
+  <a href="https://www.erblearn.org/families/isee-preparation/">ERB</a> for the ISEE. Nothing here
+  replaces those.</p>
+</div>
+
+<script>
+var LEDE = {
+  SSAT: "Five answer choices. A wrong answer costs a quarter point and a blank costs nothing, so guess only once you can rule something out. Verbal is synonyms and analogies, and the writing sample comes first.",
+  ISEE: "Four answer choices. A wrong answer costs exactly what a blank costs, which is nothing, so never leave anything empty. Verbal is synonyms and sentence completions, and the essay comes last."
+};
+
+var KIND = {
+  mock: { title: "Mocks", hint: "Every section, in the real order" },
+  drill: { title: "Drills", hint: "One skill at a time" }
+};
+
+function card(t, exam) {
+  var chips = (t.covers || []).map(function (c) {
+    return '<span class="chip">' + c + "</span>";
+  }).join("");
+  return '<li><a class="test-card ' + exam.toLowerCase() + " " + t.kind +
+    '" href="test.html?id=' + t.id + '">' +
+    "<h2>" + t.title + "</h2><p>" + t.blurb + "</p>" +
+    (chips ? '<div class="covers">' + chips + "</div>" : "") +
+    '<div class="test-meta">' + t.questions + " questions &nbsp;·&nbsp; about " +
+    t.minutes + " minutes</div></a></li>";
+}
+
+fetch("tests/manifest.json")
+  .then(function (r) { if (!r.ok) throw new Error("manifest missing"); return r.json(); })
+  .then(function (tests) {
+    var html = ["SSAT", "ISEE"].map(function (exam) {
+      var mine = tests.filter(function (t) { return t.exam === exam; });
+      if (!mine.length) return "";
+      var body = ["mock", "drill"].map(function (kind) {
+        var group = mine.filter(function (t) { return (t.kind || "drill") === kind; });
+        if (!group.length) return "";
+        return '<div class="kind-group"><div class="kind-head"><h3>' + KIND[kind].title +
+          '</h3><span class="hint">' + KIND[kind].hint + "</span></div>" +
+          '<ul class="test-list' + (kind === "drill" ? " drill-grid" : "") + '">' +
+          group.map(function (t) { return card(t, exam); }).join("") + "</ul></div>";
+      }).join("");
+      return '<section class="exam-group"><h2>' + exam + '</h2>' +
+        '<p class="lede">' + LEDE[exam] + "</p>" + body + "</section>";
+    }).join("");
+    document.getElementById("groups").innerHTML = html;
+  })
+  .catch(function () {
+    document.getElementById("groups").innerHTML =
+      '<p class="empty">The test list did not load. Browsers block one local file from reading ' +
+      'another, so opening index.html straight from your hard drive will not work. Run ' +
+      '<code>python3 -m http.server</code> in this folder and open <code>localhost:8000</code>, ' +
+      "or push the folder to GitHub Pages.</p>";
+  });
+</script>
+
+</body>
+</html>

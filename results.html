@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past attempts — SSAT and ISEE practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap narrow">
+  <header class="masthead">
+    <h1>Past attempts</h1>
+    <p>Every finished test is saved in this browser. Export them as one file to send on, or open a
+    file someone else sent you.</p>
+  </header>
+
+  <section style="margin:2rem 0">
+    <label for="who" style="display:block;font-size:0.9rem;color:var(--muted);margin-bottom:0.4rem">
+      Whose practice is this? Used in the file name only.</label>
+    <input id="who" type="text" placeholder="Rahul"
+      style="width:100%;max-width:22rem;padding:0.6rem 0.8rem;border:1px solid var(--line);
+      border-radius:6px;font-family:inherit;font-size:1rem;background:var(--slide);color:var(--ink)">
+  </section>
+
+  <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin:1.5rem 0">
+    <button class="btn btn-primary" id="exportAll">Export everything</button>
+    <button class="btn" id="openFile">Open a results file</button>
+    <button class="btn" id="clearAll">Clear this browser</button>
+    <a class="btn" href="index.html">All tests</a>
+  </div>
+  <input type="file" id="picker" accept="application/json,.json" style="display:none">
+
+  <div id="list"></div>
+  <div id="viewer"></div>
+  <div style="height:4rem"></div>
+</div>
+
+<script>
+var STORE = "prep:attempts", NAME_KEY = "prep:student";
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(STORE) || "[]"); } catch (e) { return []; }
+}
+function save(all) {
+  try { localStorage.setItem(STORE, JSON.stringify(all)); return true; } catch (e) { return false; }
+}
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
+function mmss(s) {
+  s = Math.max(0, Math.round(s));
+  return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+}
+function when(iso) {
+  var d = new Date(iso);
+  return d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }) +
+    ", " + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+}
+function totals(a) {
+  var r = 0, w = 0, b = 0, t = 0, sec = 0;
+  a.sections.forEach(function (s) { r += s.right; w += s.wrong; b += s.blank; t += s.total; sec += s.seconds; });
+  return { right: r, wrong: w, blank: b, total: t, seconds: sec, raw: r - w * (a.wrongPenalty || 0) };
+}
+function fileFor(a) {
+  var who = (a.student || "attempt").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return who + "-" + a.testId + "-" + a.takenAt.slice(0, 10) + ".json";
+}
+function download(obj, name) {
+  var blob = new Blob([JSON.stringify(obj, null, 2)], { type: "application/json" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function renderAttempt(a, i) {
+  var t = totals(a);
+  return '<div class="review-item ' + (t.right / t.total >= 0.6 ? "right" : "wrong") + '">' +
+    '<div class="verdict">' + esc(a.exam) + " " + esc(a.level) + " &nbsp;·&nbsp; " + when(a.takenAt) + "</div>" +
+    "<p class=\"stem\" style=\"margin:0.4rem 0 0.9rem\">" + esc(a.testTitle) + "</p>" +
+    a.sections.map(function (s) {
+      return '<div class="scoreline"><div class="name">' + esc(s.name) + "</div>" +
+        '<div class="val">' + s.right + " / " + s.total + "</div>" +
+        '<div class="time">' + mmss(s.seconds) + "</div></div>";
+    }).join("") +
+    '<p class="why">' + t.right + " right, " + t.wrong + " wrong, " + t.blank + " blank in " +
+    mmss(t.seconds) + (a.wrongPenalty ? ". Raw score " + t.raw.toFixed(2) : "") +
+    (a.writing && a.writing.words ? ". Writing sample " + a.writing.words + " words." : "") + "</p>" +
+    '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.9rem">' +
+    '<button class="btn" data-dl="' + i + '">Download</button>' +
+    '<button class="btn" data-rm="' + i + '">Delete</button></div>' +
+    "</div>";
+}
+
+function draw() {
+  var all = load();
+  var el = document.getElementById("list");
+  if (!all.length) {
+    el.innerHTML = '<p class="empty">Nothing saved in this browser yet. Finish a test and it will ' +
+      'appear here, or open a results file someone sent you.</p>';
+    return;
+  }
+  all.sort(function (a, b) { return b.takenAt.localeCompare(a.takenAt); });
+  el.innerHTML = "<h3 style=\"font-family:var(--serif);font-size:1.3rem;margin-bottom:1rem\">" +
+    all.length + (all.length === 1 ? " attempt" : " attempts") + "</h3>" +
+    all.map(renderAttempt).join("");
+
+  el.querySelectorAll("[data-dl]").forEach(function (b) {
+    b.onclick = function () {
+      var a = load().sort(function (x, y) { return y.takenAt.localeCompare(x.takenAt); })[+b.dataset.dl];
+      download(a, fileFor(a));
+    };
+  });
+  el.querySelectorAll("[data-rm]").forEach(function (b) {
+    b.onclick = function () {
+      var sorted = load().sort(function (x, y) { return y.takenAt.localeCompare(x.takenAt); });
+      var gone = sorted[+b.dataset.rm];
+      if (!confirm("Delete the " + gone.testTitle + " attempt from " + when(gone.takenAt) + "?")) return;
+      sorted.splice(+b.dataset.rm, 1);
+      save(sorted);
+      draw();
+    };
+  });
+}
+
+var who = document.getElementById("who");
+try { who.value = localStorage.getItem(NAME_KEY) || ""; } catch (e) {}
+who.oninput = function () {
+  try { localStorage.setItem(NAME_KEY, who.value.trim()); } catch (e) {}
+};
+
+document.getElementById("exportAll").onclick = function () {
+  var all = load();
+  if (!all.length) { alert("Nothing to export yet."); return; }
+  var name = (who.value.trim() || "attempts").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  download({ student: who.value.trim(), exported: new Date().toISOString(), attempts: all },
+    name + "-all-attempts-" + new Date().toISOString().slice(0, 10) + ".json");
+};
+
+document.getElementById("clearAll").onclick = function () {
+  var all = load();
+  if (!all.length) { alert("Nothing saved in this browser."); return; }
+  if (!confirm("Delete all " + all.length + " saved attempts from this browser? Export them first if you want to keep them.")) return;
+  save([]);
+  draw();
+};
+
+document.getElementById("openFile").onclick = function () { document.getElementById("picker").click(); };
+document.getElementById("picker").onchange = function (e) {
+  var f = e.target.files[0];
+  if (!f) return;
+  var reader = new FileReader();
+  reader.onload = function () {
+    var data;
+    try { data = JSON.parse(reader.result); }
+    catch (err) {
+      document.getElementById("viewer").innerHTML =
+        '<p class="rule warn">That file is not readable JSON, so nothing was opened.</p>';
+      return;
+    }
+    var list = Array.isArray(data) ? data : data.attempts ? data.attempts : [data];
+    document.getElementById("viewer").innerHTML =
+      "<h3 style=\"font-family:var(--serif);font-size:1.3rem;margin:2.5rem 0 0.4rem\">From " +
+      esc(f.name) + "</h3><p class=\"empty\" style=\"margin-bottom:1rem\">Viewing only. Nothing " +
+      "from this file is added to this browser.</p>" + list.map(renderAttempt).join("");
+    document.getElementById("viewer").querySelectorAll("[data-dl],[data-rm]").forEach(function (b) {
+      b.remove();
+    });
+  };
+  reader.readAsText(f);
+  e.target.value = "";
+};
+
+draw();
+</script>
+
+</body>
+</html>

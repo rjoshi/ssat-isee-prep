@@ -1,0 +1,210 @@
+{
+  "id": "isee-middle-qc-drill-01",
+  "exam": "ISEE",
+  "level": "Middle",
+  "title": "Quantitative comparison drill",
+  "description": "Twelve questions in the one format most students have never seen before test day. The maths is easy on purpose. What is being trained here is the habit of testing several values instead of solving once and moving on.",
+  "scoring": {
+    "wrongPenalty": 0
+  },
+  "sections": [
+    {
+      "name": "Quantitative Comparison",
+      "timeLimitSeconds": 600,
+      "questions": [
+        {
+          "id": "C1",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "3/8 of 64",
+            "b": "25% of 96"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "3/8 of 64 is 24, and 25% of 96 is 24. Equal. When both columns are plain arithmetic with no variables, choice D is never right, because everything needed is already given."
+        },
+        {
+          "id": "C2",
+          "stem": "x is greater than 0.",
+          "comparison": {
+            "a": "x divided by 2",
+            "b": "x divided by 3"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "Cutting a positive number into halves always leaves bigger pieces than cutting it into thirds. Test x = 6: 3 against 2. Test x = 0.6: 0.3 against 0.2. Column A wins every time, so the answer is not D. A variable does not automatically make the answer cannot be determined."
+        },
+        {
+          "id": "C3",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "the area of a square with perimeter 20",
+            "b": "the area of a rectangle with length 8 and width 3"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "A square with perimeter 20 has sides of 5, so its area is 25. The rectangle's area is 24. Column A is greater by one. Notice that both shapes have a perimeter of 22 and 20 respectively but very different areas: equal perimeters do not mean equal areas."
+        },
+        {
+          "id": "C4",
+          "stem": "n is an integer and n is greater than 1.",
+          "comparison": {
+            "a": "n squared",
+            "b": "n cubed"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "For any integer above 1, cubing beats squaring: at n = 2 it is 4 against 8, at n = 5 it is 25 against 125. The condition n greater than 1 is doing all the work here. If n could be 1, they would be equal, and if n could be a fraction between 0 and 1, Column A would win. Always read the condition above the columns first."
+        },
+        {
+          "id": "C5",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "the average of 8, 12 and 40",
+            "b": "the median of 8, 12 and 40"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "The average is 60 divided by 3, which is 20. The median is the middle value, 12. Column A is greater. One unusually large value pulls the average up but leaves the median where it is, which is the whole reason both measures exist."
+        },
+        {
+          "id": "C6",
+          "stem": "y is not equal to 0.",
+          "comparison": {
+            "a": "y squared",
+            "b": "y cubed"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 3,
+          "explanation": "Compare this with question 4, where the answer was B. Here y only has to be non zero, so it can be negative. At y = 2, Column B wins with 4 against 8. At y = -2, Column A wins with 4 against -8. The answer changes, so it cannot be determined. Negative numbers and fractions are the two cases people forget to test."
+        },
+        {
+          "id": "C7",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "2 to the power of 5",
+            "b": "5 squared"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "2 to the fifth is 32 and 5 squared is 25, so Column A is greater. The base and exponent are swapped between the columns, and swapping them does not preserve the value."
+        },
+        {
+          "id": "C8",
+          "stem": "A rectangle has an area of 24.",
+          "comparison": {
+            "a": "the perimeter of the rectangle",
+            "b": "20"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 3,
+          "explanation": "A 4 by 6 rectangle has area 24 and perimeter 20, which makes the columns equal. But a 2 by 12 rectangle also has area 24, and its perimeter is 28. A 1 by 24 rectangle gives 50. Since the answer depends on which rectangle you pick, it cannot be determined. Whenever a shape is only partly pinned down, look for a second shape that fits the same description."
+        },
+        {
+          "id": "C9",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "0.4 multiplied by 0.5",
+            "b": "0.4 divided by 0.5"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "Column A is 0.2 and Column B is 0.8. Multiplying by a number smaller than 1 makes a value shrink, while dividing by a number smaller than 1 makes it grow. This runs against the instinct that multiplying always increases, and the ISEE tests it often."
+        },
+        {
+          "id": "C10",
+          "stem": "A triangle has two sides of length 5 and 9.",
+          "comparison": {
+            "a": "the length of the third side",
+            "b": "14"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "Any side of a triangle must be shorter than the sum of the other two, so the third side is less than 14. It also has to be more than 4, the difference between them. The exact length is unknown, but the comparison is still settled, so D is wrong. Not knowing a value is not the same as not knowing the relationship."
+        },
+        {
+          "id": "C11",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "the number of prime numbers between 1 and 10",
+            "b": "4"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "The primes below 10 are 2, 3, 5 and 7, which makes four. Equal. Remember that 1 is not prime, and that 2 is the only even prime, both of which are worth having memorised."
+        },
+        {
+          "id": "C12",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "30% of 50",
+            "b": "50% of 30"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "Both come to 15. Percentages can be flipped, because a% of b always equals b% of a. That shortcut turns awkward sums into easy ones: 8% of 25 is hard, but 25% of 8 is obviously 2."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "id": "ssat-analogy-drill-01",
+  "exam": "SSAT",
+  "level": "Middle",
+  "title": "Analogy drill",
+  "description": "Twelve analogies at real pace, thirty seconds each. The ISEE has no analogies at all, so this is the format that exists only on the SSAT. The method never changes: say the relationship out loud as a sentence before you look at the choices.",
+  "scoring": {
+    "wrongPenalty": 0.25
+  },
+  "sections": [
+    {
+      "name": "Analogies",
+      "timeLimitSeconds": 360,
+      "questions": [
+        {
+          "id": "A1",
+          "type": "analogy",
+          "stem": "Thermometer is to temperature as",
+          "choices": [
+            "clock is to time",
+            "mirror is to face",
+            "telephone is to voice",
+            "window is to light",
+            "pen is to paper"
+          ],
+          "answer": 0,
+          "explanation": "Say it first: a thermometer measures temperature. A clock measures time. A mirror reflects a face rather than measuring it, and that difference is the entire question."
+        },
+        {
+          "id": "A2",
+          "type": "analogy",
+          "stem": "Puppy is to dog as",
+          "choices": [
+            "kitten is to lion",
+            "collar is to pet",
+            "flock is to sheep",
+            "calf is to cow",
+            "bark is to sound"
+          ],
+          "answer": 3,
+          "explanation": "A puppy is a young dog and a calf is a young cow. Choice A gets the young-of relationship right but changes species partway through, so it fails."
+        },
+        {
+          "id": "A3",
+          "type": "analogy",
+          "stem": "Famished is to hungry as",
+          "choices": [
+            "wet is to damp",
+            "tired is to exhausted",
+            "exhausted is to tired",
+            "warm is to hot",
+            "cold is to freezing"
+          ],
+          "answer": 2,
+          "explanation": "Famished is an extreme form of hungry, so the first word is the stronger one. Exhausted is an extreme form of tired, in that same order. Choice B has the right pair pointing the wrong way, and direction is what this question is testing."
+        },
+        {
+          "id": "A4",
+          "type": "analogy",
+          "stem": "Chef is to kitchen as",
+          "choices": [
+            "book is to library",
+            "judge is to courtroom",
+            "patient is to hospital",
+            "car is to garage",
+            "student is to homework"
+          ],
+          "answer": 1,
+          "explanation": "A chef is the professional who works in a kitchen, and a judge is the professional who presides in a courtroom. A patient is in a hospital but does not work there, which is the distinction the wrong answers are built on."
+        },
+        {
+          "id": "A5",
+          "type": "analogy",
+          "stem": "Anonymous is to name as",
+          "choices": [
+            "blind is to darkness",
+            "silent is to library",
+            "hidden is to treasure",
+            "empty is to box",
+            "barefoot is to shoes"
+          ],
+          "answer": 4,
+          "explanation": "Anonymous means without a name, and barefoot means without shoes. The relationship is the absence of a specific thing. Choice D is close, but an empty box lacks contents in general rather than one named thing."
+        },
+        {
+          "id": "A6",
+          "type": "analogy",
+          "stem": "Scissors is to cut as",
+          "choices": [
+            "paper is to write",
+            "kitchen is to cook",
+            "hammer is to nail",
+            "shovel is to dig",
+            "wheel is to roll"
+          ],
+          "answer": 3,
+          "explanation": "Scissors are the tool used to cut, and a shovel is the tool used to dig. Choice C names a tool and the thing it acts on rather than the action, so it breaks the pattern."
+        },
+        {
+          "id": "A7",
+          "type": "analogy",
+          "stem": "Drop is to ocean as",
+          "choices": [
+            "star is to sky",
+            "flock is to bird",
+            "page is to library",
+            "rain is to storm",
+            "grain is to sand"
+          ],
+          "answer": 4,
+          "explanation": "A drop is one tiny unit of an enormous quantity of the same substance, and a grain is one tiny unit of sand. Choice C changes substance partway, since a page belongs to a book rather than directly to a library, and choice B is backwards."
+        },
+        {
+          "id": "A8",
+          "type": "analogy",
+          "stem": "Rehearse is to performance as",
+          "choices": [
+            "sleep is to morning",
+            "applaud is to concert",
+            "train is to competition",
+            "travel is to arrival",
+            "read is to book"
+          ],
+          "answer": 2,
+          "explanation": "You rehearse in preparation for a performance, and you train in preparation for a competition. Choice B happens after the event rather than before it, and timing is the relationship here."
+        },
+        {
+          "id": "A9",
+          "type": "analogy",
+          "stem": "Coward is to courage as",
+          "choices": [
+            "hero is to strength",
+            "miser is to generosity",
+            "scholar is to knowledge",
+            "athlete is to speed",
+            "artist is to talent"
+          ],
+          "answer": 1,
+          "explanation": "A coward is defined by a lack of courage, and a miser is defined by a lack of generosity. Every other choice pairs a person with a quality they possess, which is exactly the opposite relationship. Whenever four choices share a pattern and one does not, the odd one is usually the answer."
+        },
+        {
+          "id": "A10",
+          "type": "analogy",
+          "stem": "Wood is to carve as",
+          "choices": [
+            "clay is to mold",
+            "tree is to forest",
+            "stone is to heavy",
+            "metal is to shine",
+            "glass is to break"
+          ],
+          "answer": 0,
+          "explanation": "Wood is the material you carve to shape it, and clay is the material you mold to shape it. Choice E is a material and something that happens to it accidentally, not a way of working it deliberately."
+        },
+        {
+          "id": "A11",
+          "type": "analogy",
+          "stem": "Symphony is to composer as",
+          "choices": [
+            "orchestra is to conductor",
+            "song is to singer",
+            "painting is to museum",
+            "novel is to author",
+            "theater is to audience"
+          ],
+          "answer": 3,
+          "explanation": "A symphony is the work created by a composer, and a novel is the work created by an author. Choice B is tempting, but a singer performs a song rather than necessarily writing it, and creating and performing are different relationships."
+        },
+        {
+          "id": "A12",
+          "type": "analogy",
+          "stem": "Dam is to river as",
+          "choices": [
+            "bridge is to valley",
+            "fence is to garden",
+            "tourniquet is to bleeding",
+            "sail is to wind",
+            "road is to travel"
+          ],
+          "answer": 2,
+          "explanation": "A dam stops the flow of a river, and a tourniquet stops the flow of blood. Choice B encloses rather than stops a flow, and choice D harnesses a flow instead of halting it. This is the hardest question here because the right answer comes from an unfamiliar subject, which is normal on the SSAT: the vocabulary is deliberately above grade level."
+        }
+      ]
+    }
+  ]
+}

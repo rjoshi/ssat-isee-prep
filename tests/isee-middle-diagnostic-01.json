@@ -1,0 +1,512 @@
+{
+  "id": "isee-middle-diagnostic-01",
+  "exam": "ISEE",
+  "level": "Middle",
+  "title": "Mock 1",
+  "description": "A quarter length version of the real test, with all four sections in the right proportions. Take this one cold, with no preparation at all, so the result tells you where you actually stand.",
+  "scoring": {
+    "wrongPenalty": 0
+  },
+  "sections": [
+    {
+      "name": "Verbal Reasoning",
+      "timeLimitSeconds": 300,
+      "questions": [
+        {
+          "id": "V1",
+          "type": "synonym",
+          "stem": "ABUNDANT",
+          "choices": [
+            "plentiful",
+            "scarce",
+            "costly",
+            "heavy"
+          ],
+          "answer": 0,
+          "explanation": "Abundant means existing in large quantity. Scarce is the opposite, and it is sitting right there as choice B. Three of the five synonyms in this section offer the antonym as a trap, which is a real ISEE habit. Read all four choices before you commit."
+        },
+        {
+          "id": "V2",
+          "type": "synonym",
+          "stem": "DILIGENT",
+          "choices": [
+            "friendly",
+            "clever",
+            "hardworking",
+            "careless"
+          ],
+          "answer": 2,
+          "explanation": "Diligent means showing steady, careful effort. Clever is about ability rather than effort, which is why it is the tempting wrong answer."
+        },
+        {
+          "id": "V3",
+          "type": "synonym",
+          "stem": "CONCEAL",
+          "choices": [
+            "repair",
+            "reveal",
+            "collect",
+            "hide"
+          ],
+          "answer": 3,
+          "explanation": "Conceal means to hide. Reveal is its opposite and looks similar on the page, which is exactly why it is offered."
+        },
+        {
+          "id": "V4",
+          "type": "synonym",
+          "stem": "RESILIENT",
+          "choices": [
+            "fragile",
+            "transparent",
+            "stubborn",
+            "able to recover quickly"
+          ],
+          "answer": 3,
+          "explanation": "Resilient means able to bounce back from difficulty. Stubborn is close enough to catch people out, but it means refusing to change rather than recovering."
+        },
+        {
+          "id": "V5",
+          "type": "synonym",
+          "stem": "NOVICE",
+          "choices": [
+            "expert",
+            "traveler",
+            "beginner",
+            "rival"
+          ],
+          "answer": 2,
+          "explanation": "A novice is someone new to an activity. Expert is the antonym trap again."
+        },
+        {
+          "id": "V6",
+          "type": "completion",
+          "stem": "Although the experiment failed, the team's __________ notes allowed another lab to identify the error.",
+          "choices": [
+            "meticulous",
+            "careless",
+            "brief",
+            "missing"
+          ],
+          "answer": 0,
+          "explanation": "Meticulous means extremely careful about detail. Only very detailed notes would let a different lab find the mistake. The word although signals a contrast with failed, so the blank has to be positive."
+        },
+        {
+          "id": "V7",
+          "type": "completion",
+          "stem": "The scientist was known for her __________; she refused to accept a result until she had repeated it many times.",
+          "choices": [
+            "rigor",
+            "charm",
+            "haste",
+            "modesty"
+          ],
+          "answer": 0,
+          "explanation": "Rigor means strictness and thoroughness. The semicolon means the second half defines the blank, so repeating results many times is the definition you are matching. Haste is the reverse."
+        },
+        {
+          "id": "V8",
+          "type": "completion",
+          "stem": "Cell walls give plants their __________, allowing stems to stand upright without any skeleton.",
+          "choices": [
+            "color",
+            "fragrance",
+            "moisture",
+            "rigidity"
+          ],
+          "answer": 3,
+          "explanation": "Rigidity means stiffness. Standing upright without a skeleton is the clue, and only stiffness explains it."
+        },
+        {
+          "id": "V9",
+          "type": "completion",
+          "stem": "The microscope's magnification proved __________, so the students could not make out the individual nuclei.",
+          "choices": [
+            "sufficient",
+            "expensive",
+            "inadequate",
+            "portable"
+          ],
+          "answer": 2,
+          "explanation": "Inadequate means not enough. The word so means the second half is the consequence of the blank, and failing to see the nuclei is a consequence of too little magnification. Sufficient gives the opposite meaning."
+        },
+        {
+          "id": "V10",
+          "type": "completion",
+          "stem": "Rather than __________ his conclusion, the researcher __________ it, offering three separate lines of evidence.",
+          "choices": [
+            "asserting . . . doubted",
+            "merely stating . . . defended",
+            "hiding . . . concealed",
+            "proving . . . questioned"
+          ],
+          "answer": 1,
+          "explanation": "Rather than sets up a contrast, so the two blanks must pull in opposite directions, and the second must fit with offering three lines of evidence. Only B does both: weak support versus strong support. In C the two words mean nearly the same thing, so there is no contrast at all."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Reasoning",
+      "timeLimitSeconds": 540,
+      "questions": [
+        {
+          "id": "Q1",
+          "stem": "If 3n + 4 = 25, what is the value of n?",
+          "choices": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "answer": 1,
+          "explanation": "Subtract 4 from both sides to get 3n = 21, then divide by 3 to get n = 7."
+        },
+        {
+          "id": "Q2",
+          "stem": "A recipe uses 3/4 cup of sugar to make 12 cookies. How much sugar is needed for 30 cookies?",
+          "choices": [
+            "1 1/4 cups",
+            "1 1/2 cups",
+            "1 3/4 cups",
+            "1 7/8 cups"
+          ],
+          "answer": 3,
+          "explanation": "30 cookies is 30/12, or 2.5 times the recipe. Multiply: 3/4 x 5/2 = 15/8, which is 1 7/8 cups. Doubling to 1 1/2 and stopping there is the common slip, and it is sitting there as a choice."
+        },
+        {
+          "id": "Q3",
+          "stem": "The average of four numbers is 15. Three of the numbers are 12, 18, and 20. What is the fourth number?",
+          "choices": [
+            "10",
+            "12",
+            "15",
+            "18"
+          ],
+          "answer": 0,
+          "explanation": "An average of 15 across four numbers means they total 4 x 15 = 60. The three given numbers add to 50, so the fourth is 10. Turning an average back into a total is the move to remember here."
+        },
+        {
+          "id": "Q4",
+          "stem": "A single cell divides into two cells every 20 minutes. Starting with one cell, how many cells are there after 2 hours?",
+          "choices": [
+            "8",
+            "16",
+            "32",
+            "64"
+          ],
+          "answer": 3,
+          "explanation": "2 hours is 120 minutes, which allows 6 divisions. Each division doubles the count, so the answer is 2 to the 6th power, or 64. The other choices are all real stops along the way: 8 is where you are after one hour, and 32 is one division short."
+        },
+        {
+          "id": "Q5",
+          "stem": "Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "25% of 80",
+            "b": "1/5 of 100"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "25% of 80 is 20, and one fifth of 100 is 20. They are equal. In quantitative comparison questions, work out both columns fully before looking at the choices."
+        },
+        {
+          "id": "Q6",
+          "stem": "x is a positive integer. Compare the quantity in Column A with the quantity in Column B.",
+          "comparison": {
+            "a": "x squared",
+            "b": "2x"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 3,
+          "explanation": "Try several values. At x = 1, Column B wins because 1 is less than 2. At x = 2 they are equal, since 4 = 4. At x = 3, Column A wins because 9 is more than 6. The answer changes, so the relationship cannot be determined. This is the most important question on the whole diagnostic: whenever a comparison contains a variable, test at least 1, 2 and a larger number before answering."
+        },
+        {
+          "id": "Q7",
+          "stem": "A rectangle has a perimeter of 36 and a length that is twice its width. What is its area?",
+          "choices": [
+            "64",
+            "72",
+            "81",
+            "96"
+          ],
+          "answer": 1,
+          "explanation": "Perimeter 36 means length plus width is 18. If the length is twice the width, then 3w = 18, so the width is 6 and the length is 12. The area is 72. The choice 81 is the area of a square with that perimeter, which is what you get by ignoring the second condition."
+        },
+        {
+          "id": "Q8",
+          "stem": "If 5 pens cost $6.25, what is the cost of 8 pens?",
+          "choices": [
+            "$7.50",
+            "$8.75",
+            "$10.00",
+            "$12.50"
+          ],
+          "answer": 2,
+          "explanation": "Find the unit price first: $6.25 divided by 5 is $1.25 per pen. Then 8 x $1.25 = $10.00. The choice $7.50 is the price of 6 pens, which is what you get by adding one pen instead of working out eight."
+        },
+        {
+          "id": "Q9",
+          "stem": "On a number line, point P is at -3 and point Q is at 9. What is the coordinate of the midpoint of PQ?",
+          "choices": [
+            "3",
+            "4",
+            "6",
+            "12"
+          ],
+          "answer": 0,
+          "explanation": "The midpoint is the average of the two coordinates: (-3 + 9) divided by 2 = 3. The choice 6 is half the distance between the points rather than the midpoint position, and 12 is the whole distance. Distance and position are different things on a number line."
+        }
+      ]
+    },
+    {
+      "name": "Reading Comprehension",
+      "timeLimitSeconds": 360,
+      "passage": [
+        "In 1665, an English scientist named Robert Hooke sliced a piece of cork thin enough to let light through and placed it under a microscope he had built himself. What he saw was a honeycomb of tiny empty compartments. They reminded him of the small rooms in which monks slept, and so he borrowed the Latin word for such a room and called them cells. Hooke had given biology one of its most important words, but he had not understood what he was looking at. The compartments in his cork were dead. They were the walls left behind after the living contents were long gone.",
+        "A few years later, a Dutch cloth merchant named Antoni van Leeuwenhoek ground lenses of much higher quality and turned them on pond water. He found it swarming with things that moved. He described them in letters to the Royal Society, and for a while few people believed him, partly because no one else owned lenses good enough to check.",
+        "Almost two centuries passed before anyone assembled these scattered observations into a general rule. In the 1830s, working with far better instruments, Matthias Schleiden and Theodor Schwann proposed that all plants and all animals are built of cells. Rudolf Virchow later added the part that mattered most: every cell comes from another cell. Biology had needed nearly two hundred years, and a long succession of better lenses, to arrive at a sentence a student can now read in an afternoon."
+      ],
+      "questions": [
+        {
+          "id": "R1",
+          "stem": "The passage is primarily concerned with",
+          "choices": [
+            "explaining how a microscope works",
+            "arguing that Hooke deserves more credit than he receives",
+            "describing how the understanding of cells developed alongside better instruments",
+            "comparing plant cells with animal cells"
+          ],
+          "answer": 2,
+          "explanation": "Every paragraph ties an advance in knowledge to an advance in lenses, and the final sentence says so directly. A and D are never discussed at all. B takes one detail about Hooke and inflates it into an argument the passage never makes, which is the classic wrong answer on main idea questions: true-sounding but too narrow."
+        },
+        {
+          "id": "R2",
+          "stem": "According to the passage, Hooke chose the word cell because the compartments reminded him of",
+          "choices": [
+            "a honeycomb built by bees",
+            "prison cells",
+            "the chambers of a heart",
+            "the small rooms where monks slept"
+          ],
+          "answer": 3,
+          "explanation": "Stated outright in the first paragraph. Choice A is mentioned in the passage as a description of the overall pattern, not as the source of the name, so it is a detail lifted from the right paragraph and put to the wrong use."
+        },
+        {
+          "id": "R3",
+          "stem": "As used in the first paragraph, the word compartments most nearly means",
+          "choices": [
+            "enclosed spaces",
+            "instruments",
+            "living organisms",
+            "measurements"
+          ],
+          "answer": 0,
+          "explanation": "In context the compartments are the empty spaces Hooke saw in the cork, so enclosed spaces fits. Living organisms is wrong precisely because the passage stresses that what he saw was dead."
+        },
+        {
+          "id": "R4",
+          "stem": "The passage suggests that Leeuwenhoek's findings were doubted mainly because",
+          "choices": [
+            "he was a merchant rather than a trained scientist",
+            "other people lacked lenses good enough to confirm them",
+            "his letters were poorly written",
+            "pond water was considered an unimportant subject"
+          ],
+          "answer": 1,
+          "explanation": "The passage gives the reason directly: no one else owned lenses good enough to check. Choice A is tempting because the passage does call him a cloth merchant, but it never links that to the doubt. Watch for wrong answers built from true details the passage never connects."
+        },
+        {
+          "id": "R5",
+          "stem": "The author's attitude toward the development of cell theory can best be described as",
+          "choices": [
+            "impatient with how slowly it progressed",
+            "indifferent to the scientists involved",
+            "skeptical that the theory is correct",
+            "appreciative of how gradually the knowledge accumulated"
+          ],
+          "answer": 3,
+          "explanation": "The closing sentence contrasts two hundred years of work with a sentence a student now reads in an afternoon. That contrast is admiring rather than impatient. On attitude questions, ignore how you feel about the topic and find the words the author actually chose."
+        },
+        {
+          "id": "R6",
+          "stem": "The passage is organized primarily by",
+          "choices": [
+            "chronological order",
+            "comparison and contrast",
+            "cause and effect within a single experiment",
+            "order of importance"
+          ],
+          "answer": 0,
+          "explanation": "The passage moves from 1665 to a few years later to the 1830s to Virchow. That is time order. The dates at the start of paragraphs are the giveaway on structure questions."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics Achievement",
+      "timeLimitSeconds": 600,
+      "questions": [
+        {
+          "id": "M1",
+          "stem": "3/8 + 1/6 =",
+          "choices": [
+            "4/14",
+            "13/24",
+            "1/2",
+            "5/8"
+          ],
+          "answer": 1,
+          "explanation": "The lowest common denominator of 8 and 6 is 24. That makes 3/8 into 9/24 and 1/6 into 4/24, which add to 13/24. Choice A is what you get by adding the tops and bottoms separately, which is never how fractions work."
+        },
+        {
+          "id": "M2",
+          "stem": "What is 15% of 240?",
+          "choices": [
+            "24",
+            "30",
+            "36",
+            "48"
+          ],
+          "answer": 2,
+          "explanation": "Split it up: 10% of 240 is 24, and 5% is half of that, 12. Together, 36. Breaking a percentage into 10% and 5% pieces is much faster than long multiplication with no calculator."
+        },
+        {
+          "id": "M3",
+          "stem": "Simplify: 4(2x - 3) - 2(x + 5)",
+          "choices": [
+            "6x - 22",
+            "6x - 2",
+            "10x - 22",
+            "6x + 2"
+          ],
+          "answer": 0,
+          "explanation": "4(2x - 3) is 8x - 12. Then -2(x + 5) is -2x - 10, not -2x + 10. Combining gives 6x - 22. The choice 6x - 2 comes from forgetting to distribute the minus sign across the 5, which is the single most common algebra error on this test."
+        },
+        {
+          "id": "M4",
+          "stem": "Which fraction is equal to 0.024?",
+          "choices": [
+            "24/100",
+            "24/1000",
+            "240/100",
+            "2.4/10"
+          ],
+          "answer": 1,
+          "explanation": "0.024 is twenty four thousandths, because the last digit sits in the thousandths place. Choice D equals 0.24, ten times too large, and choice A equals 0.24 as well."
+        },
+        {
+          "id": "M5",
+          "stem": "What is the prime factorization of 84?",
+          "choices": [
+            "2 x 42",
+            "2 squared x 3 x 7",
+            "2 squared x 21",
+            "2 x 3 squared x 7"
+          ],
+          "answer": 1,
+          "explanation": "84 = 4 x 21 = 2 x 2 x 3 x 7. Two of the choices stop early and leave 42 and 21 sitting in the answer, so they are factorizations but not prime ones. And 2 x 3 squared x 7 multiplies out to 126, not 84."
+        },
+        {
+          "id": "M6",
+          "stem": "Two angles of a triangle measure 43 degrees and 67 degrees. What is the measure of the third angle?",
+          "choices": [
+            "43 degrees",
+            "60 degrees",
+            "70 degrees",
+            "110 degrees"
+          ],
+          "answer": 2,
+          "explanation": "The angles of any triangle add to 180 degrees. 180 - 43 - 67 = 70. Choice D is just the sum of the two given angles, which is the answer to a question nobody asked."
+        },
+        {
+          "id": "M7",
+          "stem": "Solve for x: 7 - 2x = 1",
+          "choices": [
+            "2",
+            "3",
+            "4",
+            "-3"
+          ],
+          "answer": 1,
+          "explanation": "Subtract 7 from both sides to get -2x = -6, then divide by -2 to get x = 3. Choice D is what happens if you lose track of one of the negative signs."
+        },
+        {
+          "id": "M8",
+          "stem": "What is the value of (2 cubed x 3 squared) divided by 6?",
+          "choices": [
+            "6",
+            "8",
+            "12",
+            "18"
+          ],
+          "answer": 2,
+          "explanation": "2 cubed is 8 and 3 squared is 9, so the top is 72. Divided by 6 that is 12. Note that 2 cubed means 2 x 2 x 2, not 2 x 3."
+        },
+        {
+          "id": "M9",
+          "stem": "In a class, the ratio of boys to girls is 3 to 5. If there are 40 students in all, how many are girls?",
+          "choices": [
+            "15",
+            "20",
+            "24",
+            "25"
+          ],
+          "answer": 3,
+          "explanation": "A ratio of 3 to 5 makes 8 parts in total, so each part is 40 divided by 8, which is 5. Girls are 5 parts, so 25. Choice A is the number of boys, and answering with the wrong group is the usual mistake here."
+        },
+        {
+          "id": "M10",
+          "stem": "A circle has a radius of 5. What is its area?",
+          "choices": [
+            "10 pi",
+            "25 pi",
+            "50 pi",
+            "100 pi"
+          ],
+          "answer": 1,
+          "explanation": "Area is pi times the radius squared, so pi x 25. Choice A is the circumference, 2 pi r, and choice D uses the diameter squared instead of the radius."
+        },
+        {
+          "id": "M11",
+          "stem": "What is the median of 4, 9, 2, 7, 11, 8?",
+          "choices": [
+            "6.8",
+            "7",
+            "7.5",
+            "8"
+          ],
+          "answer": 2,
+          "explanation": "Sort them first: 2, 4, 7, 8, 9, 11. With an even count there is no single middle value, so average the middle two: (7 + 8) divided by 2 = 7.5. The choice 6.8 is roughly the mean, which is a different measure entirely, and 7 and 8 are the two middle values taken on their own. Always sort before finding a median."
+        },
+        {
+          "id": "M12",
+          "stem": "A cube has an edge length of 4 cm. What is its volume?",
+          "choices": [
+            "16 cubic cm",
+            "48 cubic cm",
+            "64 cubic cm",
+            "96 cubic cm"
+          ],
+          "answer": 2,
+          "explanation": "Volume is edge cubed: 4 x 4 x 4 = 64. Choice D, 96, is the surface area, which is six faces of 16."
+        }
+      ]
+    }
+  ],
+  "writing": {
+    "name": "Essay",
+    "position": "last",
+    "timeLimitSeconds": 1800,
+    "note": "Not scored, but it is sent directly to every school that receives your results. It is the only sample of unedited writing an admissions office will see.",
+    "prompts": [
+      "Describe something you wanted to learn that no one asked you to learn. What did you do about it, and what did you find out?"
+    ]
+  }
+}

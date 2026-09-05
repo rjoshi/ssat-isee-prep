@@ -1,0 +1,278 @@
+{
+  "id": "isee-middle-verbal-01",
+  "exam": "ISEE",
+  "level": "Middle",
+  "title": "Verbal sprint 1",
+  "description": "Twenty verbal questions in ten minutes, which is the real pace of about thirty seconds each. Verbal is usually the weakest section for strong maths students and the one that responds fastest to practice.",
+  "scoring": {
+    "wrongPenalty": 0
+  },
+  "sections": [
+    {
+      "name": "Verbal Reasoning",
+      "timeLimitSeconds": 600,
+      "questions": [
+        {
+          "id": "S1",
+          "type": "synonym",
+          "stem": "VIVID",
+          "choices": [
+            "strikingly clear",
+            "faint",
+            "noisy",
+            "brief"
+          ],
+          "answer": 0,
+          "explanation": "Vivid describes something bright and sharply detailed, whether a colour or a memory. Faint is the antonym."
+        },
+        {
+          "id": "S2",
+          "type": "synonym",
+          "stem": "FUTILE",
+          "choices": [
+            "fertile",
+            "rapid",
+            "useless",
+            "hidden"
+          ],
+          "answer": 2,
+          "explanation": "Futile means having no chance of success. Fertile is offered because it looks and sounds similar, but the two words are unrelated. Lookalike traps are common in this section."
+        },
+        {
+          "id": "S3",
+          "type": "synonym",
+          "stem": "PROVOKE",
+          "choices": [
+            "soothe",
+            "postpone",
+            "surround",
+            "stir up"
+          ],
+          "answer": 3,
+          "explanation": "To provoke is to stir up a reaction. Soothe is the opposite."
+        },
+        {
+          "id": "S4",
+          "type": "synonym",
+          "stem": "AMPLE",
+          "choices": [
+            "narrow",
+            "more than enough",
+            "empty",
+            "uneven"
+          ],
+          "answer": 1,
+          "explanation": "Ample means plentiful, with room to spare."
+        },
+        {
+          "id": "S5",
+          "type": "synonym",
+          "stem": "TENTATIVE",
+          "choices": [
+            "certain",
+            "permanent",
+            "not final",
+            "enormous"
+          ],
+          "answer": 2,
+          "explanation": "A tentative plan is provisional and might still change. Certain and permanent are both close to the opposite."
+        },
+        {
+          "id": "S6",
+          "type": "synonym",
+          "stem": "SCRUTINIZE",
+          "choices": [
+            "glance at",
+            "examine closely",
+            "criticize",
+            "ignore"
+          ],
+          "answer": 1,
+          "explanation": "To scrutinize is to inspect in detail. Criticize is the tempting near miss, since scrutiny often leads to criticism, but the word itself only means to look hard."
+        },
+        {
+          "id": "S7",
+          "type": "synonym",
+          "stem": "OBSOLETE",
+          "choices": [
+            "obvious",
+            "difficult",
+            "required",
+            "no longer in use"
+          ],
+          "answer": 3,
+          "explanation": "Obsolete describes something replaced by something newer, like a floppy disk."
+        },
+        {
+          "id": "S8",
+          "type": "synonym",
+          "stem": "CANDID",
+          "choices": [
+            "sweet",
+            "honest and direct",
+            "secretive",
+            "cautious"
+          ],
+          "answer": 1,
+          "explanation": "A candid answer is frank and unguarded. Choice A plays on the word candy, which shares no root with it."
+        },
+        {
+          "id": "S9",
+          "type": "synonym",
+          "stem": "ARID",
+          "choices": [
+            "fertile",
+            "icy",
+            "very dry",
+            "crowded"
+          ],
+          "answer": 2,
+          "explanation": "Arid describes land so dry that little grows there. Fertile is the antonym trap."
+        },
+        {
+          "id": "S10",
+          "type": "synonym",
+          "stem": "INTRICATE",
+          "choices": [
+            "simple",
+            "fragile",
+            "ancient",
+            "complicated in detail"
+          ],
+          "answer": 3,
+          "explanation": "Intricate means having many small parts arranged in a complex way, like the inside of a watch."
+        },
+        {
+          "id": "S11",
+          "type": "completion",
+          "stem": "The evidence was __________: every test pointed to the same conclusion.",
+          "choices": [
+            "conflicting",
+            "missing",
+            "unanimous",
+            "preliminary"
+          ],
+          "answer": 2,
+          "explanation": "The colon means the second half defines the blank. If every test agrees, the evidence is unanimous. Conflicting says the opposite of what follows."
+        },
+        {
+          "id": "S12",
+          "type": "completion",
+          "stem": "Because the samples had been left uncovered overnight, the results were __________ and had to be discarded.",
+          "choices": [
+            "confirmed",
+            "precise",
+            "duplicated",
+            "contaminated"
+          ],
+          "answer": 3,
+          "explanation": "Because signals cause and effect, and the effect given is that the results were thrown out. Only contaminated explains that. Precise and confirmed would mean keeping them."
+        },
+        {
+          "id": "S13",
+          "type": "completion",
+          "stem": "She spoke with such __________ that even those who disagreed with her listened carefully.",
+          "choices": [
+            "hesitation",
+            "conviction",
+            "volume",
+            "confusion"
+          ],
+          "answer": 1,
+          "explanation": "Conviction means firm belief. The clue is that opponents still listened, which strength of belief explains and hesitation does not. Volume is a literal trap on the word spoke."
+        },
+        {
+          "id": "S14",
+          "type": "completion",
+          "stem": "The instructions were deliberately __________ so that students would have to work out the method for themselves.",
+          "choices": [
+            "detailed",
+            "lengthy",
+            "illegible",
+            "incomplete"
+          ],
+          "answer": 3,
+          "explanation": "Deliberately tells you the gap was on purpose, and the goal was for students to figure things out. Incomplete fits. Illegible is unreadable rather than unfinished, and would be a mistake rather than a design."
+        },
+        {
+          "id": "S15",
+          "type": "completion",
+          "stem": "Far from being __________, the young researcher asked questions constantly.",
+          "choices": [
+            "reserved",
+            "curious",
+            "energetic",
+            "talkative"
+          ],
+          "answer": 0,
+          "explanation": "Far from being sets up a contrast, so the blank must be the opposite of asking constant questions. Reserved means holding back. Curious and talkative both agree with the second half instead of contrasting with it, which is why reading the connecting words first matters so much."
+        },
+        {
+          "id": "S16",
+          "type": "completion",
+          "stem": "The theory remained __________ until three separate laboratories reproduced the result.",
+          "choices": [
+            "disputed",
+            "accepted",
+            "published",
+            "forgotten"
+          ],
+          "answer": 0,
+          "explanation": "Until marks a turning point, so the blank describes how things stood before independent confirmation. Disputed fits. Accepted reverses the sentence."
+        },
+        {
+          "id": "S17",
+          "type": "completion",
+          "stem": "The new lens revealed details that had previously been __________ even at high magnification.",
+          "choices": [
+            "indistinct",
+            "apparent",
+            "colorful",
+            "enlarged"
+          ],
+          "answer": 0,
+          "explanation": "Revealed and previously together mean the details were not visible before. Indistinct means blurred or unclear. Apparent means the opposite."
+        },
+        {
+          "id": "S18",
+          "type": "completion",
+          "stem": "His explanation was so __________ that we understood it at once, despite knowing nothing about the subject.",
+          "choices": [
+            "technical",
+            "lucid",
+            "lengthy",
+            "rushed"
+          ],
+          "answer": 1,
+          "explanation": "Lucid means clear and easy to follow. The clue is understanding at once while knowing nothing, which rules out technical."
+        },
+        {
+          "id": "S19",
+          "type": "completion",
+          "stem": "Rather than __________ the disagreement, the teacher used it to show how scientists actually settle questions.",
+          "choices": [
+            "exploring",
+            "explaining",
+            "suppressing",
+            "recording"
+          ],
+          "answer": 2,
+          "explanation": "Rather than sets up a contrast with using the disagreement productively, so the blank must be something that shuts it down. Suppressing fits. Exploring and explaining both point the same way as the rest of the sentence, giving no contrast at all."
+        },
+        {
+          "id": "S20",
+          "type": "completion",
+          "stem": "The first draft was __________, but after weeks of revision it became one of the clearest papers in the journal.",
+          "choices": [
+            "polished",
+            "muddled",
+            "brief",
+            "accepted"
+          ],
+          "answer": 1,
+          "explanation": "But signals a reversal, so the blank must contrast with clearest. Muddled means confused and disorganised. Polished would mean the draft was already good, leaving nothing for the revision to fix."
+        }
+      ]
+    }
+  ]
+}

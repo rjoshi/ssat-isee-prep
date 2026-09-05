@@ -1,0 +1,174 @@
+{
+  "id": "ssat-quant-drill-01",
+  "exam": "SSAT",
+  "level": "Middle",
+  "title": "Quantitative drill",
+  "description": "Twelve questions at real SSAT pace, about seventy seconds each, spread across the four content areas the test draws on: number operations, algebra, geometry and data. Five choices, and a wrong answer costs a quarter point.",
+  "scoring": {
+    "wrongPenalty": 0.25
+  },
+  "sections": [
+    {
+      "name": "Quantitative",
+      "timeLimitSeconds": 840,
+      "questions": [
+        {
+          "id": "QD1",
+          "stem": "If 3(x + 2) = 21, what is the value of x?",
+          "choices": [
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "answer": 0,
+          "explanation": "Divide both sides by 3 first to get x + 2 = 7, so x = 5. Dividing before distributing saves a step. The choice 7 is what you get by forgetting the plus 2 entirely."
+        },
+        {
+          "id": "QD2",
+          "stem": "What is 40% of 250?",
+          "choices": [
+            "25",
+            "40",
+            "80",
+            "90",
+            "100"
+          ],
+          "answer": 4,
+          "explanation": "10% of 250 is 25, so 40% is four of those, which is 100. Building a percentage out of 10% chunks is the fastest route without a calculator. The choice 25 is only 10%, and 40 is the percentage itself rather than the answer."
+        },
+        {
+          "id": "QD3",
+          "stem": "The average of 6, 10 and x is 9. What is x?",
+          "choices": [
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+          ],
+          "answer": 3,
+          "explanation": "Three numbers averaging 9 must total 27. Since 6 and 10 add to 16, x is 11. Convert an average into a total and these stop being guesswork."
+        },
+        {
+          "id": "QD4",
+          "stem": "What is the least common multiple of 6 and 8?",
+          "choices": [
+            "12",
+            "24",
+            "48",
+            "72",
+            "144"
+          ],
+          "answer": 1,
+          "explanation": "List multiples of 8 and check each against 6: 8 no, 16 no, 24 yes. The choice 48 is a common multiple but not the least one, and 144 is the two numbers multiplied, which is only the answer when they share no factors."
+        },
+        {
+          "id": "QD5",
+          "stem": "A shirt costs $40 after a 20% discount. What was the original price?",
+          "choices": [
+            "$32",
+            "$48",
+            "$50",
+            "$52",
+            "$64"
+          ],
+          "answer": 2,
+          "explanation": "After 20% off, the price paid is 80% of the original, so the original is 40 divided by 0.8, which is $50. The choice $48 is 40 plus 20% of 40, and $32 is 20% taken off 40 again. Adding 20% back does not undo taking 20% off."
+        },
+        {
+          "id": "QD6",
+          "stem": "A rectangle measures 8 by 5. A square has the same perimeter. What is the square's area?",
+          "choices": [
+            "40",
+            "42.25",
+            "45",
+            "49",
+            "52"
+          ],
+          "answer": 1,
+          "explanation": "The rectangle's perimeter is 26, so the square has sides of 6.5 and an area of 42.25. The rectangle's own area is 40, sitting there as the first choice. Equal perimeters do not mean equal areas, and the square always wins on area."
+        },
+        {
+          "id": "QD7",
+          "stem": "On a coordinate grid, how far is it from the point (1, 2) to the point (4, 6)?",
+          "choices": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "answer": 2,
+          "explanation": "The horizontal gap is 3 and the vertical gap is 4, making a right triangle with legs 3 and 4, so the straight line distance is 5. The 3, 4, 5 triangle turns up constantly and is worth memorising. The choices 3 and 4 are the two legs on their own."
+        },
+        {
+          "id": "QD8",
+          "stem": "If a fair six sided die is rolled once, what is the probability of getting a number greater than 4?",
+          "choices": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3",
+            "5/6"
+          ],
+          "answer": 1,
+          "explanation": "Only 5 and 6 are greater than 4, so that is 2 outcomes out of 6, which simplifies to 1/3. The word greater excludes 4 itself. Reading it as 4 or more gives 1/2, which is the next choice along."
+        },
+        {
+          "id": "QD9",
+          "stem": "Simplify: 12x squared y divided by 4xy",
+          "choices": [
+            "3x",
+            "3xy",
+            "8x",
+            "3x squared y",
+            "48x"
+          ],
+          "answer": 0,
+          "explanation": "Divide the numbers to get 3, then subtract the powers: x squared over x leaves x, and y over y cancels completely. The result is 3x. The choice 8x comes from subtracting 4 from 12 instead of dividing."
+        },
+        {
+          "id": "QD10",
+          "stem": "A jar holds red and blue marbles in the ratio 3 to 2. If there are 30 red marbles, how many blue ones are there?",
+          "choices": [
+            "12",
+            "15",
+            "18",
+            "20",
+            "45"
+          ],
+          "answer": 3,
+          "explanation": "Thirty red marbles is 3 parts, so each part is 10, and 2 parts of blue is 20. The choice 45 comes from applying the ratio the wrong way round, and 15 is half of 30, which ignores the ratio altogether."
+        },
+        {
+          "id": "QD11",
+          "stem": "The sides of a triangle are 3x, 4x and 5x, and its perimeter is 36. How long is the longest side?",
+          "choices": [
+            "3",
+            "6",
+            "9",
+            "12",
+            "15"
+          ],
+          "answer": 4,
+          "explanation": "The three sides add to 12x, so 12x = 36 and x = 3. The longest side is 5x, which is 15. The choices 9 and 12 are the other two sides and 3 is x itself, so three of the five choices are quantities the question did not ask for."
+        },
+        {
+          "id": "QD12",
+          "stem": "A chart shows a shop sold 20 books in March and 25 in April. By what percentage did sales increase?",
+          "choices": [
+            "5%",
+            "20%",
+            "25%",
+            "80%",
+            "125%"
+          ],
+          "answer": 2,
+          "explanation": "The increase is 5 books, and a percentage change is always measured against the starting figure, not the finishing one. So it is 5 out of 20, which is 25%. The choice 20% comes from dividing by 25 instead, and that mistake is the entire point of the question."
+        }
+      ]
+    }
+  ]
+}

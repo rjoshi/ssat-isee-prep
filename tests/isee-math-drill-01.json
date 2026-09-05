@@ -1,0 +1,162 @@
+{
+  "id": "isee-math-drill-01",
+  "exam": "ISEE",
+  "level": "Middle",
+  "title": "Mathematics achievement drill",
+  "description": "Twelve curriculum questions at real ISEE pace, about fifty seconds each. This is the section that rewards knowing the material rather than spotting a trick. Four choices, and guessing costs nothing, so answer every one.",
+  "scoring": {
+    "wrongPenalty": 0
+  },
+  "sections": [
+    {
+      "name": "Mathematics Achievement",
+      "timeLimitSeconds": 610,
+      "questions": [
+        {
+          "id": "MD1",
+          "stem": "5/6 - 1/4 =",
+          "choices": [
+            "4/2",
+            "4/24",
+            "1/2",
+            "7/12"
+          ],
+          "answer": 3,
+          "explanation": "The lowest common denominator of 6 and 4 is 12, giving 10/12 minus 3/12, which is 7/12. The choice 4/2 comes from subtracting tops and bottoms separately, which is never how fractions work."
+        },
+        {
+          "id": "MD2",
+          "stem": "What is the value of 3 + 4 x 2 squared?",
+          "choices": [
+            "19",
+            "28",
+            "49",
+            "196"
+          ],
+          "answer": 0,
+          "explanation": "Order of operations: the exponent first, so 2 squared is 4, then multiply to get 16, then add 3 for 19. Choice B comes from multiplying before squaring, and choice C from adding first."
+        },
+        {
+          "id": "MD3",
+          "stem": "Solve for y: 5y + 7 = 2y + 22",
+          "choices": [
+            "3",
+            "4",
+            "5",
+            "29/7"
+          ],
+          "answer": 2,
+          "explanation": "Subtract 2y from both sides to get 3y + 7 = 22, then subtract 7 to get 3y = 15, so y = 5. Move the variables to one side before the numbers and this stays tidy."
+        },
+        {
+          "id": "MD4",
+          "stem": "A recipe calls for 2 1/2 cups of flour. How much is needed for half the recipe?",
+          "choices": [
+            "1 cup",
+            "1 1/4 cups",
+            "1 1/2 cups",
+            "5 cups"
+          ],
+          "answer": 1,
+          "explanation": "Half of 2 1/2 is 1 1/4. Turn it into 5/2 first if that helps, since half of 5/2 is 5/4. Choice D doubles the recipe instead of halving it."
+        },
+        {
+          "id": "MD5",
+          "stem": "What is the area of a triangle with a base of 10 and a height of 6?",
+          "choices": [
+            "16",
+            "30",
+            "60",
+            "120"
+          ],
+          "answer": 1,
+          "explanation": "Area is half the base times the height, so half of 60 is 30. Choice C is what you get by forgetting the half, which is the single most common geometry slip on this test."
+        },
+        {
+          "id": "MD6",
+          "stem": "Which of the following is equivalent to 0.35?",
+          "choices": [
+            "3/5",
+            "35/10",
+            "1/35",
+            "7/20"
+          ],
+          "answer": 3,
+          "explanation": "0.35 is 35/100, which simplifies by 5 to 7/20. The choice 3/5 is 0.6 and 35/10 is 3.5, ten times too large."
+        },
+        {
+          "id": "MD7",
+          "stem": "The temperature was -4 degrees at dawn and rose 11 degrees by noon. What was it at noon?",
+          "choices": [
+            "-15 degrees",
+            "-7 degrees",
+            "7 degrees",
+            "15 degrees"
+          ],
+          "answer": 2,
+          "explanation": "Starting at -4 and adding 11 crosses zero and lands on 7. Getting to zero uses 4 of the 11 degrees, leaving 7. Choice B subtracts instead of adding."
+        },
+        {
+          "id": "MD8",
+          "stem": "What is the perimeter of a regular hexagon with sides of length 7?",
+          "choices": [
+            "28",
+            "35",
+            "42",
+            "49"
+          ],
+          "answer": 2,
+          "explanation": "Regular means all sides are equal, and a hexagon has six of them, so 6 times 7 is 42. Choice A treats it as a square and choice B as a pentagon, so the trap is miscounting the sides rather than the arithmetic."
+        },
+        {
+          "id": "MD9",
+          "stem": "If 4 notebooks cost $9.00, how much do 10 notebooks cost?",
+          "choices": [
+            "$18.00",
+            "$22.50",
+            "$24.00",
+            "$36.00"
+          ],
+          "answer": 1,
+          "explanation": "One notebook is $2.25, so ten cost $22.50. Alternatively, ten is two and a half times four, and two and a half times $9.00 is $22.50. Choice A only doubles the price."
+        },
+        {
+          "id": "MD10",
+          "stem": "What is the mode of 3, 7, 3, 9, 4, 3, 7?",
+          "choices": [
+            "3",
+            "4",
+            "5.14",
+            "7"
+          ],
+          "answer": 0,
+          "explanation": "The mode is the value that appears most often, and 3 appears three times against two sevens. Choice C is roughly the mean and choice B is the median once sorted, so all three averages are represented here. Know which one is being asked for."
+        },
+        {
+          "id": "MD11",
+          "stem": "A map uses a scale of 1 inch to 25 miles. Two towns are 3.5 inches apart on the map. How far apart are they in reality?",
+          "choices": [
+            "70 miles",
+            "80.5 miles",
+            "87.5 miles",
+            "92.5 miles"
+          ],
+          "answer": 2,
+          "explanation": "Multiply 3.5 by 25. Three inches is 75 miles and half an inch is 12.5, giving 87.5 miles. Splitting the multiplication into a whole part and a half is faster than long multiplication."
+        },
+        {
+          "id": "MD12",
+          "stem": "What is the value of x if the angles of a triangle measure x, 2x and 3x degrees?",
+          "choices": [
+            "30",
+            "45",
+            "60",
+            "90"
+          ],
+          "answer": 0,
+          "explanation": "The three angles add to 180, and x plus 2x plus 3x is 6x, so 6x = 180 and x = 30. The angles are then 30, 60 and 90, which is why all three appear among the choices. Answering with the largest angle instead of x is the real risk here."
+        }
+      ]
+    }
+  ]
+}

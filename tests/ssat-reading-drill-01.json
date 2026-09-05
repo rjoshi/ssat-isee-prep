@@ -1,0 +1,147 @@
+{
+  "id": "ssat-reading-drill-01",
+  "exam": "SSAT",
+  "level": "Middle",
+  "title": "Reading drill",
+  "description": "Eight questions on two short passages at real pace, a minute each. SSAT reading mixes nonfiction with fiction and poetry, so one of these is a poem. Five choices, and a wrong answer costs a quarter point.",
+  "scoring": {
+    "wrongPenalty": 0.25
+  },
+  "sections": [
+    {
+      "name": "Reading",
+      "timeLimitSeconds": 480,
+      "passages": {
+        "p1": [
+          "A honeybee that finds a good patch of flowers comes home and dances. She runs in a figure of eight across the vertical comb, waggling her body along the straight middle stretch, and the other bees crowd around to read her.",
+          "The dance is a set of instructions. The direction of the straight run, measured against straight up on the comb, gives the angle of the flowers from the sun. The length of the waggle gives the distance. A run lasting one second means roughly a kilometre. The vigour of the whole performance suggests how good the find is.",
+          "What makes this remarkable is not that bees communicate. Plenty of animals do. It is that the dance is abstract. Straight up on a dark vertical comb stands in for the position of a sun the watching bees cannot see, and a second of waggling stands in for a kilometre of flying. The bee is not pointing at the flowers. She is describing them."
+        ],
+        "p2": [
+          "The river does not hurry, and it does not rest.",
+          "It has worn this valley the way a hand wears a bannister,",
+          "not by force but by returning.",
+          "",
+          "The hills that watched it start are lower now.",
+          "The stone that split it once lies smooth beneath it.",
+          "It did not argue. It went around, and around, and around,",
+          "and the stone gave up its corners one at a time."
+        ]
+      },
+      "questions": [
+        {
+          "id": "RD1",
+          "passage": "p1",
+          "stem": "According to the passage, the length of the waggle run tells other bees",
+          "choices": [
+            "how far away the flowers are",
+            "how many flowers there are",
+            "the direction of the flowers",
+            "how long the dancer has been away",
+            "which flowers to avoid"
+          ],
+          "answer": 0,
+          "explanation": "The second paragraph assigns each part of the dance a meaning: direction comes from the angle of the run, distance comes from its length. Choice C is the right kind of information attached to the wrong part of the dance, which is the standard trap when a passage lists several details."
+        },
+        {
+          "id": "RD2",
+          "passage": "p1",
+          "stem": "The author considers the dance remarkable mainly because",
+          "choices": [
+            "bees are small animals",
+            "no other animal communicates at all",
+            "one thing is used to stand for another",
+            "the bees crowd around the dancer",
+            "it happens in the dark"
+          ],
+          "answer": 2,
+          "explanation": "The third paragraph says outright that plenty of animals communicate, and that what matters here is abstraction: up stands for the sun, a second stands for a kilometre. Choice B contradicts the passage directly, which is worth noticing because it recycles words from the text while reversing their sense."
+        },
+        {
+          "id": "RD3",
+          "passage": "p1",
+          "stem": "As used in the second paragraph, the word vigour most nearly means",
+          "choices": [
+            "accuracy",
+            "honesty",
+            "length",
+            "energy",
+            "direction"
+          ],
+          "answer": 3,
+          "explanation": "A vigorous performance is an energetic one, and the passage links it to how good the find is: a better patch is worth dancing harder about. Choice C is already taken by a different feature of the dance."
+        },
+        {
+          "id": "RD4",
+          "passage": "p1",
+          "stem": "The final sentence, that the bee is describing the flowers rather than pointing at them, emphasises that",
+          "choices": [
+            "the bee cannot see the flowers from the hive",
+            "pointing would be more efficient",
+            "bees have poor eyesight",
+            "the other bees do not understand the dance",
+            "the dance conveys information about something absent"
+          ],
+          "answer": 4,
+          "explanation": "Pointing needs the thing to be present. Describing does not, and that is the distinction the whole paragraph builds toward. Choice A is true of the situation but is not what the contrast is emphasising, and telling those two apart is what these questions test."
+        },
+        {
+          "id": "RD5",
+          "passage": "p2",
+          "stem": "The comparison of the river to a hand on a bannister suggests that the valley was shaped by",
+          "choices": [
+            "long repetition rather than force",
+            "human hands",
+            "a single violent flood",
+            "the weight of the hills",
+            "sudden changes of direction"
+          ],
+          "answer": 0,
+          "explanation": "The next line says it plainly: not by force but by returning. A hand wears a bannister smooth over years of ordinary touching. When a poem gives you an image and then a plain statement, the plain statement is usually the answer."
+        },
+        {
+          "id": "RD6",
+          "passage": "p2",
+          "stem": "The repetition of around in the second stanza mainly creates a sense of",
+          "choices": [
+            "confusion",
+            "patient persistence",
+            "anger",
+            "speed",
+            "indecision"
+          ],
+          "answer": 1,
+          "explanation": "Saying it three times makes the reader feel the passage of time the river spent doing the same thing. The line before it, that the river did not argue, rules out anger, and the poem's opening rules out speed."
+        },
+        {
+          "id": "RD7",
+          "passage": "p2",
+          "stem": "The line that the stone gave up its corners one at a time suggests that the stone",
+          "choices": [
+            "shattered suddenly",
+            "was removed by people",
+            "wore down gradually",
+            "was never really there",
+            "blocked the river permanently"
+          ],
+          "answer": 2,
+          "explanation": "One at a time is the key phrase, and it matches the bannister image from the first stanza. Choice A is the opposite kind of change, and the poem spends every line arguing against it."
+        },
+        {
+          "id": "RD8",
+          "passage": "p2",
+          "stem": "Which best states the poem's main idea?",
+          "choices": [
+            "Rivers are dangerous",
+            "Nature is unpredictable",
+            "Water is stronger than stone",
+            "Hills eventually disappear",
+            "Steady persistence outlasts resistance"
+          ],
+          "answer": 4,
+          "explanation": "Choice C is close and tempting, but the poem is not really about strength. It says the river did not argue and did not use force. It won by returning. The distinction between winning by strength and winning by persistence is the whole poem, and main idea questions on poetry usually turn on exactly this kind of near miss."
+        }
+      ]
+    }
+  ]
+}

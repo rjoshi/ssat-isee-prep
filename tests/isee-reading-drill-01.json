@@ -1,0 +1,134 @@
+{
+  "id": "isee-reading-drill-01",
+  "exam": "ISEE",
+  "level": "Middle",
+  "title": "Reading drill",
+  "description": "Eight questions on two passages at real ISEE pace, just under a minute each. ISEE reading leans toward informational passages across science, history and the humanities. Four choices, and guessing is free.",
+  "scoring": {
+    "wrongPenalty": 0
+  },
+  "sections": [
+    {
+      "name": "Reading Comprehension",
+      "timeLimitSeconds": 470,
+      "passages": {
+        "p1": [
+          "For most of history, the fastest way to send a message was to hand it to someone travelling in the right direction. A letter from London to Bombay in 1830 took months, and the reply took months more, so a conversation across that distance lasted the better part of a year.",
+          "The telegraph broke this. By the 1870s a cable ran along the sea floor, and a message that had taken ten weeks arrived in hours. What changed was not just speed. For the first time, information could travel faster than the fastest person could, and the two came apart permanently.",
+          "The consequences reached places nobody had thought to predict. Newspapers could print yesterday's foreign news instead of last season's. Markets in distant cities began to move together, because a price in one was known in the other before the day ended. Armies could be directed from capitals they were nowhere near. A technology built to carry words ended up rearranging trade, journalism and war, none of which its inventors had set out to touch."
+        ],
+        "p2": [
+          "The octopus has no bones, which means it has no fixed shape, and no fixed shape means no reliable sense of where its own arms are. A human brain always knows roughly where a hand is, because the elbow and shoulder only bend in certain ways. An octopus arm can bend anywhere along its length, in any direction, which is far too much information for one brain to track.",
+          "So the octopus does not try. Most of its neurons are not in its head at all. They are distributed along the arms, which handle a great deal of the work themselves. An arm can reach into a crevice, identify something edible by touch and begin passing it back toward the mouth without the central brain issuing detailed orders.",
+          "This raises a question that is easier to ask than to answer. When an arm solves a problem the brain was not attending to, who has done the solving? Biologists mostly avoid the question. It sits at the edge of what the word thinking is built to describe, and the octopus, which has no interest in our vocabulary, goes on doing it."
+        ]
+      },
+      "questions": [
+        {
+          "id": "IR1",
+          "passage": "p1",
+          "stem": "The passage is primarily concerned with",
+          "choices": [
+            "how underwater cables were built",
+            "the wide effects of separating information from travel",
+            "why letters to Bombay were slow",
+            "the decline of the newspaper industry"
+          ],
+          "answer": 1,
+          "explanation": "The first paragraph sets up the old situation, the second names the break, and the third lists effects across three unrelated fields. Choice C is only the setup, and mistaking the opening scene for the subject is the most common error on main idea questions."
+        },
+        {
+          "id": "IR2",
+          "passage": "p1",
+          "stem": "According to the passage, before the telegraph a message could travel no faster than",
+          "choices": [
+            "a ship could sail in calm weather",
+            "a horse could gallop",
+            "news could be printed",
+            "a person going the same way"
+          ],
+          "answer": 3,
+          "explanation": "The opening sentence says the fastest way to send a message was to hand it to someone travelling in the right direction. The choices naming a ship and a horse invent specific means of travel the passage never mentions, and inventing plausible detail is exactly how wrong answers are built."
+        },
+        {
+          "id": "IR3",
+          "passage": "p1",
+          "stem": "The author mentions newspapers, markets and armies in order to",
+          "choices": [
+            "show that the effects spread well beyond the original purpose",
+            "argue that the telegraph was mainly a military invention",
+            "explain how the cable was funded",
+            "compare Britain with India"
+          ],
+          "answer": 0,
+          "explanation": "The paragraph ends by saying none of these were what the inventors set out to touch. Three unconnected examples are there to show breadth, and asking why an author included something is a different question from asking what they said."
+        },
+        {
+          "id": "IR4",
+          "passage": "p1",
+          "stem": "As used in the second paragraph, the phrase came apart most nearly means",
+          "choices": [
+            "broke down",
+            "became separated",
+            "were destroyed",
+            "were misunderstood"
+          ],
+          "answer": 1,
+          "explanation": "Information and travel had always moved at the same speed, and afterwards they did not. Nothing breaks or is destroyed. Choice A is the everyday sense of the phrase and the wrong one here, which is what context questions are for."
+        },
+        {
+          "id": "IR5",
+          "passage": "p2",
+          "stem": "According to the passage, an octopus arm is harder to keep track of than a human arm because it",
+          "choices": [
+            "moves much faster",
+            "has no muscles",
+            "can bend anywhere in any direction",
+            "is longer"
+          ],
+          "answer": 2,
+          "explanation": "The first paragraph contrasts a human elbow and shoulder, which bend in limited ways, with an arm that can bend anywhere along its length. Choice B contradicts the passage, since an arm with no muscles could not reach into anything."
+        },
+        {
+          "id": "IR6",
+          "passage": "p2",
+          "stem": "The passage suggests that the octopus solves this problem by",
+          "choices": [
+            "growing a larger brain",
+            "moving more slowly",
+            "spreading much of its processing into the arms",
+            "using its eyes instead of touch"
+          ],
+          "answer": 2,
+          "explanation": "The second paragraph states that most neurons are distributed along the arms and that an arm can act without detailed orders. Choice A is the obvious solution and precisely the one the passage says is not taken."
+        },
+        {
+          "id": "IR7",
+          "passage": "p2",
+          "stem": "The final paragraph indicates that biologists",
+          "choices": [
+            "have settled the question of octopus intelligence",
+            "are studying octopus vocabulary",
+            "believe octopuses cannot think",
+            "tend to steer clear of the question"
+          ],
+          "answer": 3,
+          "explanation": "The passage says biologists mostly avoid the question. Choice C is stronger than anything stated, and answers that go further than the text are wrong even when they sound reasonable."
+        },
+        {
+          "id": "IR8",
+          "passage": "p2",
+          "stem": "The closing remark that the octopus has no interest in our vocabulary is best described as",
+          "choices": [
+            "a wry observation that the animal is unaffected by our confusion",
+            "a scientific finding",
+            "a criticism of biologists",
+            "evidence that octopuses understand language"
+          ],
+          "answer": 0,
+          "explanation": "It is a light joke resting on a real point: the difficulty belongs to our word thinking, not to the octopus. Choice D takes a figure of speech literally, and choice B treats a turn of phrase as data."
+        }
+      ]
+    }
+  ]
+}

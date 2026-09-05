@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ssat-middle-diagnostic-01",
+    "exam": "SSAT",
+    "kind": "mock",
+    "title": "Mock 1",
+    "blurb": "Every section in the order the real test runs them, at a quarter length. Start here to find out where he stands.",
+    "covers": ["Writing", "Quantitative", "Reading", "Verbal"],
+    "questions": 37,
+    "minutes": 55
+  },
+  {
+    "id": "ssat-analogy-drill-01",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Analogies",
+    "blurb": "The format that exists only on the SSAT. Say the relationship as a sentence before looking at the choices.",
+    "covers": ["Verbal"],
+    "questions": 12,
+    "minutes": 6
+  },
+  {
+    "id": "ssat-quant-drill-01",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Quantitative",
+    "blurb": "Number operations, algebra, geometry and data, at seventy seconds a question.",
+    "covers": ["Quantitative"],
+    "questions": 12,
+    "minutes": 14
+  },
+  {
+    "id": "ssat-reading-drill-01",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Reading",
+    "blurb": "Two passages, one of them a poem, because SSAT reading mixes nonfiction with fiction and verse.",
+    "covers": ["Reading"],
+    "questions": 8,
+    "minutes": 8
+  },
+  {
+    "id": "isee-middle-diagnostic-01",
+    "exam": "ISEE",
+    "kind": "mock",
+    "title": "Mock 1",
+    "blurb": "All four scored sections plus the essay, at a quarter length. Start here.",
+    "covers": ["Verbal", "Quantitative", "Reading", "Mathematics", "Essay"],
+    "questions": 37,
+    "minutes": 60
+  },
+  {
+    "id": "isee-middle-verbal-01",
+    "exam": "ISEE",
+    "kind": "drill",
+    "title": "Verbal",
+    "blurb": "Synonyms and sentence completions at thirty seconds each, the fastest pace on either exam.",
+    "covers": ["Verbal"],
+    "questions": 20,
+    "minutes": 10
+  },
+  {
+    "id": "isee-middle-qc-drill-01",
+    "exam": "ISEE",
+    "kind": "drill",
+    "title": "Quantitative comparison",
+    "blurb": "Easy arithmetic, unfamiliar format. Test several values instead of solving once.",
+    "covers": ["Quantitative"],
+    "questions": 12,
+    "minutes": 10
+  },
+  {
+    "id": "isee-math-drill-01",
+    "exam": "ISEE",
+    "kind": "drill",
+    "title": "Mathematics achievement",
+    "blurb": "Curriculum maths rather than puzzles. This is the section that rewards knowing the material.",
+    "covers": ["Mathematics"],
+    "questions": 12,
+    "minutes": 10
+  },
+  {
+    "id": "isee-reading-drill-01",
+    "exam": "ISEE",
+    "kind": "drill",
+    "title": "Reading",
+    "blurb": "Two informational passages, the kind the ISEE leans on across science and history.",
+    "covers": ["Reading"],
+    "questions": 8,
+    "minutes": 8
+  }
+]
