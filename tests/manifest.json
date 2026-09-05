@@ -8,7 +8,8 @@
     "blurb": "The real thing at the real length: writing sample, Quantitative, Reading, a fifteen minute break, Verbal and a second Quantitative. About three hours. Sit it in one go.",
     "covers": ["Writing", "Quantitative", "Reading", "Verbal"],
     "questions": 150,
-    "minutes": 170
+    "minutes": 170,
+    "frozen": "2ff0a88cee8f1260"
   },
   {
     "id": "ssat-middle-diagnostic-01",
@@ -53,6 +54,18 @@
     "questions": 8,
     "minutes": 8,
     "frozen": "152e7bc913384f40"
+  },
+  {
+    "id": "isee-middle-full-01",
+    "exam": "ISEE",
+    "kind": "mock",
+    "format": "full",
+    "title": "Full length 1",
+    "blurb": "The real thing at the real length: Verbal Reasoning, Quantitative Reasoning, a five minute break, Reading Comprehension, Mathematics Achievement, then the essay. About two and three quarter hours. Sit it in one go.",
+    "covers": ["Verbal", "Quantitative", "Reading", "Mathematics", "Essay"],
+    "questions": 160,
+    "minutes": 165,
+    "frozen": "be3a115ce8d6fd54"
   },
   {
     "id": "isee-middle-diagnostic-01",

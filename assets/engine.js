@@ -982,6 +982,7 @@ else {
     .then((data) => {
       state.test = data;
       document.title = data.title + ", " + data.exam + " practice";
+      document.getElementById("sectionName").textContent = data.exam + " practice";
       if (attemptAt) {
         const a = loadAttempts().find((x) => x.testId === data.id && x.takenAt === attemptAt);
         if (!a) throw new Error("That attempt is not saved in this browser. Attempts stay on the device that took them.");

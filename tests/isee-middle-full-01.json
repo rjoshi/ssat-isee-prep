@@ -1,0 +1,2297 @@
+{
+  "id": "isee-middle-full-01",
+  "exam": "ISEE",
+  "level": "Middle",
+  "title": "Full length 1",
+  "description": "The whole ISEE Middle Level at the real length: Verbal Reasoning, Quantitative Reasoning, a five minute break, Reading Comprehension, Mathematics Achievement, and the essay last. 160 questions with four choices each. There is no penalty for a wrong answer, so every bubble gets filled. Set aside three hours.",
+  "format": "full",
+  "scoring": {
+    "wrongPenalty": 0
+  },
+  "writing": {
+    "name": "Essay",
+    "position": "last",
+    "timeLimitSeconds": 1800,
+    "note": "Not scored, but it is sent directly to every school that receives your results, and it is the only sample of your unedited writing they will see. Plan for five minutes, write for twenty, and keep five to read it back. Answer the question that was asked.",
+    "prompts": [
+      "If you could add one subject to your school's timetable that is not taught there now, what would it be, and why would it be worth the time it takes from something else?"
+    ]
+  },
+  "sections": [
+    {
+      "name": "Verbal Reasoning",
+      "timeLimitSeconds": 1200,
+      "questions": [
+        {
+          "id": "V1",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ADEQUATE",
+          "choices": [
+            "excellent",
+            "tiny",
+            "sufficient",
+            "expensive"
+          ],
+          "answer": 2,
+          "explanation": "Adequate means enough for the purpose, no more. Sufficient is the match. Excellent is the trap: adequate sounds like praise but is actually the faintest praise there is, since it means only that something will do."
+        },
+        {
+          "id": "V2",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "BOLSTER",
+          "choices": [
+            "support",
+            "attack",
+            "hide",
+            "measure"
+          ],
+          "answer": 0,
+          "explanation": "To bolster is to strengthen or prop up. Support is the match. A bolster is also a long pillow, which is where the sense of propping comes from. Attack is the opposite direction entirely."
+        },
+        {
+          "id": "V3",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "CONSPICUOUS",
+          "choices": [
+            "suspicious",
+            "careful",
+            "secret",
+            "obvious"
+          ],
+          "answer": 3,
+          "explanation": "Conspicuous means standing out so as to be clearly seen. Obvious is the match. Suspicious is a sound-alike trap, and secret is the opposite. Careful comes from confusing this word with conscientious."
+        },
+        {
+          "id": "V4",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "DELIBERATE",
+          "choices": [
+            "slow",
+            "intentional",
+            "delicious",
+            "free"
+          ],
+          "answer": 1,
+          "explanation": "Deliberate, as an adjective, means done on purpose. Intentional is the match. Slow is a trap because deliberate can also describe careful, unhurried movement, but that is a secondary sense. Free comes from confusing the word with liberate."
+        },
+        {
+          "id": "V5",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "ERRATIC",
+          "choices": [
+            "wrong",
+            "angry",
+            "steady",
+            "unpredictable"
+          ],
+          "answer": 3,
+          "explanation": "Erratic means irregular and impossible to predict. Unpredictable is the match. Wrong is a trap from the shared root with error, but erratic behaviour is not necessarily mistaken, only inconsistent. Steady is the opposite."
+        },
+        {
+          "id": "V6",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "FLOURISH",
+          "choices": [
+            "thrive",
+            "wave",
+            "decorate",
+            "fail"
+          ],
+          "answer": 0,
+          "explanation": "To flourish is to grow or develop in a healthy way. Thrive is the match. Wave and decorate come from a different sense, a flourish of the hand or a decorative curl in handwriting, which is why they tempt. Fail is the opposite."
+        },
+        {
+          "id": "V7",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "GRIEVANCE",
+          "choices": [
+            "sorrow",
+            "funeral",
+            "complaint",
+            "gift"
+          ],
+          "answer": 2,
+          "explanation": "A grievance is a real or imagined wrong that gives grounds for complaint. Complaint is the match. Sorrow and funeral come from grief, which shares the root but not the meaning; a grievance is a matter of fairness, not mourning."
+        },
+        {
+          "id": "V8",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "HAUGHTY",
+          "choices": [
+            "hot",
+            "arrogant",
+            "hasty",
+            "humble"
+          ],
+          "answer": 1,
+          "explanation": "Haughty means arrogantly superior and disdainful. Arrogant is the match. Humble is the opposite, and hot and hasty are traps from the sound of the word. Picture someone looking down their nose."
+        },
+        {
+          "id": "V9",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "IMPARTIAL",
+          "choices": [
+            "fair",
+            "incomplete",
+            "unimportant",
+            "hostile"
+          ],
+          "answer": 0,
+          "explanation": "Impartial means not favouring one side over another. Fair is the match. Incomplete is the trap: partial can mean incomplete, so impartial looks as if it should mean complete, but the word comes from the other sense of partial, meaning biased."
+        },
+        {
+          "id": "V10",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "JUBILANT",
+          "choices": [
+            "nervous",
+            "youthful",
+            "loud",
+            "overjoyed"
+          ],
+          "answer": 3,
+          "explanation": "Jubilant means feeling or showing great happiness, especially after a success. Overjoyed is the match. Loud is a trap because jubilant crowds are noisy, but a person can be quietly jubilant. Youthful is a guess from the sound of juvenile."
+        },
+        {
+          "id": "V11",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "LETHARGIC",
+          "choices": [
+            "deadly",
+            "sluggish",
+            "lengthy",
+            "alert"
+          ],
+          "answer": 1,
+          "explanation": "Lethargic means lacking energy and enthusiasm. Sluggish is the match. Deadly is a trap from the sound of lethal, a different word. Alert is the opposite."
+        },
+        {
+          "id": "V12",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "MEAGER",
+          "choices": [
+            "eager",
+            "generous",
+            "scanty",
+            "thin"
+          ],
+          "answer": 2,
+          "explanation": "Meager means lacking in quantity or quality. Scanty is the match. Thin is close, since a meager person is thin, but the word is far more often used of amounts, as in a meager meal or meager savings. Generous is the opposite, and eager is a sound-alike."
+        },
+        {
+          "id": "V13",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "NEGLIGENT",
+          "choices": [
+            "negative",
+            "clever",
+            "tidy",
+            "careless"
+          ],
+          "answer": 3,
+          "explanation": "Negligent means failing to take proper care. Careless is the match. Negative shares the first syllable and nothing else. Tidy is close to the opposite, since a negligent person lets things slide."
+        },
+        {
+          "id": "V14",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "OMINOUS",
+          "choices": [
+            "threatening",
+            "enormous",
+            "famous",
+            "everywhere"
+          ],
+          "answer": 0,
+          "explanation": "Ominous means giving the impression that something bad is about to happen. Threatening is the match. The word comes from omen, a sign of the future. Enormous and everywhere are traps from the sound of the word and from omni, which means all."
+        },
+        {
+          "id": "V15",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "PLAUSIBLE",
+          "choices": [
+            "proven",
+            "believable",
+            "praised",
+            "playful"
+          ],
+          "answer": 1,
+          "explanation": "Plausible means seeming reasonable or probable. Believable is the match. Proven is the trap: a plausible explanation sounds right but has not been shown to be right, and the word is often used precisely when the truth is still in doubt."
+        },
+        {
+          "id": "V16",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "RECEDE",
+          "choices": [
+            "receive",
+            "repeat",
+            "move back",
+            "rush forward"
+          ],
+          "answer": 2,
+          "explanation": "To recede is to go or move back, like a tide or a hairline. Move back is the match. Rush forward is the opposite. Receive and repeat are sound-alikes that share only the first letters."
+        },
+        {
+          "id": "V17",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "SOLEMN",
+          "choices": [
+            "serious",
+            "lonely",
+            "silent",
+            "sad"
+          ],
+          "answer": 0,
+          "explanation": "Solemn means formal and dignified, with a serious purpose. Serious is the match. Sad is the trap, because solemn occasions such as funerals are often sad, but a wedding vow is solemn too. Silent is close but wrong, since a solemn speech is not quiet."
+        },
+        {
+          "id": "V18",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "THWART",
+          "choices": [
+            "throw",
+            "encourage",
+            "twist",
+            "prevent"
+          ],
+          "answer": 3,
+          "explanation": "To thwart is to stop someone from doing what they intend. Prevent is the match. Encourage is the opposite. Throw and twist are guesses from the shape of the word, which is an unusual one."
+        },
+        {
+          "id": "V19",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "UNANIMOUS",
+          "choices": [
+            "unknown",
+            "lively",
+            "in full agreement",
+            "unusual"
+          ],
+          "answer": 2,
+          "explanation": "Unanimous means everyone is of one mind. In full agreement is the match. The word comes from one soul, uni and animus. Lively is a trap from animated, which shares the root but points in a different direction. Unknown and unusual only share the prefix."
+        },
+        {
+          "id": "V20",
+          "type": "synonym",
+          "topic": "vocabulary",
+          "stem": "VERSATILE",
+          "choices": [
+            "poetic",
+            "adaptable",
+            "reversible",
+            "talkative"
+          ],
+          "answer": 1,
+          "explanation": "Versatile means able to adapt to many different functions. Adaptable is the match. Poetic is a trap from verse, and reversible from the shared root meaning to turn, but neither is what the word means. Talkative comes from confusing it with verbose."
+        },
+        {
+          "id": "V21",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The hikers were warned that the trail was __________ after the storm, since several footbridges had been washed away.",
+          "choices": [
+            "scenic",
+            "impassable",
+            "popular",
+            "well marked"
+          ],
+          "answer": 1,
+          "explanation": "Impassable means impossible to travel along. The clue is the second half of the sentence: with the bridges gone, nobody can get through. Scenic and popular are positive words that do not follow from washed away bridges, and the word since signals that the blank is explained by what comes after it."
+        },
+        {
+          "id": "V22",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Although the twins look identical, their personalities are entirely __________.",
+          "choices": [
+            "similar",
+            "hidden",
+            "pleasant",
+            "distinct"
+          ],
+          "answer": 3,
+          "explanation": "Distinct means clearly different. Although sets up a contrast with identical, so the blank must mean not alike. Similar is the trap for anyone who misses the contrast word. Pleasant and hidden do not contrast with identical at all."
+        },
+        {
+          "id": "V23",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The museum's newest exhibit was so __________ that visitors queued around the block before it opened.",
+          "choices": [
+            "anticipated",
+            "expensive",
+            "ordinary",
+            "brief"
+          ],
+          "answer": 0,
+          "explanation": "Anticipated means eagerly looked forward to. People queue before opening for something they have been waiting for. Expensive might explain a short queue, not a long one, and ordinary would explain no queue at all. The structure so blank that result tells you the blank causes the queue."
+        },
+        {
+          "id": "V24",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Because the evidence was __________, the jury could not reach a verdict.",
+          "choices": [
+            "overwhelming",
+            "clear",
+            "inconclusive",
+            "recent"
+          ],
+          "answer": 2,
+          "explanation": "Inconclusive means not leading to a firm decision. The word because tells you the blank explains why no verdict was reached, and only unclear evidence does that. Overwhelming and clear evidence would produce a quick verdict, which is the opposite of the result described."
+        },
+        {
+          "id": "V25",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "A good editor is __________ without being harsh; she points out every flaw but explains how to fix it.",
+          "choices": [
+            "careless",
+            "exacting",
+            "silent",
+            "cheerful"
+          ],
+          "answer": 1,
+          "explanation": "Exacting means demanding high standards. The semicolon means the second half defines the first: pointing out every flaw is exacting, and explaining how to fix it is what keeps that from being harsh. Careless is the opposite of pointing out every flaw, and a silent editor points out nothing."
+        },
+        {
+          "id": "V26",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The mountain village was so __________ that mail arrived only once a week.",
+          "choices": [
+            "isolated",
+            "crowded",
+            "wealthy",
+            "modern"
+          ],
+          "answer": 0,
+          "explanation": "Isolated means far from other places and hard to reach. Weekly mail is the result of being cut off. Crowded and modern would suggest more frequent service, not less. The result after that is the clue to the blank."
+        },
+        {
+          "id": "V27",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Rather than __________ the problem, the mayor admitted the mistake and set out a plan to correct it.",
+          "choices": [
+            "solve",
+            "describe",
+            "announce",
+            "minimize"
+          ],
+          "answer": 3,
+          "explanation": "Minimize means to make something seem smaller or less serious than it is. Rather than sets up a contrast with admitting the mistake, so the blank must be what a less honest person would do instead, which is play it down. Solve is the trap: it sounds like the right thing to do, but the sentence says the mayor did not do the blank, and a mayor who admits a mistake has not refused to solve it."
+        },
+        {
+          "id": "V28",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The scientist's surprising claim was met with __________ until other laboratories repeated her results.",
+          "choices": [
+            "applause",
+            "boredom",
+            "skepticism",
+            "relief"
+          ],
+          "answer": 2,
+          "explanation": "Skepticism is doubt. Until tells you the attitude changed once the results were repeated, so before that people did not believe her. Applause would not need to wait for confirmation, and boredom does not fit a surprising claim."
+        },
+        {
+          "id": "V29",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The coach's instructions were so __________ that even the newest players understood exactly where to stand.",
+          "choices": [
+            "explicit",
+            "lengthy",
+            "quiet",
+            "confusing"
+          ],
+          "answer": 0,
+          "explanation": "Explicit means stated clearly and in detail. New players understanding exactly where to stand is the result of clear instruction. Confusing is the opposite, and lengthy instructions are not necessarily clear ones. Quiet has nothing to do with being understood."
+        },
+        {
+          "id": "V30",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Once a __________ trading post, the town is now a quiet place where few travellers stop.",
+          "choices": [
+            "deserted",
+            "bustling",
+            "hidden",
+            "tiny"
+          ],
+          "answer": 1,
+          "explanation": "Bustling means full of busy activity. Once and now set up a contrast between the past and the present, and the present is quiet, so the past must have been busy. Deserted and tiny describe the present, which is the trap for a reader who misses that the blank refers to what the town used to be."
+        },
+        {
+          "id": "V31",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The two nations signed the treaty __________, each hoping the other would be the first to break it.",
+          "choices": [
+            "eagerly",
+            "publicly",
+            "quickly",
+            "reluctantly"
+          ],
+          "answer": 3,
+          "explanation": "Reluctantly means unwillingly. Nations that hope the agreement will fail did not want to sign it, so they signed without enthusiasm. Eagerly is the opposite. Publicly and quickly say nothing about attitude, and the second half of the sentence is all about attitude."
+        },
+        {
+          "id": "V32",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Fossils are __________ in this region; a hiker can find one in almost any dry streambed.",
+          "choices": [
+            "rare",
+            "protected",
+            "abundant",
+            "valuable"
+          ],
+          "answer": 2,
+          "explanation": "Abundant means present in large quantities. The semicolon introduces the evidence: finding one in almost any streambed means there are a great many. Rare is the exact opposite of what the evidence shows. Valuable might be true but is not what the second half describes."
+        },
+        {
+          "id": "V33",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The recipe called for exact measurements, so the chef",
+          "choices": [
+            "added a pinch of whatever was nearby",
+            "weighed each ingredient carefully",
+            "tasted the sauce before serving it",
+            "chose a different dish instead"
+          ],
+          "answer": 1,
+          "explanation": "So tells you the second half follows from the first. Exact measurements lead to careful weighing. Adding a pinch of whatever was nearby is the opposite of exactness, and the other two choices are things a chef might do but do not follow from the demand for precision."
+        },
+        {
+          "id": "V34",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Despite his __________ manner on stage, the comedian was shy and quiet in private.",
+          "choices": [
+            "boisterous",
+            "timid",
+            "gloomy",
+            "formal"
+          ],
+          "answer": 0,
+          "explanation": "Boisterous means noisy, energetic and cheerful. Despite sets up a contrast with shy and quiet, so the stage manner must be loud and outgoing. Timid is the trap, since it matches shy instead of contrasting with it. Gloomy contrasts with a comedian rather than with shy."
+        },
+        {
+          "id": "V35",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The old map was __________; several of the rivers it showed had changed course a century ago.",
+          "choices": [
+            "accurate",
+            "enormous",
+            "obsolete",
+            "valuable"
+          ],
+          "answer": 2,
+          "explanation": "Obsolete means out of date and no longer useful. The semicolon introduces the reason: the rivers have moved, so the map no longer matches the land. Accurate is the opposite of what the evidence shows. Valuable may be true of an old map but is not what the second half explains."
+        },
+        {
+          "id": "V36",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Because the bridge had been closed for repairs, commuters",
+          "choices": [
+            "arrived earlier than usual",
+            "enjoyed the smoother road surface",
+            "paid a smaller toll than before",
+            "had to take a longer route into the city"
+          ],
+          "answer": 3,
+          "explanation": "Because means the second half is a consequence of the closure. A closed bridge forces a detour. Enjoying the smoother surface would follow from the repairs being finished, not from the closure, which is the trap. Arriving earlier is the opposite of what a detour does."
+        },
+        {
+          "id": "V37",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The lecture was so __________ that half the audience had left before the speaker reached his second point.",
+          "choices": [
+            "tedious",
+            "inspiring",
+            "brief",
+            "loud"
+          ],
+          "answer": 0,
+          "explanation": "Tedious means too long and dull to hold interest. People leaving partway through is the result of boredom. Inspiring would keep them in their seats, and brief contradicts a lecture that has not yet reached its second point. Loud might annoy but is not the natural cause of a mass exit."
+        },
+        {
+          "id": "V38",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The detective's __________ eye caught the smudge on the glass that everyone else had missed.",
+          "choices": [
+            "tired",
+            "gentle",
+            "keen",
+            "blind"
+          ],
+          "answer": 2,
+          "explanation": "Keen, of eyesight or attention, means sharp and quick to notice. Seeing what everyone else missed is what a keen eye does. Tired and blind eyes miss things rather than catch them, and gentle describes a manner, not a power of observation."
+        },
+        {
+          "id": "V39",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "Although she was __________ about the plan at first, she eventually became its strongest supporter.",
+          "choices": [
+            "certain",
+            "enthusiastic",
+            "informed",
+            "dubious"
+          ],
+          "answer": 3,
+          "explanation": "Dubious means doubtful. Although and at first set up a change from an early attitude to a later one, and the later one is strong support, so the early one must be doubt. Enthusiastic is the trap: it matches the ending instead of contrasting with it."
+        },
+        {
+          "id": "V40",
+          "type": "completion",
+          "topic": "sentence completion",
+          "stem": "The drought lasted so long that the farmers",
+          "choices": [
+            "harvested a record crop",
+            "began to sell livestock they could no longer feed",
+            "planted more rice than usual",
+            "held a festival to celebrate the rain"
+          ],
+          "answer": 1,
+          "explanation": "So long that introduces a consequence of a long drought, and a drought kills the grass that animals eat. Selling livestock is the consequence that follows. A record crop and a rain festival contradict the drought, and planting more rice, a thirsty crop, is the opposite of what dry years allow."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Reasoning",
+      "timeLimitSeconds": 2100,
+      "breakAfterSeconds": 300,
+      "questions": [
+        {
+          "id": "QR1",
+          "topic": "number properties",
+          "stem": "A number is multiplied by 0.5, and the result is then divided by 0.25. The final result is how many times the original number?",
+          "choices": [
+            "1/8",
+            "2",
+            "4",
+            "8"
+          ],
+          "answer": 1,
+          "explanation": "Multiplying by 0.5 halves the number, and dividing by 0.25 multiplies it by 4. Half of 4 is 2, so the result is twice the original. The choice 1/8 comes from multiplying by both decimals, and 4 forgets the halving. Try it with 8: half is 4, and 4 divided by 0.25 is 16, which is twice 8."
+        },
+        {
+          "id": "QR2",
+          "topic": "number properties",
+          "stem": "The sum of any five consecutive whole numbers is always divisible by",
+          "choices": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": 3,
+          "explanation": "Five consecutive numbers add up to five times the middle one, since the two below balance the two above. For example, 3 + 4 + 5 + 6 + 7 = 25, which is 5 × 5. So the sum is always a multiple of 5. The choice 2 fails for 3 through 7, whose sum is 25. The choice 3 happens to work for 1 through 5, whose sum is 15, but fails for 2 through 6, whose sum is 20. Always means every case, so one counterexample is enough to rule a choice out."
+        },
+        {
+          "id": "QR3",
+          "topic": "geometry",
+          "stem": "If the perimeter of a square is P, what is its area in terms of P?",
+          "choices": [
+            "P² ÷ 16",
+            "P² ÷ 4",
+            "P ÷ 4",
+            "4P"
+          ],
+          "answer": 0,
+          "explanation": "Each side is P ÷ 4, and area is side squared, so the area is (P ÷ 4)² = P² ÷ 16. The choice P ÷ 4 is the side length, not the area. The choice P² ÷ 4 squares the perimeter but divides by 4 only once, forgetting that the 4 gets squared too. Check with a side of 3: P is 12, and 144 ÷ 16 = 9."
+        },
+        {
+          "id": "QR4",
+          "topic": "data and probability",
+          "stem": "A bag contains 3 red, 4 blue and 5 green marbles. If one marble is drawn at random, what is the probability that it is not blue?",
+          "choices": [
+            "1/3",
+            "1/2",
+            "2/3",
+            "3/4"
+          ],
+          "answer": 2,
+          "explanation": "There are 12 marbles and 8 of them are not blue, so the probability is 8/12 = 2/3. The choice 1/3 is the probability of drawing blue, which is the trap for a reader who skips the word not. Not blue means red or green, and there is no need to count them separately."
+        },
+        {
+          "id": "QR5",
+          "topic": "data and probability",
+          "stem": "The average of four numbers is 15. When one of the numbers is removed, the average of the remaining three is 12. What number was removed?",
+          "choices": [
+            "3",
+            "12",
+            "18",
+            "24"
+          ],
+          "answer": 3,
+          "explanation": "Four numbers with an average of 15 total 60. Three numbers with an average of 12 total 36. The removed number is 60 - 36 = 24. The choice 3 is the difference between the two averages, which is not the same as the difference between the totals. Averages hide totals; find the totals."
+        },
+        {
+          "id": "QR6",
+          "topic": "algebra",
+          "stem": "Which expression is equivalent to 3(x + 4) - 2(x - 1)?",
+          "choices": [
+            "x + 10",
+            "x + 14",
+            "5x + 10",
+            "5x + 14"
+          ],
+          "answer": 1,
+          "explanation": "Expanding gives 3x + 12 - 2x + 2 = x + 14. The choice x + 10 comes from writing -2 instead of +2, forgetting that -2 times -1 is positive. The 5x choices add the x terms instead of subtracting. Substitute x = 0 to check: 3 × 4 - 2 × (-1) = 14."
+        },
+        {
+          "id": "QR7",
+          "topic": "geometry",
+          "stem": "A rectangle has an area of 48 square centimetres and side lengths that are whole numbers. Which of the following could NOT be its perimeter?",
+          "choices": [
+            "30 cm",
+            "32 cm",
+            "38 cm",
+            "52 cm"
+          ],
+          "answer": 0,
+          "explanation": "The whole-number pairs with a product of 48 are 1 by 48, 2 by 24, 3 by 16, 4 by 12 and 6 by 8, with perimeters 98, 52, 38, 32 and 28. So 52, 38 and 32 are all possible, and 30 is not. Listing the factor pairs is the whole problem; the perimeter of 30 would need sides adding to 15, and no pair of factors of 48 does."
+        },
+        {
+          "id": "QR8",
+          "topic": "algebra",
+          "stem": "Ella has n stickers. Jay has 5 more than twice as many stickers as Ella. In terms of n, how many stickers do they have altogether?",
+          "choices": [
+            "2n + 5",
+            "3n",
+            "3n + 5",
+            "3n + 10"
+          ],
+          "answer": 2,
+          "explanation": "Jay has 2n + 5. Together they have n + 2n + 5 = 3n + 5. The choice 2n + 5 is Jay alone, the answer to a question that was not asked. The choice 3n + 10 doubles the 5 as well as the n, but only Ella's count is doubled."
+        },
+        {
+          "id": "QR9",
+          "topic": "fractions and decimals",
+          "stem": "What is 2/3 of 3/4 of 60?",
+          "choices": [
+            "15",
+            "20",
+            "30",
+            "45"
+          ],
+          "answer": 2,
+          "explanation": "Three quarters of 60 is 45, and two thirds of 45 is 30. Or multiply the fractions first: 2/3 × 3/4 = 1/2, and half of 60 is 30. The choice 45 stops after the first step, and 20 comes from taking 2/3 of 60 and then 1/2 by mistake. Of means multiply, twice."
+        },
+        {
+          "id": "QR10",
+          "topic": "geometry",
+          "stem": "A rectangular piece of card measures 6 cm by 4 cm. A right triangle with legs of 2 cm and 3 cm is cut from one corner. What is the area of the card that remains?",
+          "choices": [
+            "21 square cm",
+            "22 square cm",
+            "23 square cm",
+            "24 square cm"
+          ],
+          "answer": 0,
+          "explanation": "The card is 24 square cm. The triangle is half of 2 × 3, which is 3 square cm. What remains is 24 - 3 = 21. The choice 22 comes from taking the triangle's area as 2, and 24 forgets the cut altogether. A triangle's area is half the product of its legs, not the product."
+        },
+        {
+          "id": "QR11",
+          "topic": "algebra",
+          "stem": "If 3a = 4b, and a and b are both positive, which of the following must be true?",
+          "choices": [
+            "a < b",
+            "a = b",
+            "a + b = 7",
+            "a > b"
+          ],
+          "answer": 3,
+          "explanation": "Three of a equals four of b, so each a must be worth more than each b. For example a = 4 and b = 3, or a = 8 and b = 6. The choice a + b = 7 works for the first example only, and must be true means every example. The choice a < b reads the equation backwards, which is the standard trap with ratios."
+        },
+        {
+          "id": "QR12",
+          "topic": "measurement",
+          "stem": "Through how many degrees does the minute hand of a clock turn between 3:40 and 4:05?",
+          "choices": [
+            "120 degrees",
+            "150 degrees",
+            "180 degrees",
+            "210 degrees"
+          ],
+          "answer": 1,
+          "explanation": "From 3:40 to 4:05 is 25 minutes. The minute hand turns 360 degrees in 60 minutes, which is 6 degrees a minute, so 25 minutes is 150 degrees. The choice 120 comes from counting 20 minutes, and 210 from counting 35. The hour changing in the middle is what makes the minute count easy to get wrong."
+        },
+        {
+          "id": "QR13",
+          "topic": "arithmetic",
+          "stem": "Which of the following is the best estimate of 398 × 51?",
+          "choices": [
+            "20,000",
+            "24,000",
+            "200,000",
+            "240,000"
+          ],
+          "answer": 0,
+          "explanation": "398 is close to 400 and 51 is close to 50, and 400 × 50 = 20,000. The exact answer is 20,298. The choice 200,000 has an extra zero, from miscounting when multiplying by 50. Estimation questions reward rounding before you multiply, not after."
+        },
+        {
+          "id": "QR14",
+          "topic": "percent",
+          "stem": "A jacket originally priced at x dollars is sold at a 20% discount. Which expression gives the sale price in dollars?",
+          "choices": [
+            "0.2x",
+            "x - 20",
+            "x - 0.2",
+            "0.8x"
+          ],
+          "answer": 3,
+          "explanation": "Taking 20% off leaves 80%, and 80% of x is 0.8x. The choice 0.2x is the amount of the discount, not the price after it. The choice x - 20 subtracts 20 dollars instead of 20 percent, which only agrees when x is 100. Always ask whether a question wants the part removed or the part that stays."
+        },
+        {
+          "id": "QR15",
+          "topic": "data and probability",
+          "stem": "The mean of a set of five numbers is 10. Which of the following must be true?",
+          "choices": [
+            "The median of the set is 10.",
+            "Every number in the set is less than 20.",
+            "The sum of the numbers is 50.",
+            "The largest number is 10 more than the smallest."
+          ],
+          "answer": 2,
+          "explanation": "A mean of 10 across five numbers means they add up to 5 × 10 = 50, and nothing else is guaranteed. The set 1, 1, 1, 1, 46 has a mean of 10, a median of 1, and a number well over 20, which knocks out the first two choices. The mean tells you the total and only the total."
+        },
+        {
+          "id": "QR16",
+          "topic": "ratio and proportion",
+          "stem": "A car travels at 60 km per hour for 30 minutes and then at 40 km per hour for the next 30 minutes. What is its average speed for the whole hour?",
+          "choices": [
+            "45 km per hour",
+            "50 km per hour",
+            "55 km per hour",
+            "100 km per hour"
+          ],
+          "answer": 1,
+          "explanation": "In the first half hour it covers 30 km, and in the second it covers 20 km, so it travels 50 km in one hour, which is 50 km per hour. Averaging the two speeds works here only because the two times are equal. The choice 100 adds the speeds instead of averaging them."
+        },
+        {
+          "id": "QR17",
+          "topic": "fractions and decimals",
+          "stem": "Which of the following has the greatest value?",
+          "choices": [
+            "0.3",
+            "1/3",
+            "0.34",
+            "7/20"
+          ],
+          "answer": 3,
+          "explanation": "Convert everything to decimals: 1/3 is about 0.333 and 7/20 is 0.35, so the order is 0.3, then 1/3, then 0.34, then 7/20. The choice 0.34 looks bigger than 7/20 because 34 is more than 7 and 20, but that is comparing digits, not values. The fraction 7/20 is 35 hundredths."
+        },
+        {
+          "id": "QR18",
+          "topic": "number properties",
+          "stem": "What is the smallest positive whole number that has exactly four factors?",
+          "choices": [
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "answer": 0,
+          "explanation": "The factors of 6 are 1, 2, 3 and 6, which is exactly four. Nothing smaller works: 4 has three factors, 5 has two, and so on. The choice 8 also has exactly four factors, 1, 2, 4 and 8, but it is not the smallest, and 12 has six. Read for the word smallest as well as the count."
+        },
+        {
+          "id": "QR19",
+          "topic": "number properties",
+          "stem": "If x is an odd whole number, which of the following must be even?",
+          "choices": [
+            "2x + 1",
+            "x + 1",
+            "x²",
+            "3x"
+          ],
+          "answer": 1,
+          "explanation": "Adding 1 to an odd number always gives an even one. The others stay odd: 2x is even, so 2x + 1 is odd; an odd number squared is odd; and three times an odd number is odd. Test with x = 3: the four expressions give 7, 4, 9 and 9, and only 4 is even."
+        },
+        {
+          "id": "QR20",
+          "topic": "geometry",
+          "stem": "A square and an equilateral triangle have the same perimeter. If each side of the square is 9 cm, what is the length of each side of the triangle?",
+          "choices": [
+            "6.75 cm",
+            "9 cm",
+            "12 cm",
+            "27 cm"
+          ],
+          "answer": 2,
+          "explanation": "The square's perimeter is 4 × 9 = 36 cm. The triangle shares that perimeter across three equal sides, so each is 36 ÷ 3 = 12 cm. The choice 9 assumes the sides match, which they cannot if the perimeters do and the side counts differ. The choice 6.75 divides 27 by 4 instead of 36 by 3."
+        },
+        {
+          "id": "QR21",
+          "topic": "percent",
+          "comparison": {
+            "a": "3/4 of 80",
+            "b": "60% of 90"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "Column A is 60. Column B is 0.6 × 90 = 54. So Column A is greater. Both look like they should land near 60, and the question is built for a student who calls them equal without finishing the second one."
+        },
+        {
+          "id": "QR22",
+          "topic": "number properties",
+          "comparison": {
+            "a": "2 to the power of 5",
+            "b": "4 × 8"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "2 to the power of 5 is 2 × 2 × 2 × 2 × 2 = 32, and 4 × 8 is also 32, so the two quantities are equal. The trap is reading 2 to the power of 5 as 2 × 5 = 10, which would make Column B look far larger."
+        },
+        {
+          "id": "QR23",
+          "topic": "measurement",
+          "comparison": {
+            "a": "The number of minutes in 2.5 hours",
+            "b": "The number of seconds in 3 minutes"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "Column A is 2.5 × 60 = 150. Column B is 3 × 60 = 180. Column B is greater. The pull toward Column A comes from hours sounding bigger than minutes, but the question asks about the count, and 3 minutes contains more seconds than 2.5 hours contains minutes."
+        },
+        {
+          "id": "QR24",
+          "topic": "algebra",
+          "stem": "x is a positive number.",
+          "comparison": {
+            "a": "x²",
+            "b": "2x"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 3,
+          "explanation": "Try several values. If x = 1, Column A is 1 and Column B is 2, so B is greater. If x = 3, Column A is 9 and Column B is 6, so A is greater. If x = 2, they are equal. Since the answer changes with x, the relationship cannot be determined. Testing one value and stopping is how this question is missed."
+        },
+        {
+          "id": "QR25",
+          "topic": "percent",
+          "comparison": {
+            "a": "15% of 200",
+            "b": "200% of 12"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "Column A is 0.15 × 200 = 30. Column B is 2 × 12 = 24. Column A is greater. 200% sounds enormous, but 200% of a small number is only double it."
+        },
+        {
+          "id": "QR26",
+          "topic": "geometry",
+          "comparison": {
+            "a": "The perimeter of a square with an area of 25",
+            "b": "The perimeter of a rectangle 8 units long and 3 units wide"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "A square with area 25 has sides of 5 and a perimeter of 20. The rectangle's perimeter is 2 × (8 + 3) = 22. Column B is greater. The area of the rectangle, 24, is less than 25, which is the trap: a smaller area does not mean a smaller perimeter."
+        },
+        {
+          "id": "QR27",
+          "topic": "algebra",
+          "stem": "a + b = 10",
+          "comparison": {
+            "a": "2a + 2b",
+            "b": "20"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "2a + 2b is 2(a + b), which is 2 × 10 = 20, so the quantities are equal. You do not need to know a or b separately, which is the point. The trap is choosing cannot be determined because the individual values are unknown."
+        },
+        {
+          "id": "QR28",
+          "topic": "number properties",
+          "comparison": {
+            "a": "The number of even whole numbers between 1 and 21",
+            "b": "The number of odd whole numbers between 2 and 20"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "The even numbers between 1 and 21 are 2, 4, and so on up to 20, which is 10 numbers. The odd numbers between 2 and 20 are 3, 5, and so on up to 19, which is 9 numbers. Column A is greater. Both ranges look the same width, and the difference comes from where the endpoints fall."
+        },
+        {
+          "id": "QR29",
+          "topic": "geometry",
+          "stem": "A rectangle has a perimeter of 24.",
+          "comparison": {
+            "a": "The area of the rectangle",
+            "b": "36"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 3,
+          "explanation": "A rectangle with perimeter 24 has length plus width equal to 12. If it is 6 by 6, the area is 36 and the columns are equal. If it is 8 by 4, the area is 32 and Column B is greater. Since the answer depends on the shape, the relationship cannot be determined. A fixed perimeter does not fix the area."
+        },
+        {
+          "id": "QR30",
+          "topic": "fractions and decimals",
+          "comparison": {
+            "a": "1/3 + 1/4",
+            "b": "3/5"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "1/3 + 1/4 = 4/12 + 3/12 = 7/12, which is about 0.583. Column B is 0.6. Column B is greater by a little. Adding the tops and bottoms to get 2/7 would make Column A look much smaller, and guessing without adding would make it look larger, so the only route is to add properly."
+        },
+        {
+          "id": "QR31",
+          "topic": "data and probability",
+          "comparison": {
+            "a": "The mean of 4, 8 and 15",
+            "b": "The median of 3, 9 and 20"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "The mean of 4, 8 and 15 is 27 ÷ 3 = 9. The median of 3, 9 and 20 is the middle value, 9. The quantities are equal. The mean of Column B's numbers would be about 10.7, which is the trap for a student who computes a mean in both columns."
+        },
+        {
+          "id": "QR32",
+          "topic": "number properties",
+          "stem": "n is a negative whole number.",
+          "comparison": {
+            "a": "n²",
+            "b": "n³"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "A negative number squared is positive, and a negative number cubed is negative. Any positive number is greater than any negative one, so Column A is greater no matter which negative number n is. Testing n = -2 gives 4 and -8. The trap is choosing cannot be determined because n is unknown, but the sign is enough."
+        },
+        {
+          "id": "QR33",
+          "topic": "fractions and decimals",
+          "comparison": {
+            "a": "0.2 × 0.2",
+            "b": "0.2 ÷ 0.2"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "0.2 × 0.2 = 0.04, and 0.2 ÷ 0.2 = 1. Column B is greater. Multiplying two numbers less than 1 makes something smaller than either, and dividing a number by itself always gives 1."
+        },
+        {
+          "id": "QR34",
+          "topic": "data and probability",
+          "stem": "The average of three numbers is 20.",
+          "comparison": {
+            "a": "The largest of the three numbers",
+            "b": "20"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 3,
+          "explanation": "If the three numbers are 20, 20 and 20, the largest is 20 and the columns are equal. If they are 10, 20 and 30, the largest is 30 and Column A is greater. The largest can never be less than the average, but it can equal it, so the relationship cannot be determined."
+        },
+        {
+          "id": "QR35",
+          "topic": "geometry",
+          "comparison": {
+            "a": "The sum of the interior angles of a quadrilateral, in degrees",
+            "b": "The number of degrees in a full turn"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 2,
+          "explanation": "Any quadrilateral's interior angles add to 360 degrees, and a full turn is also 360 degrees, so the quantities are equal. The trap is choosing cannot be determined because the quadrilateral's shape is not given; the sum is the same for every quadrilateral."
+        },
+        {
+          "id": "QR36",
+          "topic": "number properties",
+          "comparison": {
+            "a": "3 × 3 × 3",
+            "b": "2 × 2 × 2 × 2 × 2"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 1,
+          "explanation": "Column A is 27 and Column B is 32, so Column B is greater. Bigger bases feel bigger, but five doublings beat three triplings here. Work them out rather than judging by the size of the digits."
+        },
+        {
+          "id": "QR37",
+          "topic": "number properties",
+          "comparison": {
+            "a": "The number of prime numbers less than 20",
+            "b": "The number of multiples of 3 less than 20"
+          },
+          "choices": [
+            "The quantity in Column A is greater.",
+            "The quantity in Column B is greater.",
+            "The two quantities are equal.",
+            "The relationship cannot be determined from the information given."
+          ],
+          "answer": 0,
+          "explanation": "The primes less than 20 are 2, 3, 5, 7, 11, 13, 17 and 19, which is 8. The multiples of 3 less than 20 are 3, 6, 9, 12, 15 and 18, which is 6. Column A is greater. Forgetting that 2 is prime, or counting 1 as prime, changes Column A by one but not the answer; missing several primes does."
+        }
+      ]
+    },
+    {
+      "name": "Reading Comprehension",
+      "timeLimitSeconds": 2100,
+      "passages": {
+        "p1": [
+          "Before printing, there was no such thing as a spelling mistake. A scribe copying a manuscript wrote words the way they sounded to him, and since people in different regions pronounced the same word differently, they spelled it differently too. The same writer might spell a word two ways on one page and see nothing odd in it. Spelling was a matter of habit, not of rule.",
+          "The printing press changed this, though not on purpose. A printer setting type for a book had to choose one spelling for each word, and once the book was printed in hundreds of copies, that spelling travelled to places where people had never spelled it that way. Readers in one town began to see the forms used in another. Printers, who were mostly in a few large cities, gradually became the unofficial judges of how words ought to look.",
+          "They were not always careful judges. Printers were paid by the page, and a slightly longer spelling could stretch a line to fill it neatly. Some letters that we now consider silent were added or kept for exactly this reason. Other spellings were frozen at a moment when they matched pronunciation, and then the pronunciation moved on while the printed word stayed put. This is why so many English words carry letters that nobody has said aloud for centuries.",
+          "By the time dictionaries appeared, they mostly recorded what the printers had already settled. A dictionary did not invent a correct spelling so much as announce which of the surviving ones had won. The idea that a word has one right form, and that getting it wrong is a mark of ignorance, is younger than the machine that made it possible."
+        ],
+        "p2": [
+          "A honeybee hive in summer holds tens of thousands of insects, and the brood, the developing young at its centre, must be kept within a degree or two of 35 degrees Celsius. Too cool and the young develop slowly or with deformed wings; too warm and they die. The bees have no thermostat. They have only one another.",
+          "When the hive grows too warm, workers spread out across the comb and fan their wings, drawing cooler air in at the entrance and pushing warm air out. If fanning is not enough, foragers bring back water instead of nectar and spread it in thin films over the comb, where it evaporates and carries heat away with it, the same principle as sweating. On the hottest afternoons, a portion of the colony may leave the hive entirely and cluster on the outside, simply to reduce the number of warm bodies inside.",
+          "Cold calls for the opposite. Bees crowd together over the brood and shiver, contracting the flight muscles in their chests without moving their wings. A shivering bee produces a surprising amount of heat, and thousands of them, packed shoulder to shoulder, can hold the brood at temperature through a frost. Bees on the outside of the cluster grow cold and push inward, and warmer bees from the centre rotate outward, so no individual freezes.",
+          "No single bee understands any of this. Each responds to the temperature where it happens to be standing, fanning if warm, shivering if cold, and the hive as a whole behaves as if it had been designed by an engineer. Scientists call this an emergent property: a pattern that belongs to the group and to none of its members."
+        ],
+        "p3": [
+          "For most of the history of the post, the person who paid for a letter was the one who received it. The sender handed it over unpaid; the carrier delivered it and collected the fee at the door. The charge depended on the distance travelled and on the number of sheets, and it was high. A single letter sent across a country might cost a labourer most of a day's wages.",
+          "This arrangement produced predictable results. Recipients who could not pay simply refused the letter, and the carrier had made the journey for nothing. People invented codes so that a message could be read from the outside of a folded letter and then declined, leaving the post office to bear the cost. And because the fee was assessed on sheets rather than on weight, writers crammed their pages with tiny script, turning the paper sideways and writing a second layer across the first.",
+          "The reform, when it came in the 1840s, was almost absurdly simple. The sender would pay, in advance, a single low price for any letter under a certain weight, regardless of how far it went. Prepayment would be shown by a small printed label stuck to the envelope, the first postage stamp. Critics said that a flat low price would bankrupt the service, since long journeys would no longer pay their way.",
+          "The critics had the arithmetic upside down. The cost of carrying a letter was mostly in handling it, not in the miles, and a cheap prepaid letter that was never refused cost far less to process than an expensive one that might be. Volumes rose so fast that within a few years the post was handling several times as many letters as before, and the idea spread from country to country. Nearly every postal system in the world still runs on the principle that a farmer's letter and a banker's letter cost the same to send."
+        ],
+        "p4": [
+          "For a long time, orchestras had no conductor. A group of a dozen players could keep together by listening to one another and by watching the leading violinist, who would nod or lift his bow to mark the beat. When a beat needed to be shown more firmly, the leader might tap his bow on the stand, or the composer at the keyboard might stamp a foot. Rhythm was kept from inside the group, by one of its members.",
+          "As orchestras grew, this stopped working. Sixty players spread across a stage could not all see the first violinist, and the instruments at the back heard the front a fraction late. Composers were also writing music that shifted speed and mood within a single movement, and a nod could not carry that much information. Somebody had to stand apart, face the players, and show them the beat with a gesture large enough to be seen from every seat.",
+          "The earliest conductors, in the first half of the nineteenth century, were often the composers themselves, and audiences found the sight strange. Here was a person making no sound, waving a stick, with his back to the paying public. Critics complained that the conductor drew attention away from the music. Players complained that they did not need to be told when to play.",
+          "Within a generation the objections had faded, because the results were audible. A conductor could shape a passage the way a single player shapes a phrase, making a large group swell and hush together as though it were one instrument. Today the conductor is the most visible person in the hall and the only one who plays nothing, a fact that still strikes some first-time concertgoers as odd, exactly as it struck their predecessors two centuries ago."
+        ],
+        "p5": [
+          "There is no reason, on a round planet, for north to be at the top of a map. Maps made in medieval Europe often put east at the top, toward the rising sun and the holy places of the Middle East. Some maps from the Islamic world put south at the top. Chinese maps varied. A map is a picture, and a picture can be turned any way its maker likes.",
+          "North's rise to the top had several causes, none of them decisive alone. The magnetic compass, which reached Europe in the twelfth century, points north, and a sailor holding a compass and a chart finds it convenient when the two agree. The star that marks the north celestial pole was the one fixed point in a sky that otherwise turned, and navigators were used to reading it. The most influential geographer of the ancient world had happened to draw his maps with north at the top, and when his work was rediscovered and printed in the fifteenth century, printers copied his orientation along with his coastlines.",
+          "Once the habit was established, it became invisible. Globes are mounted with the north pole uppermost. Wall maps in classrooms hang that way. Navigation software assumes it. The choice has consequences: countries in the northern hemisphere sit at eye level, and a viewer half consciously reads up as more important than down, though nothing in geography supports the feeling.",
+          "Some cartographers have printed maps with south at the top to make the point. The continents are all still there, in their correct positions, and yet the map looks wrong to almost everyone who sees it. That sense of wrongness is worth noticing. It is not coming from the world. It is coming from the habit."
+        ],
+        "p6": [
+          "Below about a thousand metres, sunlight does not reach the sea. The water is black in every direction, and yet the deep ocean is not dark. It flickers. Most of the animals that live there make their own light, and the deep sea is by some measures the most brightly populated place on Earth, if brightness is counted in the number of things that glow.",
+          "The light is made by a chemical reaction inside the animal's body, a molecule combining with oxygen in the presence of an enzyme and releasing energy as light rather than heat. It is remarkably efficient. A light bulb wastes most of its energy warming the room; a deep-sea shrimp wastes almost none. The colour is nearly always blue-green, because that is the colour that travels farthest through seawater, and an animal advertising in the dark wants to be seen from as far away as possible.",
+          "What the light is for depends on who is making it. Some fish dangle a glowing lure in front of their mouths and wait for smaller fish to investigate. Some squid squirt a cloud of light instead of ink, blinding a pursuer while they escape into the black. A great many animals glow from their undersides, matching the faint light filtering from above so that a hunter looking up sees no silhouette. Others flash to find one another, since a mate in the deep sea is otherwise as hard to locate as a particular person in a city with the power out.",
+          "Because so little of the deep ocean has been explored, most of these animals were first seen only recently, and many of their signals have not yet been decoded. Biologists watching footage from submersibles have described the experience as reading a language in which every word is a flash and the grammar is still unknown."
+        ]
+      },
+      "questions": [
+        {
+          "id": "R1",
+          "passage": "p1",
+          "topic": "main idea",
+          "stem": "The passage is primarily concerned with",
+          "choices": [
+            "criticising the carelessness of early printers",
+            "explaining how printing led to fixed spellings",
+            "describing how dictionaries are compiled",
+            "arguing that English spelling should be reformed"
+          ],
+          "answer": 1,
+          "explanation": "Every paragraph is a step in the story of how spelling went from personal habit to fixed rule, with the printing press as the cause. The paragraph on printers padding lines is one detail in that story, not its point, and dictionaries appear only at the end as recorders of what printers had settled. Nothing in the passage proposes reform."
+        },
+        {
+          "id": "R2",
+          "passage": "p1",
+          "topic": "detail",
+          "stem": "According to the passage, before printing, a single writer might spell a word two different ways because",
+          "choices": [
+            "the writer was poorly educated",
+            "the two spellings had different meanings",
+            "different readers preferred different spellings",
+            "spelling followed habit and sound rather than rules"
+          ],
+          "answer": 3,
+          "explanation": "The first paragraph says scribes wrote words as they sounded, and that spelling was a matter of habit, not of rule, so seeing two forms on one page was not odd. Education is never mentioned as the cause, and the passage does not say the spellings differed in meaning; they were the same word."
+        },
+        {
+          "id": "R3",
+          "passage": "p1",
+          "topic": "inference",
+          "stem": "The passage suggests that some silent letters in English words exist today because",
+          "choices": [
+            "printers added or kept them to fill out a line of type",
+            "scribes were paid to add them",
+            "dictionary makers invented them",
+            "they were borrowed from other languages"
+          ],
+          "answer": 0,
+          "explanation": "The third paragraph says printers, paid by the page, stretched spellings to fill lines, and that some letters we consider silent were added or kept for exactly this reason. The choice about scribes moves the payment detail to the wrong group, and the passage says dictionaries recorded spellings rather than inventing them."
+        },
+        {
+          "id": "R4",
+          "passage": "p1",
+          "topic": "vocabulary in context",
+          "stem": "As used in the third paragraph, \"frozen\" most nearly means",
+          "choices": [
+            "chilled",
+            "forgotten",
+            "fixed in place",
+            "made difficult"
+          ],
+          "answer": 2,
+          "explanation": "The spellings were frozen at a moment when they matched pronunciation, and then the pronunciation moved while the printed word stayed put. Frozen here means stopped from changing. Chilled is the literal meaning and does not apply to a spelling, and forgotten is the opposite of what happened, since the frozen spellings are the ones that survived."
+        },
+        {
+          "id": "R5",
+          "passage": "p1",
+          "topic": "inference",
+          "stem": "The author would most likely agree with which of the following statements?",
+          "choices": [
+            "The idea of a correct spelling is a fairly recent development.",
+            "Printers deliberately set out to standardise the language.",
+            "Dictionaries have had a greater influence on spelling than printers have.",
+            "Medieval scribes were more skilled than modern writers."
+          ],
+          "answer": 0,
+          "explanation": "The final sentence says the idea that a word has one right form is younger than the printing press. The second paragraph says printing changed spelling though not on purpose, which rules out deliberate standardisation. The last paragraph puts dictionaries after printers as recorders of a decision already made, so the choice about dictionaries reverses the passage."
+        },
+        {
+          "id": "R6",
+          "passage": "p1",
+          "topic": "structure",
+          "stem": "The final paragraph serves mainly to",
+          "choices": [
+            "introduce a new topic unrelated to printing",
+            "argue that dictionaries are unnecessary",
+            "give an example of a printing error",
+            "show that dictionaries confirmed rather than created the fixed spellings"
+          ],
+          "answer": 3,
+          "explanation": "The paragraph says dictionaries mostly recorded what the printers had already settled and announced which spelling had won. That is confirmation of an existing result, which completes the argument of the passage. It does not call dictionaries unnecessary, only later, and it gives no example of an error."
+        },
+        {
+          "id": "R7",
+          "passage": "p2",
+          "topic": "main idea",
+          "stem": "Which of the following best states the main idea of the passage?",
+          "choices": [
+            "Honeybees are more intelligent than most insects.",
+            "Beekeepers must protect hives from extreme temperatures.",
+            "A hive controls its temperature through the combined simple actions of many bees.",
+            "Shivering is the most important behaviour in a beehive."
+          ],
+          "answer": 2,
+          "explanation": "The passage describes fanning, water spreading, clustering outside and shivering, and then explains in the final paragraph that no single bee understands any of it; the control belongs to the group. The choice about shivering is one behaviour among four, and beekeepers are never mentioned. The passage argues against individual intelligence as the explanation."
+        },
+        {
+          "id": "R8",
+          "passage": "p2",
+          "topic": "detail",
+          "stem": "According to the passage, when fanning is not enough to cool the hive, foragers",
+          "choices": [
+            "bring back water and spread it over the comb",
+            "carry the young to a cooler part of the hive",
+            "stop collecting nectar for several days",
+            "seal the entrance to keep warm air out"
+          ],
+          "answer": 0,
+          "explanation": "The second paragraph says foragers bring back water instead of nectar and spread it in thin films over the comb, where evaporation carries heat away. The passage says nothing about moving the young. Sealing the entrance would trap warm air, the opposite of what the bees want."
+        },
+        {
+          "id": "R9",
+          "passage": "p2",
+          "topic": "detail",
+          "stem": "The passage compares spreading water on the comb to",
+          "choices": [
+            "a thermostat",
+            "an engineer's design",
+            "a frost",
+            "sweating"
+          ],
+          "answer": 3,
+          "explanation": "The second paragraph says the water evaporates and carries heat away, the same principle as sweating. The thermostat is mentioned as something the bees do not have, and the engineer appears in the last paragraph as a comparison for the whole hive's behaviour, not for the water."
+        },
+        {
+          "id": "R10",
+          "passage": "p2",
+          "topic": "inference",
+          "stem": "It can be inferred that bees on the outside of a winter cluster push inward because they",
+          "choices": [
+            "are trying to reach the food stored at the centre",
+            "have grown cold and are seeking warmth",
+            "are attacking bees from another hive",
+            "want to be closer to the queen"
+          ],
+          "answer": 1,
+          "explanation": "The third paragraph says bees on the outside grow cold and push inward while warmer bees rotate outward, so that no individual freezes. The movement is driven by temperature. Food and the queen are never mentioned, and the cluster is made of one colony, not rivals."
+        },
+        {
+          "id": "R11",
+          "passage": "p2",
+          "topic": "vocabulary in context",
+          "stem": "As used in the final paragraph, an \"emergent\" property is one that",
+          "choices": [
+            "appears suddenly in an emergency",
+            "is found in only a few rare species",
+            "arises from a group but belongs to none of its members",
+            "was recently discovered by scientists"
+          ],
+          "answer": 2,
+          "explanation": "The passage defines the term in the same sentence: a pattern that belongs to the group and to none of its members. The choice about emergencies is a guess from the sound of the word, and nothing in the passage suggests the property is rare or newly discovered."
+        },
+        {
+          "id": "R12",
+          "passage": "p2",
+          "topic": "tone and purpose",
+          "stem": "The author most likely includes the sentence \"They have only one another\" in order to",
+          "choices": [
+            "suggest that bees are lonely",
+            "emphasise that the hive's control comes from the bees themselves rather than any device",
+            "criticise beekeepers for not providing heating",
+            "explain why bees sting intruders"
+          ],
+          "answer": 1,
+          "explanation": "The sentence follows \"The bees have no thermostat\" and sets up the rest of the passage, in which every method of temperature control is something the bees do together. It is about the source of the control, not about feelings. Beekeepers and stinging are not part of the passage."
+        },
+        {
+          "id": "R13",
+          "passage": "p3",
+          "topic": "detail",
+          "stem": "According to the passage, before the reform, the cost of a letter depended on",
+          "choices": [
+            "its weight alone",
+            "whether the sender had paid in advance",
+            "the value of its contents",
+            "the distance it travelled and the number of sheets"
+          ],
+          "answer": 3,
+          "explanation": "The first paragraph states that the charge depended on the distance travelled and on the number of sheets. Weight is what the reform switched to, so the choice about weight belongs to the later system. Prepayment did not exist before the reform, which is the point of the passage."
+        },
+        {
+          "id": "R14",
+          "passage": "p3",
+          "topic": "inference",
+          "stem": "The passage implies that writing a second layer of text across the first was a response to",
+          "choices": [
+            "a shortage of paper",
+            "charges based on the number of sheets rather than weight",
+            "a desire to keep letters private",
+            "the small size of envelopes"
+          ],
+          "answer": 1,
+          "explanation": "The second paragraph says that because the fee was assessed on sheets rather than on weight, writers crammed their pages and wrote a second layer across the first. One sheet, however full, was cheaper than two. Paper shortage and privacy are reasonable guesses but are not what the passage gives as the cause."
+        },
+        {
+          "id": "R15",
+          "passage": "p3",
+          "topic": "detail",
+          "stem": "Critics of the reform believed that",
+          "choices": [
+            "senders would refuse to pay in advance",
+            "the stamps would be easy to forge",
+            "a flat low price would ruin the postal service financially",
+            "letters would take longer to arrive"
+          ],
+          "answer": 2,
+          "explanation": "The third paragraph says critics warned that a flat low price would bankrupt the service, since long journeys would no longer pay their way. Forgery, delays and refusal to prepay are plausible worries, but none is the one the passage reports."
+        },
+        {
+          "id": "R16",
+          "passage": "p3",
+          "topic": "inference",
+          "stem": "The author says the critics \"had the arithmetic upside down\" because",
+          "choices": [
+            "the main cost of a letter was in handling it, not in the distance it travelled",
+            "they had miscounted the number of letters being sent",
+            "the new price was actually higher than the old one",
+            "stamps cost more to print than expected"
+          ],
+          "answer": 0,
+          "explanation": "The final paragraph explains that the cost of carrying a letter was mostly in handling, not in the miles, so cheap prepaid letters that were never refused cost less to process. The critics had assumed distance was the main expense. The new price was low, not high, and stamps and miscounting are not discussed."
+        },
+        {
+          "id": "R17",
+          "passage": "p3",
+          "topic": "vocabulary in context",
+          "stem": "As used in the fourth paragraph, \"volumes\" most nearly means",
+          "choices": [
+            "books",
+            "levels of noise",
+            "sizes of containers",
+            "quantities of letters"
+          ],
+          "answer": 3,
+          "explanation": "The sentence continues by saying the post was handling several times as many letters as before, so volumes means the number of letters. Books and loudness are other meanings of the word that do not fit a sentence about mail."
+        },
+        {
+          "id": "R18",
+          "passage": "p3",
+          "topic": "main idea",
+          "stem": "The main purpose of the passage is to",
+          "choices": [
+            "explain how a simple change fixed a costly and unfair postal system",
+            "describe the process of printing postage stamps",
+            "argue that postal services should be free",
+            "compare postal systems in different countries"
+          ],
+          "answer": 0,
+          "explanation": "The passage sets out the old system and its problems, describes the reform, and shows why it worked despite the critics. That is the story of a simple change fixing a broken system. Stamps are mentioned only as the proof of prepayment, and the spread to other countries is a single sentence, not a comparison."
+        },
+        {
+          "id": "R19",
+          "passage": "p4",
+          "topic": "detail",
+          "stem": "According to the passage, before there were conductors, an orchestra kept time by",
+          "choices": [
+            "following the leading violinist and listening to one another",
+            "reading marks printed in the music",
+            "watching a clock at the side of the stage",
+            "following the loudest instrument"
+          ],
+          "answer": 0,
+          "explanation": "The first paragraph says players kept together by listening to one another and by watching the leading violinist, who nodded or lifted his bow. The other choices are not in the passage. The point of the paragraph is that rhythm was kept from inside the group."
+        },
+        {
+          "id": "R20",
+          "passage": "p4",
+          "topic": "detail",
+          "stem": "The passage gives all of the following as reasons the old method stopped working EXCEPT",
+          "choices": [
+            "orchestras grew too large for everyone to see the leader",
+            "players at the back heard the front a fraction late",
+            "audiences demanded a visible leader",
+            "music began to change speed and mood within a movement"
+          ],
+          "answer": 2,
+          "explanation": "The second paragraph gives three reasons: size, the delay in sound reaching the back, and music that shifted within a movement. Audiences are described in the third paragraph as finding the conductor strange, which is the opposite of demanding one. On an EXCEPT question, three choices come from the text and the answer is the one that does not."
+        },
+        {
+          "id": "R21",
+          "passage": "p4",
+          "topic": "inference",
+          "stem": "The passage suggests that early audiences found conductors strange mainly because the conductor",
+          "choices": [
+            "was usually the composer",
+            "made no sound and faced away from the audience",
+            "was paid more than the players",
+            "used an unusually long stick"
+          ],
+          "answer": 1,
+          "explanation": "The third paragraph describes the odd sight: a person making no sound, waving a stick, with his back to the paying public. Silence and facing away are the two things named. Composers conducting is mentioned as a fact, not as the cause of the strangeness, and pay is never discussed."
+        },
+        {
+          "id": "R22",
+          "passage": "p4",
+          "topic": "vocabulary in context",
+          "stem": "As used in the final paragraph, \"audible\" most nearly means",
+          "choices": [
+            "loud",
+            "able to be heard",
+            "recorded",
+            "popular"
+          ],
+          "answer": 1,
+          "explanation": "The objections faded because the results were audible: the improvement could be heard in the music. Loud is a trap, since audible things can be quiet, and the passage does not mention recordings, which did not exist at the time."
+        },
+        {
+          "id": "R23",
+          "passage": "p4",
+          "topic": "structure",
+          "stem": "The passage is organised primarily by",
+          "choices": [
+            "comparing two kinds of orchestra that exist today",
+            "tracing a change over time and explaining why it happened",
+            "listing famous conductors in order of importance",
+            "presenting a problem that remains unsolved"
+          ],
+          "answer": 1,
+          "explanation": "The passage moves from orchestras without conductors, to the reasons that arrangement failed, to the first conductors and the objections, to acceptance. That is a change over time with its causes. No conductors are named, and the problem was solved, as the last paragraph says."
+        },
+        {
+          "id": "R24",
+          "passage": "p4",
+          "topic": "inference",
+          "stem": "The final sentence suggests that",
+          "choices": [
+            "modern orchestras are considering returning to the old system",
+            "conductors are no longer necessary",
+            "the oddness of a silent leader has never entirely disappeared",
+            "first-time concertgoers should study music history"
+          ],
+          "answer": 2,
+          "explanation": "The sentence says the sight still strikes some first-time concertgoers as odd, exactly as it struck their predecessors two centuries ago. The strangeness persists even though the practice is accepted. Nothing suggests conductors are unnecessary; the previous paragraph says the results were audible."
+        },
+        {
+          "id": "R25",
+          "passage": "p5",
+          "topic": "main idea",
+          "stem": "The passage is primarily concerned with",
+          "choices": [
+            "proving that early maps were more accurate than modern ones",
+            "describing how the magnetic compass was invented",
+            "explaining why north is at the top of maps and what that habit does to us",
+            "arguing that maps should always put south at the top"
+          ],
+          "answer": 2,
+          "explanation": "The passage opens by saying there is no natural reason for north to be on top, gives the historical causes, and then examines the effects of the habit. The compass is one cause among several, and the south-up maps at the end are used to reveal the habit, not as a recommendation for all maps."
+        },
+        {
+          "id": "R26",
+          "passage": "p5",
+          "topic": "detail",
+          "stem": "According to the passage, the ancient geographer influenced modern maps because",
+          "choices": [
+            "he invented the magnetic compass",
+            "he was the first to draw accurate coastlines",
+            "his maps put south at the top",
+            "printers copied the orientation of his rediscovered maps"
+          ],
+          "answer": 3,
+          "explanation": "The second paragraph says his work was rediscovered and printed in the fifteenth century, and printers copied his orientation along with his coastlines. He happened to put north on top. The passage does not credit him with the compass or with accuracy, and south-up maps are attributed to some Islamic mapmakers."
+        },
+        {
+          "id": "R27",
+          "passage": "p5",
+          "topic": "vocabulary in context",
+          "stem": "As used in the second paragraph, \"decisive\" most nearly means",
+          "choices": [
+            "settling the matter by itself",
+            "quick to make choices",
+            "well known",
+            "based on measurement"
+          ],
+          "answer": 0,
+          "explanation": "The sentence says north's rise had several causes, none of them decisive alone, and then lists them. Decisive here means enough on its own to settle the question. Quick to make choices is the meaning used for people, not for causes."
+        },
+        {
+          "id": "R28",
+          "passage": "p5",
+          "topic": "inference",
+          "stem": "The author suggests that the habit of putting north on top",
+          "choices": [
+            "has been abandoned by most navigation software",
+            "subtly affects how viewers judge the importance of places",
+            "was imposed by law in the fifteenth century",
+            "makes maps more accurate"
+          ],
+          "answer": 1,
+          "explanation": "The third paragraph says a viewer half consciously reads up as more important than down, though nothing in geography supports the feeling. That is a subtle effect on judgement. Navigation software is said to assume north-up, the reverse of abandoning it, and the passage says nothing about law or accuracy."
+        },
+        {
+          "id": "R29",
+          "passage": "p5",
+          "topic": "detail",
+          "stem": "The passage mentions medieval European maps in order to",
+          "choices": [
+            "praise their artistic quality",
+            "explain how the compass reached Europe",
+            "criticise their many errors",
+            "show that other orientations were once normal"
+          ],
+          "answer": 3,
+          "explanation": "The first paragraph lists European maps with east on top, Islamic maps with south on top, and varied Chinese maps, all to make the point that a map can be turned any way its maker likes. The examples establish that north-up was one choice among several, not the natural one."
+        },
+        {
+          "id": "R30",
+          "passage": "p5",
+          "topic": "tone and purpose",
+          "stem": "The final paragraph's sentence \"It is not coming from the world. It is coming from the habit\" is intended to",
+          "choices": [
+            "make the reader recognise that the sense of wrongness is learned, not natural",
+            "argue that the world itself has no north or south",
+            "explain how to read a south-up map",
+            "warn that such maps are dangerous for navigation"
+          ],
+          "answer": 0,
+          "explanation": "The paragraph says south-up maps look wrong to almost everyone even though the continents are correctly placed, and then locates the wrongness in the habit rather than in the world. The point is that the feeling is learned. The passage does not deny that north and south exist, and it says nothing about danger."
+        },
+        {
+          "id": "R31",
+          "passage": "p6",
+          "topic": "main idea",
+          "stem": "The passage is primarily about",
+          "choices": [
+            "the dangers of deep-sea exploration",
+            "how light bulbs waste energy",
+            "how and why deep-sea animals produce their own light",
+            "the discovery of a new species of squid"
+          ],
+          "answer": 2,
+          "explanation": "The second paragraph explains how the light is made, the third explains what it is used for, and the fourth notes how much remains unknown. The light bulb appears as a comparison for efficiency, and the squid is one example among several. Danger is never discussed."
+        },
+        {
+          "id": "R32",
+          "passage": "p6",
+          "topic": "detail",
+          "stem": "According to the passage, deep-sea light is nearly always blue-green because",
+          "choices": [
+            "that colour travels farthest through seawater",
+            "it is the only colour the chemical reaction can produce",
+            "predators cannot see blue-green light",
+            "it matches the colour of the animals' bodies"
+          ],
+          "answer": 0,
+          "explanation": "The second paragraph says blue-green is the colour that travels farthest through seawater, and an animal advertising in the dark wants to be seen from far away. The passage does not say the reaction is limited to one colour, and the whole point of the colour is to be seen, not hidden."
+        },
+        {
+          "id": "R33",
+          "passage": "p6",
+          "topic": "inference",
+          "stem": "It can be inferred that an animal glowing from its underside is trying to",
+          "choices": [
+            "attract a mate",
+            "lure prey toward its mouth",
+            "warm itself",
+            "avoid being seen from below"
+          ],
+          "answer": 3,
+          "explanation": "The third paragraph says these animals match the faint light filtering from above so that a hunter looking up sees no silhouette. That is hiding from something below. Lures and mate-finding are given as separate uses by other animals, and the passage says the reaction releases light rather than heat."
+        },
+        {
+          "id": "R34",
+          "passage": "p6",
+          "topic": "vocabulary in context",
+          "stem": "As used in the third paragraph, \"pursuer\" most nearly means",
+          "choices": [
+            "a companion",
+            "a scientist",
+            "something giving chase",
+            "a source of light"
+          ],
+          "answer": 2,
+          "explanation": "The squid squirts a cloud of light to blind a pursuer while it escapes, so the pursuer is whatever is chasing it. Companion and scientist do not fit a sentence about escaping, and a source of light is what the squid itself produces."
+        },
+        {
+          "id": "R35",
+          "passage": "p6",
+          "topic": "structure",
+          "stem": "The comparison to \"a particular person in a city with the power out\" is used to show",
+          "choices": [
+            "how dangerous the deep sea is",
+            "how difficult it is to find a mate in the dark",
+            "how cities waste electricity",
+            "how deep-sea animals navigate"
+          ],
+          "answer": 1,
+          "explanation": "The sentence says animals flash to find one another, since a mate in the deep sea is otherwise as hard to locate as a person in a blacked-out city. The comparison is about the difficulty of finding one individual in total darkness. It is not about danger or navigation in general."
+        },
+        {
+          "id": "R36",
+          "passage": "p6",
+          "topic": "tone and purpose",
+          "stem": "The final paragraph's comparison of the animals' signals to a language suggests that the author regards the deep sea as",
+          "choices": [
+            "a place that has been fully explained",
+            "too dark to be worth studying",
+            "full of meaning that has not yet been understood",
+            "a threat to human divers"
+          ],
+          "answer": 2,
+          "explanation": "Flashes as words and a grammar still unknown describe something meaningful that has not been decoded. The paragraph also says most of the animals were seen only recently and many signals remain undeciphered. That is the opposite of fully explained, and the tone is curiosity rather than dismissal or fear."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics Achievement",
+      "timeLimitSeconds": 2400,
+      "questions": [
+        {
+          "id": "M1",
+          "topic": "fractions and decimals",
+          "stem": "4.06 + 12.7 + 0.35 =",
+          "choices": [
+            "16.11",
+            "17.01",
+            "17.11",
+            "18.11"
+          ],
+          "answer": 2,
+          "explanation": "Line up the decimal points: 4.06 + 12.70 + 0.35 = 17.11. The choice 17.01 comes from dropping the carry from the hundredths column, and 16.11 from adding 12.7 as 11.7. Writing 12.7 as 12.70 keeps the columns straight."
+        },
+        {
+          "id": "M2",
+          "topic": "fractions and decimals",
+          "stem": "5/12 - 1/4 =",
+          "choices": [
+            "1/6",
+            "1/4",
+            "1/3",
+            "1/2"
+          ],
+          "answer": 0,
+          "explanation": "The common denominator is 12: 5/12 - 3/12 = 2/12, which reduces to 1/6. The choice 1/2 is 4/8, from subtracting tops and bottoms separately, which is never how fractions work. The choice 1/3 is 4/12, from forgetting to convert the 1/4."
+        },
+        {
+          "id": "M3",
+          "topic": "fractions and decimals",
+          "stem": "2.5 × 3.6 =",
+          "choices": [
+            "0.9",
+            "6.1",
+            "8.1",
+            "9"
+          ],
+          "answer": 3,
+          "explanation": "25 × 36 = 900, and there are two decimal places in total, so the answer is 9.00, or 9. The choice 6.1 adds the numbers instead of multiplying. The choice 0.9 places the decimal point one spot too far to the left. A quick estimate, 2.5 × 4 = 10, shows the answer must be close to 9."
+        },
+        {
+          "id": "M4",
+          "topic": "percent",
+          "stem": "Written as a percent, 7/8 is",
+          "choices": [
+            "78%",
+            "87.5%",
+            "88%",
+            "875%"
+          ],
+          "answer": 1,
+          "explanation": "7 ÷ 8 = 0.875, which is 87.5%. The choice 78% comes from reading the digits of the fraction, 7 and 8, as a percentage. The choice 875% moves the decimal one place too far. Knowing that 1/8 is 12.5% makes 7/8 a quick 7 × 12.5."
+        },
+        {
+          "id": "M5",
+          "topic": "arithmetic",
+          "stem": "-8 + (-3) - 5 =",
+          "choices": [
+            "-16",
+            "-10",
+            "-6",
+            "0"
+          ],
+          "answer": 0,
+          "explanation": "Adding a negative is subtracting: -8 - 3 = -11, then -11 - 5 = -16. The choice -10 comes from treating the -3 as +3 and getting -8 + 3 - 5. The choice -6 comes from -8 + 3 + 5 with two sign slips. Every operation here moves left on the number line."
+        },
+        {
+          "id": "M6",
+          "topic": "arithmetic",
+          "stem": "What is the value of 2 + 3 × 4² ÷ 8?",
+          "choices": [
+            "5",
+            "6.5",
+            "8",
+            "50"
+          ],
+          "answer": 2,
+          "explanation": "Exponents first: 4² = 16. Then multiply and divide left to right: 3 × 16 = 48 and 48 ÷ 8 = 6. Then add: 2 + 6 = 8. The choice 50 comes from adding 2 + 3 first and then squaring the result of 5 × 4. Order of operations is the whole question."
+        },
+        {
+          "id": "M7",
+          "topic": "algebra",
+          "stem": "Solve for x: 4(x - 3) = 20",
+          "choices": [
+            "5",
+            "8",
+            "11",
+            "23"
+          ],
+          "answer": 1,
+          "explanation": "Divide both sides by 4 to get x - 3 = 5, so x = 8. Or expand: 4x - 12 = 20, so 4x = 32 and x = 8. The choice 5 stops after dividing and forgets to add the 3. The choice 23 comes from treating 4(x - 3) as 4x - 3."
+        },
+        {
+          "id": "M8",
+          "topic": "number properties",
+          "stem": "What is the greatest common factor of 36 and 60?",
+          "choices": [
+            "4",
+            "6",
+            "8",
+            "12"
+          ],
+          "answer": 3,
+          "explanation": "36 = 12 × 3 and 60 = 12 × 5, so 12 divides both, and nothing larger does. The choices 4 and 6 are common factors but not the greatest. The choice 8 divides neither 36 nor 60 evenly. Listing the factors of the smaller number and testing each against the larger is the safe method."
+        },
+        {
+          "id": "M9",
+          "topic": "number properties",
+          "stem": "What is the least common multiple of 8 and 12?",
+          "choices": [
+            "24",
+            "48",
+            "72",
+            "96"
+          ],
+          "answer": 0,
+          "explanation": "The multiples of 8 are 8, 16, 24, and the multiples of 12 are 12, 24, so 24 is the first they share. The choice 96 is 8 × 12, which is a common multiple but not the least one. Multiplying the numbers only gives the least common multiple when they share no factors."
+        },
+        {
+          "id": "M10",
+          "topic": "geometry",
+          "stem": "A circle has a radius of 7 cm. Using 22/7 for pi, what is its circumference?",
+          "choices": [
+            "22 cm",
+            "33 cm",
+            "44 cm",
+            "154 cm"
+          ],
+          "answer": 2,
+          "explanation": "Circumference is 2 × pi × radius, which is 2 × 22/7 × 7 = 44 cm. The choice 154 is the area, pi times radius squared, which is the answer to a different question. The choice 22 forgets to double."
+        },
+        {
+          "id": "M11",
+          "topic": "geometry",
+          "stem": "A rectangular box is 8 cm long, 5 cm wide and 3 cm high. What is its volume?",
+          "choices": [
+            "16 cubic cm",
+            "40 cubic cm",
+            "79 cubic cm",
+            "120 cubic cm"
+          ],
+          "answer": 3,
+          "explanation": "Volume is length times width times height: 8 × 5 × 3 = 120 cubic cm. The choice 40 is the area of the base only, and 16 is the sum of the three dimensions. The choice 79 adds the areas of three different faces, which has no meaning here."
+        },
+        {
+          "id": "M12",
+          "topic": "number properties",
+          "stem": "0.7 × 10³ =",
+          "choices": [
+            "70",
+            "700",
+            "7,000",
+            "70,000"
+          ],
+          "answer": 1,
+          "explanation": "10³ is 1,000, and 0.7 × 1,000 = 700. The choice 70 moves the decimal only two places, and 7,000 moves it four. Each power of ten moves the decimal point one place to the right, so three places from 0.7 gives 700."
+        },
+        {
+          "id": "M13",
+          "topic": "fractions and decimals",
+          "stem": "Which of the following fractions is between 1/2 and 3/4?",
+          "choices": [
+            "2/5",
+            "5/8",
+            "4/5",
+            "7/8"
+          ],
+          "answer": 1,
+          "explanation": "In eighths, 1/2 is 4/8 and 3/4 is 6/8, so 5/8 sits between them. The choice 2/5 is 0.4, which is below 1/2, and 4/5 is 0.8, above 3/4. Converting to a common denominator or to decimals makes the comparison mechanical."
+        },
+        {
+          "id": "M14",
+          "topic": "number properties",
+          "stem": "3² × 3³ =",
+          "choices": [
+            "3 to the power of 5",
+            "3 to the power of 6",
+            "3 to the power of 8",
+            "3 to the power of 10"
+          ],
+          "answer": 0,
+          "explanation": "Multiplying powers of the same base adds the exponents: 2 + 3 = 5, so the answer is 3 to the power of 5, which is 243. The choice 3 to the power of 6 multiplies the exponents, which is the rule for raising a power to a power, not for multiplying. Check: 9 × 27 = 243."
+        },
+        {
+          "id": "M15",
+          "topic": "percent",
+          "stem": "After a 20% discount, a jacket costs $25. What was its original price?",
+          "choices": [
+            "$20",
+            "$30",
+            "$31.25",
+            "$45"
+          ],
+          "answer": 2,
+          "explanation": "The sale price is 80% of the original, so the original is 25 ÷ 0.8 = $31.25. The choice $30 adds 20% of the sale price, 5 dollars, back on, but the 20% was taken from the original, which was larger. Check: 20% of 31.25 is 6.25, and 31.25 - 6.25 = 25."
+        },
+        {
+          "id": "M16",
+          "topic": "data and probability",
+          "stem": "What is the median of 12, 5, 9, 20, 14 and 7?",
+          "choices": [
+            "9",
+            "9.5",
+            "10",
+            "10.5"
+          ],
+          "answer": 3,
+          "explanation": "In order: 5, 7, 9, 12, 14, 20. With six numbers, the median is the average of the middle two, 9 and 12, which is 10.5. The choice 9 is the third value, chosen by someone who stopped at one middle number. The choice 10 rounds the answer, which a median never needs."
+        },
+        {
+          "id": "M17",
+          "topic": "data and probability",
+          "stem": "What is the mode of 2, 9, 2, 5, 11, 2 and 8?",
+          "choices": [
+            "2",
+            "5",
+            "5.6",
+            "9"
+          ],
+          "answer": 0,
+          "explanation": "The mode is the value that appears most often, and 2 appears three times. The choice 5 is the median of the ordered list, and 5.6 is close to the mean, 39 ÷ 7. The choice 9 is the range, 11 - 2. Each wrong answer is a different measure of the same data."
+        },
+        {
+          "id": "M18",
+          "topic": "geometry",
+          "stem": "Two angles of a triangle measure 35 degrees and 65 degrees. What is the third angle?",
+          "choices": [
+            "70 degrees",
+            "80 degrees",
+            "90 degrees",
+            "100 degrees"
+          ],
+          "answer": 1,
+          "explanation": "The angles of a triangle add to 180, so the third is 180 - 35 - 65 = 80. The choice 100 is 35 + 65, the sum of the two given angles rather than what is left. The choice 90 is a guess that the triangle must be right-angled."
+        },
+        {
+          "id": "M19",
+          "topic": "measurement",
+          "stem": "3.5 kilometres is how many metres?",
+          "choices": [
+            "35",
+            "350",
+            "3,050",
+            "3,500"
+          ],
+          "answer": 3,
+          "explanation": "One kilometre is 1,000 metres, so 3.5 km is 3,500 m. The choice 350 uses 100 metres to a kilometre, and 3,050 reads 3.5 as 3 km and 50 m. Kilo always means a thousand."
+        },
+        {
+          "id": "M20",
+          "topic": "algebra",
+          "stem": "Simplify 6x + 3y - 2x + 5y.",
+          "choices": [
+            "8x + 8y",
+            "4x + 2y",
+            "4x + 8y",
+            "12xy"
+          ],
+          "answer": 2,
+          "explanation": "Combine like terms: 6x - 2x = 4x and 3y + 5y = 8y, giving 4x + 8y. The choice 4x + 2y subtracts the y terms as well as the x terms. The choice 12xy adds everything into one term, but x and y are different variables and cannot be combined."
+        },
+        {
+          "id": "M21",
+          "topic": "number properties",
+          "stem": "Which of the following numbers is divisible by 9?",
+          "choices": [
+            "4,536",
+            "5,182",
+            "6,344",
+            "7,201"
+          ],
+          "answer": 0,
+          "explanation": "A number is divisible by 9 when its digits add to a multiple of 9. For 4,536 the digits add to 18. The others add to 16, 17 and 10, none of which is a multiple of 9. The test saves dividing four large numbers."
+        },
+        {
+          "id": "M22",
+          "topic": "geometry",
+          "stem": "A trapezoid has parallel sides of 6 cm and 10 cm and a height of 4 cm. What is its area?",
+          "choices": [
+            "24 square cm",
+            "32 square cm",
+            "40 square cm",
+            "64 square cm"
+          ],
+          "answer": 1,
+          "explanation": "The area of a trapezoid is the average of the parallel sides times the height: (6 + 10) ÷ 2 × 4 = 8 × 4 = 32. The choice 40 uses the longer side alone as if the shape were a rectangle, and 64 forgets to halve the sum of the sides."
+        },
+        {
+          "id": "M23",
+          "topic": "algebra",
+          "stem": "If y = 3x - 7 and x = 5, what is the value of y?",
+          "choices": [
+            "-22",
+            "1",
+            "8",
+            "22"
+          ],
+          "answer": 2,
+          "explanation": "Substitute: 3 × 5 - 7 = 15 - 7 = 8. The choice 22 adds 7 instead of subtracting. The choice -22 comes from -15 - 7, treating 3x as negative. The choice 1 is 3 × 5 - 14, a doubled subtraction."
+        },
+        {
+          "id": "M24",
+          "topic": "ratio and proportion",
+          "stem": "The ratio 18 : 24 written in lowest terms is",
+          "choices": [
+            "2 : 3",
+            "3 : 5",
+            "6 : 8",
+            "3 : 4"
+          ],
+          "answer": 3,
+          "explanation": "The greatest common factor of 18 and 24 is 6, and dividing both by 6 gives 3 : 4. The choice 6 : 8 is a partial reduction, dividing by 3 only. The choice 2 : 3 is what you get by dividing 18 by 9 and 24 by 8, two different numbers, which a ratio never allows."
+        },
+        {
+          "id": "M25",
+          "topic": "data and probability",
+          "stem": "A fair six-sided die is rolled once. What is the probability of rolling a number greater than 4?",
+          "choices": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3"
+          ],
+          "answer": 1,
+          "explanation": "The numbers greater than 4 are 5 and 6, which is 2 of the 6 faces, so the probability is 2/6 = 1/3. The choice 1/2 counts 4, 5 and 6, treating greater than as at least. The choice 1/6 counts only one face."
+        },
+        {
+          "id": "M26",
+          "topic": "percent",
+          "stem": "12 is what percent of 80?",
+          "choices": [
+            "15%",
+            "20%",
+            "60%",
+            "68%"
+          ],
+          "answer": 0,
+          "explanation": "12 ÷ 80 = 0.15, which is 15%. The choice 20% comes from 12 ÷ 60, misreading the base, and 68% is 80 - 12, which is not a percentage of anything. Percent questions are a division: the part divided by the whole."
+        },
+        {
+          "id": "M27",
+          "topic": "geometry",
+          "stem": "A rectangle has an area of 36 square cm and a width of 4 cm. What is its perimeter?",
+          "choices": [
+            "13 cm",
+            "18 cm",
+            "22 cm",
+            "26 cm"
+          ],
+          "answer": 3,
+          "explanation": "The length is 36 ÷ 4 = 9 cm, so the perimeter is 2 × (9 + 4) = 26 cm. The choice 13 is the length plus the width once, not twice. The choice 18 doubles the length and forgets the widths."
+        },
+        {
+          "id": "M28",
+          "topic": "arithmetic",
+          "stem": "Round 4,762 to the nearest hundred.",
+          "choices": [
+            "4,700",
+            "4,760",
+            "4,800",
+            "5,000"
+          ],
+          "answer": 2,
+          "explanation": "The hundreds digit is 7 and the tens digit is 6, which is 5 or more, so round up to 4,800. The choice 4,760 rounds to the nearest ten, and 5,000 rounds to the nearest thousand. Look at the digit one place to the right of the one you are rounding to."
+        },
+        {
+          "id": "M29",
+          "topic": "fractions and decimals",
+          "stem": "A recipe uses 2/3 of a cup of sugar for one batch. How many cups of sugar are needed for 4 batches?",
+          "choices": [
+            "2 2/3",
+            "3 1/3",
+            "4 2/3",
+            "6"
+          ],
+          "answer": 0,
+          "explanation": "4 × 2/3 = 8/3 = 2 2/3 cups. The choice 4 2/3 adds the whole number 4 to the fraction instead of multiplying. The choice 6 comes from multiplying by the 3 in the denominator. Four batches of two thirds is eight thirds."
+        },
+        {
+          "id": "M30",
+          "topic": "algebra",
+          "stem": "Solve for x: x ÷ 5 + 3 = 7",
+          "choices": [
+            "0.8",
+            "20",
+            "35",
+            "50"
+          ],
+          "answer": 1,
+          "explanation": "Subtract 3 from both sides to get x ÷ 5 = 4, then multiply by 5 to get x = 20. The choice 35 multiplies before subtracting, giving 7 × 5. The choice 0.8 divides 4 by 5 instead of multiplying. Undo the operations in the reverse order they were applied."
+        },
+        {
+          "id": "M31",
+          "topic": "number properties",
+          "stem": "On a number line, point P is at -3 and point Q is at 5. What is the distance between P and Q?",
+          "choices": [
+            "-8",
+            "2",
+            "8",
+            "15"
+          ],
+          "answer": 2,
+          "explanation": "From -3 to 0 is 3 units, and from 0 to 5 is 5 more, so the distance is 8. Distance is always positive, so -8 is not possible. The choice 2 is 5 - 3, which treats the -3 as +3. The choice 15 multiplies the two values."
+        },
+        {
+          "id": "M32",
+          "topic": "fractions and decimals",
+          "stem": "Which of the following is equal to 2/5?",
+          "choices": [
+            "0.25",
+            "0.3",
+            "0.35",
+            "0.4"
+          ],
+          "answer": 3,
+          "explanation": "2 ÷ 5 = 0.4, or think of 2/5 as 4/10. The choice 0.25 is 1/4, and 0.35 is what you get by reading the two digits of 2/5 and adding them up in an odd way. Fifths are the easiest fractions to convert, since each fifth is two tenths."
+        },
+        {
+          "id": "M33",
+          "topic": "number properties",
+          "stem": "What is the square root of 144?",
+          "choices": [
+            "12",
+            "14",
+            "72",
+            "288"
+          ],
+          "answer": 0,
+          "explanation": "12 × 12 = 144, so the square root is 12. The choice 72 is half of 144, a common confusion between halving and square rooting. The choice 288 doubles it. The choice 14 is a guess from the digits 1 and 4."
+        },
+        {
+          "id": "M34",
+          "topic": "geometry",
+          "stem": "The point (3, -2) is reflected over the x-axis. What are the coordinates of its image?",
+          "choices": [
+            "(-3, -2)",
+            "(-3, 2)",
+            "(3, 2)",
+            "(-2, 3)"
+          ],
+          "answer": 2,
+          "explanation": "Reflecting over the x-axis flips the point up or down, so the y-coordinate changes sign and the x-coordinate stays: (3, 2). The choice (-3, -2) is a reflection over the y-axis instead. The choice (-2, 3) swaps the coordinates, which no reflection over an axis does."
+        },
+        {
+          "id": "M35",
+          "topic": "geometry",
+          "stem": "Two angles are complementary. One measures 37 degrees. What is the other?",
+          "choices": [
+            "43 degrees",
+            "53 degrees",
+            "143 degrees",
+            "153 degrees"
+          ],
+          "answer": 1,
+          "explanation": "Complementary angles add to 90, so the other is 90 - 37 = 53. The choice 143 uses 180, which is for supplementary angles. The choice 43 is a subtraction slip, 90 - 37 done as 80 - 37."
+        },
+        {
+          "id": "M36",
+          "topic": "geometry",
+          "stem": "A cube has edges of 5 cm. What is its total surface area?",
+          "choices": [
+            "25 square cm",
+            "30 square cm",
+            "125 square cm",
+            "150 square cm"
+          ],
+          "answer": 3,
+          "explanation": "Each face is 5 × 5 = 25 square cm, and a cube has six faces, so the surface area is 150. The choice 125 is the volume, 5 cubed. The choice 25 is one face, and 30 is 6 × 5, mixing up the number of faces with the edge length."
+        },
+        {
+          "id": "M37",
+          "topic": "arithmetic",
+          "stem": "Which of the following is the best estimate of 61 × 39?",
+          "choices": [
+            "2,400",
+            "2,800",
+            "24,000",
+            "28,000"
+          ],
+          "answer": 0,
+          "explanation": "61 is about 60 and 39 is about 40, so the product is about 60 × 40 = 2,400. The exact answer is 2,379. The choice 24,000 has an extra zero from mishandling 60 × 40. Round each number first, then multiply."
+        },
+        {
+          "id": "M38",
+          "topic": "data and probability",
+          "stem": "A bakery sold 12 loaves on Monday, 8 on Tuesday, 15 on Wednesday and 5 on Thursday. What fraction of the four days' total was sold on Wednesday?",
+          "choices": [
+            "1/4",
+            "3/8",
+            "1/2",
+            "5/8"
+          ],
+          "answer": 1,
+          "explanation": "The total is 12 + 8 + 15 + 5 = 40, and Wednesday's 15 out of 40 reduces to 3/8. The choice 1/4 assumes each of four days sold an equal share. The choice 1/2 is a rough guess that 15 is about half of the biggest number, not of the total."
+        },
+        {
+          "id": "M39",
+          "topic": "algebra",
+          "stem": "Which of the following describes all values of x for which 2x + 7 > 15?",
+          "choices": [
+            "x > 2",
+            "x < 4",
+            "x > 4",
+            "x > 11"
+          ],
+          "answer": 2,
+          "explanation": "Subtract 7 from both sides to get 2x > 8, then divide by 2 to get x > 4. The choice x < 4 flips the inequality, which only happens when dividing by a negative. The choice x > 11 comes from adding 7 instead of subtracting and then forgetting to divide."
+        },
+        {
+          "id": "M40",
+          "topic": "geometry",
+          "stem": "What is the measure of each interior angle of a regular hexagon?",
+          "choices": [
+            "60 degrees",
+            "90 degrees",
+            "108 degrees",
+            "120 degrees"
+          ],
+          "answer": 3,
+          "explanation": "The interior angles of a hexagon add to (6 - 2) × 180 = 720, and a regular hexagon has six equal angles, so each is 720 ÷ 6 = 120. The choice 108 is a regular pentagon's angle, and 60 is the angle of the equilateral triangles a hexagon can be cut into."
+        },
+        {
+          "id": "M41",
+          "topic": "ratio and proportion",
+          "stem": "A car travels 210 miles on 7 gallons of fuel. How many miles does it travel per gallon?",
+          "choices": [
+            "27",
+            "30",
+            "35",
+            "42"
+          ],
+          "answer": 1,
+          "explanation": "Miles per gallon is miles divided by gallons: 210 ÷ 7 = 30. The choice 35 is 210 ÷ 6, and 42 is 210 ÷ 5, both division slips. Per means divide by, and the order is the thing being measured divided by the unit it is measured against."
+        },
+        {
+          "id": "M42",
+          "topic": "arithmetic",
+          "stem": "(-4) × (-3) × (-2) =",
+          "choices": [
+            "-24",
+            "-9",
+            "9",
+            "24"
+          ],
+          "answer": 0,
+          "explanation": "The sizes multiply to 24. Three negative signs give a negative result, since each pair of negatives cancels and one is left over. So the answer is -24. The choice 24 forgets the third sign. The choices 9 and -9 add the numbers instead of multiplying."
+        },
+        {
+          "id": "M43",
+          "topic": "fractions and decimals",
+          "stem": "3/4 ÷ 3/8 =",
+          "choices": [
+            "9/32",
+            "1/2",
+            "2",
+            "8/3"
+          ],
+          "answer": 2,
+          "explanation": "Dividing by a fraction is multiplying by its reciprocal: 3/4 × 8/3 = 24/12 = 2. Or notice that 3/4 is 6/8, and 6/8 contains 3/8 exactly twice. The choice 9/32 multiplies the fractions as written. The choice 1/2 flips the wrong fraction."
+        },
+        {
+          "id": "M44",
+          "topic": "geometry",
+          "stem": "A right triangle has legs of 9 cm and 12 cm. What is the length of its hypotenuse?",
+          "choices": [
+            "3 cm",
+            "10.5 cm",
+            "13 cm",
+            "15 cm"
+          ],
+          "answer": 3,
+          "explanation": "9² + 12² = 81 + 144 = 225, and the square root of 225 is 15. This is the 3-4-5 triangle scaled by 3. The choice 13 belongs to the 5-12-13 triangle, which shares one leg and is the natural mix-up. The choice 10.5 is the average of the legs."
+        },
+        {
+          "id": "M45",
+          "topic": "fractions and decimals",
+          "stem": "Written as a fraction in lowest terms, 0.045 is",
+          "choices": [
+            "9/200",
+            "1/20",
+            "9/20",
+            "9/2"
+          ],
+          "answer": 0,
+          "explanation": "0.045 is 45/1000, and dividing top and bottom by 5 gives 9/200. The choice 9/20 is 0.45, ten times too large, and 1/20 is 0.05, which is close but not equal. Three decimal places means thousandths."
+        },
+        {
+          "id": "M46",
+          "topic": "percent",
+          "stem": "The price of a jacket rose from $40 to $50. What was the percent increase?",
+          "choices": [
+            "20%",
+            "25%",
+            "40%",
+            "125%"
+          ],
+          "answer": 1,
+          "explanation": "The increase is $10, and 10 ÷ 40 = 0.25, which is 25%. The choice 20% divides the increase by the new price, 50, instead of the original. Percent change is always measured against the starting value. The choice 125% is the new price as a percent of the old, not the increase."
+        },
+        {
+          "id": "M47",
+          "topic": "number properties",
+          "stem": "What is the sum of the first five positive odd numbers?",
+          "choices": [
+            "15",
+            "20",
+            "25",
+            "30"
+          ],
+          "answer": 2,
+          "explanation": "1 + 3 + 5 + 7 + 9 = 25. The choice 15 is the sum of the first five counting numbers, 1 through 5. The choice 30 is the sum of the first five even numbers. The sum of the first n odd numbers is always n squared, which is worth noticing."
+        }
+      ]
+    }
+  ]
+}
