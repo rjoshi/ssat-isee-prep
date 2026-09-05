@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Past attempts — SSAT and ISEE practice</title>
+<title>Past attempts, SSAT and ISEE practice</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
@@ -94,9 +94,38 @@ function renderAttempt(a, i) {
     mmss(t.seconds) + (a.wrongPenalty ? ". Raw score " + t.raw.toFixed(2) : "") +
     (a.writing && a.writing.words ? ". Writing sample " + a.writing.words + " words." : "") + "</p>" +
     '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.9rem">' +
+    '<a class="btn btn-primary" data-review href="test.html?id=' + encodeURIComponent(a.testId) +
+      "&attempt=" + encodeURIComponent(a.takenAt) + '">Review</a>' +
+    '<a class="btn" data-review href="test.html?id=' + encodeURIComponent(a.testId) + '">Retake</a>' +
     '<button class="btn" data-dl="' + i + '">Download</button>' +
     '<button class="btn" data-rm="' + i + '">Delete</button></div>' +
     "</div>";
+}
+
+/* One line per test, so repeat sittings read as a trend before the individual attempts below. */
+function renderByTest(all) {
+  var by = {};
+  all.forEach(function (a) { (by[a.testId] = by[a.testId] || []).push(a); });
+  var ids = Object.keys(by).filter(function (id) { return by[id].length > 1; });
+  if (!ids.length) return "";
+  return "<h3 style=\"font-family:var(--serif);font-size:1.3rem;margin:2rem 0 0.4rem\">Across attempts</h3>" +
+    '<p class="empty" style="margin-bottom:1rem">Tests taken more than once. SSAT scores are raw, with the quarter point deduction.</p>' +
+    '<div class="history" style="margin-bottom:2rem">' + ids.map(function (id) {
+      var list = by[id].slice().sort(function (a, b) { return a.takenAt.localeCompare(b.takenAt); });
+      var p = list[0].wrongPenalty || 0;
+      var val = function (a) { var t = totals(a); return p ? t.raw : t.right; };
+      var show = function (v) { return p ? v.toFixed(2) : String(v); };
+      var first = val(list[0]), last = val(list[list.length - 1]);
+      var best = Math.max.apply(null, list.map(val));
+      var total = totals(list[0]).total;
+      var trend = last > first ? "up " + show(last - first) : last < first ? "down " + show(first - last) : "level";
+      return '<div class="history-row"><span class="when">' + esc(list[0].exam) + " " + esc(list[0].testTitle) + "</span>" +
+        '<span class="bar"><span style="width:' + Math.round((totals(list[list.length - 1]).right / total) * 100) + '%"></span></span>' +
+        '<span class="score">' + show(last) + " / " + total + "</span>" +
+        '<span class="time">best ' + show(best) + ", " + trend + " over " + list.length + " sittings</span>" +
+        '<a class="btn-quiet" href="test.html?id=' + encodeURIComponent(id) + "&attempt=" +
+        encodeURIComponent(list[list.length - 1].takenAt) + '">Review latest</a></div>';
+    }).join("") + "</div>";
 }
 
 function draw() {
@@ -108,7 +137,8 @@ function draw() {
     return;
   }
   all.sort(function (a, b) { return b.takenAt.localeCompare(a.takenAt); });
-  el.innerHTML = "<h3 style=\"font-family:var(--serif);font-size:1.3rem;margin-bottom:1rem\">" +
+  el.innerHTML = renderByTest(all) +
+    "<h3 style=\"font-family:var(--serif);font-size:1.3rem;margin-bottom:1rem\">" +
     all.length + (all.length === 1 ? " attempt" : " attempts") + "</h3>" +
     all.map(renderAttempt).join("");
 
@@ -166,13 +196,40 @@ document.getElementById("picker").onchange = function (e) {
       return;
     }
     var list = Array.isArray(data) ? data : data.attempts ? data.attempts : [data];
+    list = list.filter(function (a) { return a && a.testId && a.takenAt && Array.isArray(a.sections); });
+    if (!list.length) {
+      document.getElementById("viewer").innerHTML =
+        '<p class="rule warn">That file does not contain any attempts, so nothing was opened.</p>';
+      return;
+    }
+    // Attempts already in this browser are matched by test and time taken, so importing the same
+    // file twice adds nothing.
+    var have = {};
+    load().forEach(function (a) { have[a.testId + "|" + a.takenAt] = true; });
+    var fresh = list.filter(function (a) { return !have[a.testId + "|" + a.takenAt]; });
     document.getElementById("viewer").innerHTML =
       "<h3 style=\"font-family:var(--serif);font-size:1.3rem;margin:2.5rem 0 0.4rem\">From " +
       esc(f.name) + "</h3><p class=\"empty\" style=\"margin-bottom:1rem\">Viewing only. Nothing " +
-      "from this file is added to this browser.</p>" + list.map(renderAttempt).join("");
-    document.getElementById("viewer").querySelectorAll("[data-dl],[data-rm]").forEach(function (b) {
+      "from this file is added to this browser unless you press the button below.</p>" +
+      '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:0 0 1.25rem">' +
+      (fresh.length
+        ? '<button class="btn btn-primary" id="importAll">Add ' + fresh.length +
+          (fresh.length === 1 ? " attempt" : " attempts") + " to this browser</button>"
+        : '<span class="empty">Every attempt in this file is already saved here.</span>') +
+      "</div>" + list.map(renderAttempt).join("");
+    // A file from another device cannot be reviewed here until it is added, since review reads the
+    // answers from this browser.
+    document.getElementById("viewer").querySelectorAll("[data-dl],[data-rm],[data-review]").forEach(function (b) {
       b.remove();
     });
+    var imp = document.getElementById("importAll");
+    if (imp) imp.onclick = function () {
+      var all = load().concat(fresh);
+      if (!save(all)) { alert("This browser would not save the attempts. Private windows often refuse."); return; }
+      document.getElementById("viewer").innerHTML = "";
+      draw();
+      window.scrollTo(0, 0);
+    };
   };
   reader.readAsText(f);
   e.target.value = "";

@@ -20,6 +20,9 @@ const state = {
   writingDone: false,
   attempt: null,
   saved: false,
+  reviewing: false,
+  stale: false,
+  breakStart: 0,
 };
 
 const app = document.getElementById("app");
@@ -101,6 +104,33 @@ function stopTimer() {
   state.tickHandle = null;
 }
 
+/* Breaks count up rather than down. Nothing advances automatically, since the point of a full
+   length sitting is to practise the whole three hours, but the clock turns rose once the real
+   break would have ended. */
+function startCountUp(allowed) {
+  stopTimer();
+  state.breakStart = Date.now();
+  let warned = false;
+  const tick = () => {
+    const gone = (Date.now() - state.breakStart) / 1000;
+    const clock = document.getElementById("clock");
+    if (clock) {
+      clock.textContent = mmss(gone);
+      clock.classList.toggle("low", gone > allowed);
+    }
+    if (railFill) {
+      railFill.style.transform = "scaleX(" + Math.min(1, gone / allowed) + ")";
+      railFill.classList.toggle("low", gone > allowed);
+    }
+    if (gone > allowed && !warned) {
+      warned = true;
+      toast("The real break would be over now.");
+    }
+  };
+  tick();
+  state.tickHandle = setInterval(tick, 1000);
+}
+
 function clearRail() {
   if (railFill) {
     railFill.style.transform = "scaleX(1)";
@@ -126,6 +156,7 @@ function render() {
     intro: renderIntro,
     section: renderSection,
     sectionEnd: renderSectionEnd,
+    break: renderBreak,
     writing: renderWriting,
     results: renderResults,
   })[state.phase]();
@@ -141,14 +172,20 @@ function renderIntro() {
   clearRail();
   const t = state.test;
   const w = writing();
+  const breakMin = sections().reduce((a, s) => a + (s.breakAfterSeconds || 0), 0) / 60;
   const totalMin = Math.round(
-    (sections().reduce((a, s) => a + s.timeLimitSeconds, 0) + (w ? w.timeLimitSeconds : 0)) / 60
+    (sections().reduce((a, s) => a + s.timeLimitSeconds, 0) + (w ? w.timeLimitSeconds : 0)) / 60 + breakMin
   );
-  const rows = sections().map(
-    (s) => `<li><span class="k">${esc(s.name)}</span><span class="v">${plural(
+  const rows = sections().flatMap((s) => {
+    const row = `<li><span class="k">${esc(s.name)}</span><span class="v">${plural(
       s.questions.length, "question"
-    )} &nbsp;·&nbsp; ${Math.round(s.timeLimitSeconds / 60)} min</span></li>`
-  );
+    )} &nbsp;·&nbsp; ${Math.round(s.timeLimitSeconds / 60)} min</span></li>`;
+    return s.breakAfterSeconds
+      ? [row, `<li class="break-row"><span class="k">Break</span><span class="v">${Math.round(s.breakAfterSeconds / 60)} min</span></li>`]
+      : [row];
+  });
+  const full = t.format === "full";
+  const history = loadAttempts().filter((a) => a.testId === t.id);
   if (w) {
     const wrow = `<li><span class="k">${esc(w.name)}</span><span class="v">1 prompt &nbsp;·&nbsp; ${Math.round(
       w.timeLimitSeconds / 60
@@ -165,6 +202,21 @@ function renderIntro() {
         <p>${esc(t.description)}</p>
         <ul class="facts">${rows.join("")}</ul>
         <p class="rule"><strong>Scoring.</strong> ${guessingLine()}</p>
+        ${
+          full
+            ? `<p class="rule"><strong>Full length.</strong> This runs the real sections at the real
+              lengths with the real break, so set aside about ${Math.round(totalMin / 60 * 2) / 2} hours
+              and treat it as a rehearsal for test day. During the break the clock counts up and
+              nothing moves on until you press the button.</p>`
+            : ""
+        }
+        ${
+          history.length
+            ? `<p style="font-size:0.95rem;color:var(--muted)">You have taken this test ${plural(
+                history.length, "time"
+              )} before. Your scores for every attempt are kept and compared on the results screen.</p>`
+            : ""
+        }
         <p style="font-size:0.97rem">Sit somewhere quiet with scratch paper and a pencil. There is
         no calculator, because neither real test allows one. Each section is timed on its own, and
         you cannot go back to a section once its time is up.</p>
@@ -203,8 +255,50 @@ function finishSection() {
   markQuestionExit();
   const sec = currentSection();
   state.sectionElapsed[sec.name] = (Date.now() - state.sectionElapsed[sec.name]) / 1000;
-  state.phase = "sectionEnd";
+  state.phase = sec.breakAfterSeconds ? "break" : "sectionEnd";
   render();
+}
+
+function nextAfterCurrent() {
+  const w = writing();
+  const isLast = state.si === sections().length - 1;
+  return {
+    name: !isLast ? sections()[state.si + 1].name : w && !state.writingDone ? w.name : "your results",
+    go: () => {
+      if (!isLast) enterSection(state.si + 1);
+      else if (w && !state.writingDone) enterWriting();
+      else showResults();
+    },
+  };
+}
+
+function renderBreak() {
+  const sec = currentSection();
+  const next = nextAfterCurrent();
+  const answered = sec.questions.filter((q) => state.answers[q.id] !== undefined).length;
+  const min = Math.round(sec.breakAfterSeconds / 60);
+
+  app.innerHTML = `
+    <div class="wrap narrow">
+      <div class="intro">
+        <p class="eyebrow">Break</p>
+        <h2>${plural(min, "minute")}, the way the real test gives it</h2>
+        <p>${esc(sec.name)} is done. You answered ${answered} of ${sec.questions.length} in ${mmss(
+    state.sectionElapsed[sec.name]
+  )}.</p>
+        <p style="font-size:0.97rem">Stand up, get water, eat something small. Do not open a book and
+        do not look at your answers. The clock at the top counts up and turns rose when the real
+        break would end. Nothing moves on until you press the button, so if you need longer, take
+        it, and notice that you did.</p>
+        <div style="margin-top:1.5rem">
+          <button class="btn btn-primary" id="cont">Start ${esc(next.name)}</button>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById("sectionName").textContent = "Break";
+  document.getElementById("counter").textContent = "";
+  document.getElementById("cont").onclick = () => { stopTimer(); clearRail(); next.go(); };
+  startCountUp(sec.breakAfterSeconds);
 }
 
 function renderSection() {
@@ -242,7 +336,7 @@ function renderSection() {
         ${passageHtml}
         <div class="qcard">
           <div class="qnum">Question ${state.qi + 1} of ${sec.questions.length}${
-    hint ? " — " + hint : ""
+    hint ? ", " + hint : ""
   }</div>
           ${stemHtml}
           <div class="choices" role="radiogroup" aria-label="Answer choices">
@@ -341,13 +435,8 @@ function confirmFinish() {
 function renderSectionEnd() {
   clearRail();
   const sec = currentSection();
-  const w = writing();
-  const isLast = state.si === sections().length - 1;
-  const nextThing = !isLast
-    ? sections()[state.si + 1].name
-    : w && !state.writingDone
-    ? w.name
-    : "your results";
+  const next = nextAfterCurrent();
+  const nextThing = next.name;
   const answered = sec.questions.filter((q) => state.answers[q.id] !== undefined).length;
 
   app.innerHTML = `
@@ -365,11 +454,9 @@ function renderSectionEnd() {
         </div>
       </div>
     </div>`;
-  document.getElementById("cont").onclick = () => {
-    if (!isLast) enterSection(state.si + 1);
-    else if (w && !state.writingDone) enterWriting();
-    else showResults();
-  };
+  document.getElementById("sectionName").textContent = sec.name;
+  document.getElementById("counter").textContent = "";
+  document.getElementById("cont").onclick = next.go;
 }
 
 function enterWriting() {
@@ -560,7 +647,9 @@ function renderResults() {
 
   app.innerHTML = `
     <div class="wrap narrow">
-      <p class="eyebrow">${esc(state.test.exam)} ${esc(state.test.level)} Level</p>
+      <p class="eyebrow">${esc(state.test.exam)} ${esc(state.test.level)} Level${
+        state.reviewing ? " &nbsp;·&nbsp; reviewing the attempt from " + esc(whenTaken(state.attempt.takenAt)) : ""
+      }</p>
       <h2 style="font-family:var(--serif);font-size:1.7rem">${esc(state.test.title)}</h2>
       <p style="font-family:var(--serif);color:var(--muted);line-height:1.7;max-width:60ch">
         ${totalRight} right, ${totalWrong} wrong and ${totalBlank} blank out of ${totalQ}.
@@ -586,20 +675,39 @@ function renderResults() {
           .join("")}
       </div>
 
+      ${
+        state.stale
+          ? `<p class="rule warn">This test has been edited since the attempt was taken, so the
+            answers below may not line up with the choices the student actually saw. The scores
+            recorded at the time are still the ones to trust.</p>`
+          : ""
+      }
+
+      ${topicBreakdown()}
+
       ${strategyNote(totalBlank, totalWrong, totalQ)}
 
       <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin:1.5rem 0">
-        <button class="btn btn-primary" id="dlJson">Download this attempt</button>
+        ${
+          state.reviewing
+            ? `<a class="btn btn-primary" href="test.html?id=${encodeURIComponent(state.test.id)}">Retake this test</a>
+               <button class="btn" id="dlJson">Download this attempt</button>`
+            : `<button class="btn btn-primary" id="dlJson">Download this attempt</button>`
+        }
         <button class="btn" id="copy">Copy a summary</button>
         ${state.writingText.trim() ? `<button class="btn" id="dlEssay">Download the writing</button>` : ""}
         <a class="btn" href="results.html">Past attempts</a>
         <a class="btn" href="index.html">All tests</a>
       </div>
       <p style="font-size:0.9rem;color:var(--muted);max-width:60ch">${
-        state.saved
+        state.reviewing
+          ? "This is a saved attempt. Retaking the test starts a fresh timed run and keeps this one."
+          : state.saved
           ? "This attempt is saved in this browser. Download it to send the file on, or open past attempts to export everything at once."
           : "This browser would not let the attempt be saved, so download it now if you want to keep it."
       }</p>
+
+      ${attemptHistory()}
 
       <h3 style="margin-top:2.5rem;font-family:var(--serif);font-size:1.3rem">Review</h3>
       <div class="filters">
@@ -635,6 +743,88 @@ function renderResults() {
   };
   const dl = document.getElementById("dlEssay");
   if (dl) dl.onclick = downloadWriting;
+}
+
+function whenTaken(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }) +
+    ", " + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+}
+
+function attemptTotals(a) {
+  let right = 0, wrong = 0, blank = 0, total = 0, seconds = 0;
+  a.sections.forEach((s) => { right += s.right; wrong += s.wrong; blank += s.blank; total += s.total; seconds += s.seconds; });
+  return { right, wrong, blank, total, seconds, raw: right - wrong * (a.wrongPenalty || 0) };
+}
+
+/* Every saved attempt on this test, oldest first, so a repeat sitting can be read as a trend. */
+function attemptHistory() {
+  const all = loadAttempts()
+    .filter((a) => a.testId === state.test.id)
+    .sort((a, b) => a.takenAt.localeCompare(b.takenAt));
+  if (all.length < 2) return "";
+  const p = penalty();
+  const score = (a) => (p > 0 ? attemptTotals(a).raw.toFixed(2) : attemptTotals(a).right);
+  const first = attemptTotals(all[0]);
+  const last = attemptTotals(all[all.length - 1]);
+  const delta = p > 0 ? last.raw - first.raw : last.right - first.right;
+  const trend =
+    delta > 0 ? "Up " + (p > 0 ? delta.toFixed(2) : delta) + " since the first attempt."
+    : delta < 0 ? "Down " + (p > 0 ? (-delta).toFixed(2) : -delta) + " since the first attempt."
+    : "Level with the first attempt.";
+  return `
+    <h3 style="margin-top:2.5rem;font-family:var(--serif);font-size:1.3rem">Across ${plural(all.length, "attempt")}</h3>
+    <p style="font-size:0.95rem;color:var(--muted);max-width:60ch">${trend} ${
+      p > 0 ? "Scores here are raw, with the quarter point deduction applied." : "Scores here are questions right."
+    }</p>
+    <div class="history">
+      ${all
+        .map((a) => {
+          const t = attemptTotals(a);
+          const current = state.attempt && a.takenAt === state.attempt.takenAt;
+          return `<div class="history-row ${current ? "current" : ""}">
+            <span class="when">${esc(whenTaken(a.takenAt))}${current ? " <em>this one</em>" : ""}</span>
+            <span class="bar"><span style="width:${Math.round((t.right / t.total) * 100)}%"></span></span>
+            <span class="score">${score(a)} / ${t.total}</span>
+            <span class="time">${mmss(t.seconds)}</span>
+            ${
+              current
+                ? `<span></span>`
+                : `<a class="btn-quiet" href="test.html?id=${encodeURIComponent(state.test.id)}&attempt=${encodeURIComponent(a.takenAt)}">Review</a>`
+            }
+          </div>`;
+        })
+        .join("")}
+    </div>`;
+}
+
+/* Questions may carry a topic tag. When they do, show the weakest topics first, since a weak
+   section says where to look and a weak topic says what to practise. */
+function topicBreakdown() {
+  const by = {};
+  allQuestions().forEach((q) => {
+    if (!q.topic) return;
+    const t = (by[q.topic] = by[q.topic] || { right: 0, total: 0 });
+    t.total++;
+    if (state.answers[q.id] === q.answer) t.right++;
+  });
+  const rows = Object.entries(by).filter(([, t]) => t.total >= 2);
+  if (rows.length < 2) return "";
+  rows.sort((a, b) => a[1].right / a[1].total - b[1].right / b[1].total || b[1].total - a[1].total);
+  return `
+    <h3 style="margin-top:2rem;font-family:var(--serif);font-size:1.3rem">By topic, weakest first</h3>
+    <div class="topics">
+      ${rows
+        .map(([name, t]) => {
+          const pct = Math.round((t.right / t.total) * 100);
+          return `<div class="topic-row ${pct < 50 ? "weak" : ""}">
+            <span class="name">${esc(name)}</span>
+            <span class="bar"><span style="width:${pct}%"></span></span>
+            <span class="score">${t.right} / ${t.total}</span>
+          </div>`;
+        })
+        .join("")}
+    </div>`;
 }
 
 function strategyNote(blank, wrong, total) {
@@ -678,7 +868,7 @@ function reviewItem(q) {
         if (i === q.answer) k += " key";
         else if (i === a) k += " chosen-wrong";
         return `<div class="${k}">${LETTERS[i]}. ${esc(c)}${
-          i === q.answer ? " — the answer" : i === a ? " — your choice" : ""
+          i === q.answer ? " (the answer)" : i === a ? " (your choice)" : ""
         }</div>`;
       })
       .join("")}
@@ -687,7 +877,7 @@ function reviewItem(q) {
 }
 
 function copySummary() {
-  const lines = [state.test.exam + " " + state.test.level + " Level — " + state.test.title, ""];
+  const lines = [state.test.exam + " " + state.test.level + " Level, " + state.test.title, ""];
   sections().forEach((s) => {
     const sc = scoreSection(s);
     lines.push(
@@ -752,7 +942,35 @@ function failed(message) {
   </div></div>`;
 }
 
-const id = new URLSearchParams(location.search).get("id");
+/* Review mode: test.html?id=X&attempt=<takenAt> reopens a saved attempt on the results screen,
+   with the explanations, instead of starting a new timed run. */
+function restoreAttempt(a) {
+  const byId = {};
+  (a.questions || []).forEach((r) => { byId[r.id] = r; });
+  allQuestions().forEach((q) => {
+    const r = byId[q.id];
+    if (!r) return;
+    if (r.chose) state.answers[q.id] = LETTERS.indexOf(r.chose);
+    if (r.seconds) state.qtime[q.id] = r.seconds;
+    if (r.flagged) state.flags.add(q.id);
+  });
+  (a.sections || []).forEach((s) => { state.sectionElapsed[s.name] = s.seconds; });
+  if (a.writing && a.writing.text) state.writingText = a.writing.text;
+  // If the test file has changed since the attempt, letters no longer line up. Say so rather than
+  // showing a review that quietly disagrees with the score the student got at the time.
+  state.stale =
+    (a.questions || []).length !== allQuestions().length ||
+    allQuestions().some((q) => byId[q.id] && byId[q.id].correct && byId[q.id].correct !== LETTERS[q.answer]);
+  state.attempt = a;
+  state.saved = true;
+  state.reviewing = true;
+  state.writingDone = true;
+  state.phase = "results";
+}
+
+const params = new URLSearchParams(location.search);
+const id = params.get("id");
+const attemptAt = params.get("attempt");
 
 if (!id) failed("No test was named in the address.");
 else {
@@ -763,7 +981,12 @@ else {
     })
     .then((data) => {
       state.test = data;
-      document.title = data.title + " — " + data.exam + " practice";
+      document.title = data.title + ", " + data.exam + " practice";
+      if (attemptAt) {
+        const a = loadAttempts().find((x) => x.testId === data.id && x.takenAt === attemptAt);
+        if (!a) throw new Error("That attempt is not saved in this browser. Attempts stay on the device that took them.");
+        restoreAttempt(a);
+      }
       render();
     })
     .catch((err) => failed(err.message));

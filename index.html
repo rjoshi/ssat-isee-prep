@@ -23,6 +23,8 @@
     <p class="empty">Loading the test list.</p>
   </div>
 
+  <div id="attempted"></div>
+
   <p style="margin:2.5rem 0 0"><a class="btn" href="results.html">Past attempts</a></p>
 
   <p class="note">Middle Level is the right level on both exams for a student applying to grade 7
@@ -33,6 +35,8 @@
 </div>
 
 <script>
+var STORE = "prep:attempts";
+
 var LEDE = {
   SSAT: "Five answer choices. A wrong answer costs a quarter point and a blank costs nothing, so guess only once you can rule something out. Verbal is synonyms and analogies, and the writing sample comes first.",
   ISEE: "Four answer choices. A wrong answer costs exactly what a blank costs, which is nothing, so never leave anything empty. Verbal is synonyms and sentence completions, and the essay comes last."
@@ -43,36 +47,135 @@ var KIND = {
   drill: { title: "Drills", hint: "One skill at a time" }
 };
 
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
+}
+
+function loadAttempts() {
+  try { return JSON.parse(localStorage.getItem(STORE) || "[]"); } catch (e) { return []; }
+}
+
+function shortDate(iso) {
+  return new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
+}
+
+function totals(a) {
+  var r = 0, w = 0, t = 0, sec = 0;
+  a.sections.forEach(function (s) { r += s.right; w += s.wrong; t += s.total; sec += s.seconds; });
+  return { right: r, wrong: w, total: t, seconds: sec, raw: r - w * (a.wrongPenalty || 0) };
+}
+
+function lengthLabel(t) {
+  if (t.format === "full") return "Full length";
+  if (t.kind === "mock") return "Short form";
+  return "";
+}
+
 function card(t, exam) {
   var chips = (t.covers || []).map(function (c) {
-    return '<span class="chip">' + c + "</span>";
+    return '<span class="chip">' + esc(c) + "</span>";
   }).join("");
-  return '<li><a class="test-card ' + exam.toLowerCase() + " " + t.kind +
-    '" href="test.html?id=' + t.id + '">' +
-    "<h2>" + t.title + "</h2><p>" + t.blurb + "</p>" +
+  var label = lengthLabel(t);
+  return '<li><a class="test-card ' + exam.toLowerCase() + " " + t.kind + (t.format === "full" ? " full" : "") +
+    '" href="test.html?id=' + encodeURIComponent(t.id) + '">' +
+    "<h2>" + esc(t.title) + (label ? ' <span class="length">' + label + "</span>" : "") + "</h2>" +
+    "<p>" + esc(t.blurb) + "</p>" +
     (chips ? '<div class="covers">' + chips + "</div>" : "") +
     '<div class="test-meta">' + t.questions + " questions &nbsp;·&nbsp; about " +
     t.minutes + " minutes</div></a></li>";
 }
 
+/* A test that has been taken at least once moves out of its exam group and into Attempted, where
+   every sitting is listed with its score so progress across attempts can be read at a glance. */
+function attemptedCard(t, attempts) {
+  var sorted = attempts.slice().sort(function (a, b) { return a.takenAt.localeCompare(b.takenAt); });
+  var latest = sorted[sorted.length - 1];
+  var penalty = latest.wrongPenalty || 0;
+  var score = function (a) { var x = totals(a); return penalty ? x.raw.toFixed(2) : String(x.right); };
+  var best = sorted.reduce(function (m, a) {
+    var v = penalty ? totals(a).raw : totals(a).right;
+    return v > m ? v : m;
+  }, -Infinity);
+  var total = totals(latest).total;
+  var first = totals(sorted[0]), last = totals(latest);
+  var delta = penalty ? last.raw - first.raw : last.right - first.right;
+  var trend = sorted.length < 2 ? ""
+    : delta > 0 ? "up " + (penalty ? delta.toFixed(2) : delta) + " since the first sitting"
+    : delta < 0 ? "down " + (penalty ? (-delta).toFixed(2) : -delta) + " since the first sitting"
+    : "level with the first sitting";
+  var label = lengthLabel(t);
+
+  var history = sorted.map(function (a) {
+    return '<a class="chip score-chip" href="test.html?id=' + encodeURIComponent(t.id) +
+      "&attempt=" + encodeURIComponent(a.takenAt) + '" title="Review this attempt">' +
+      score(a) + "/" + totals(a).total + " &nbsp;·&nbsp; " + esc(shortDate(a.takenAt)) + "</a>";
+  }).join("");
+
+  return '<li><div class="test-card attempted ' + t.exam.toLowerCase() + " " + t.kind + '">' +
+    '<p class="eyebrow">' + esc(t.exam) + " &nbsp;·&nbsp; " + (t.kind === "mock" ? "Mock" : "Drill") + "</p>" +
+    "<h2>" + esc(t.title) + (label ? ' <span class="length">' + label + "</span>" : "") + "</h2>" +
+    '<div class="test-meta">' + sorted.length + (sorted.length === 1 ? " attempt" : " attempts") +
+    " &nbsp;·&nbsp; latest " + score(latest) + " / " + total +
+    " &nbsp;·&nbsp; best " + (penalty ? best.toFixed(2) : best) + " / " + total +
+    (trend ? " &nbsp;·&nbsp; " + trend : "") +
+    (penalty ? '<span class="hint"> (raw, with the quarter point deduction)</span>' : "") + "</div>" +
+    '<div class="covers history-chips">' + history + "</div>" +
+    '<div class="actions">' +
+    '<a class="btn btn-primary" href="test.html?id=' + encodeURIComponent(t.id) +
+      "&attempt=" + encodeURIComponent(latest.takenAt) + '">Review latest</a>' +
+    '<a class="btn" href="test.html?id=' + encodeURIComponent(t.id) + '">Retake</a>' +
+    "</div></div></li>";
+}
+
 fetch("tests/manifest.json")
   .then(function (r) { if (!r.ok) throw new Error("manifest missing"); return r.json(); })
   .then(function (tests) {
+    var attempts = loadAttempts();
+    var byTest = {};
+    attempts.forEach(function (a) { (byTest[a.testId] = byTest[a.testId] || []).push(a); });
+
+    var fresh = tests.filter(function (t) { return !byTest[t.id]; });
+    var done = tests.filter(function (t) { return byTest[t.id]; });
+
     var html = ["SSAT", "ISEE"].map(function (exam) {
       var mine = tests.filter(function (t) { return t.exam === exam; });
       if (!mine.length) return "";
-      var body = ["mock", "drill"].map(function (kind) {
-        var group = mine.filter(function (t) { return (t.kind || "drill") === kind; });
-        if (!group.length) return "";
-        return '<div class="kind-group"><div class="kind-head"><h3>' + KIND[kind].title +
-          '</h3><span class="hint">' + KIND[kind].hint + "</span></div>" +
-          '<ul class="test-list' + (kind === "drill" ? " drill-grid" : "") + '">' +
-          group.map(function (t) { return card(t, exam); }).join("") + "</ul></div>";
-      }).join("");
-      return '<section class="exam-group"><h2>' + exam + '</h2>' +
+      var open = fresh.filter(function (t) { return t.exam === exam; });
+      var body;
+      if (!open.length) {
+        body = '<p class="empty" style="margin:1.25rem 0 0">Every ' + exam + " test here has been taken at least once. " +
+          'They are under <a href="#attempted">Attempted</a>, ready to review or retake.</p>';
+      } else {
+        body = ["mock", "drill"].map(function (kind) {
+          var group = open.filter(function (t) { return (t.kind || "drill") === kind; });
+          if (!group.length) return "";
+          if (kind === "mock") group.sort(function (a, b) { return (b.format === "full") - (a.format === "full"); });
+          return '<div class="kind-group"><div class="kind-head"><h3>' + KIND[kind].title +
+            '</h3><span class="hint">' + KIND[kind].hint + "</span></div>" +
+            '<ul class="test-list' + (kind === "drill" ? " drill-grid" : "") + '">' +
+            group.map(function (t) { return card(t, exam); }).join("") + "</ul></div>";
+        }).join("");
+      }
+      return '<section class="exam-group"><h2>' + exam + "</h2>" +
         '<p class="lede">' + LEDE[exam] + "</p>" + body + "</section>";
     }).join("");
     document.getElementById("groups").innerHTML = html;
+
+    if (done.length) {
+      done.sort(function (a, b) {
+        var la = byTest[a.id].reduce(function (m, x) { return x.takenAt > m ? x.takenAt : m; }, "");
+        var lb = byTest[b.id].reduce(function (m, x) { return x.takenAt > m ? x.takenAt : m; }, "");
+        return lb.localeCompare(la);
+      });
+      document.getElementById("attempted").innerHTML =
+        '<section class="exam-group" id="attempted-section"><h2>Attempted</h2>' +
+        '<p class="lede">Tests taken in this browser, most recent first. Every sitting keeps its score. ' +
+        "Open one to see its explanations, or retake it for a fresh timed run.</p>" +
+        '<ul class="test-list">' + done.map(function (t) { return attemptedCard(t, byTest[t.id]); }).join("") +
+        "</ul></section>";
+    }
   })
   .catch(function () {
     document.getElementById("groups").innerHTML =

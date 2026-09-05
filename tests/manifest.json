@@ -7,7 +7,8 @@
     "blurb": "Every section in the order the real test runs them, at a quarter length. Start here to find out where he stands.",
     "covers": ["Writing", "Quantitative", "Reading", "Verbal"],
     "questions": 37,
-    "minutes": 55
+    "minutes": 55,
+    "frozen": "fb98ef66a6f50c24"
   },
   {
     "id": "ssat-analogy-drill-01",
@@ -17,7 +18,8 @@
     "blurb": "The format that exists only on the SSAT. Say the relationship as a sentence before looking at the choices.",
     "covers": ["Verbal"],
     "questions": 12,
-    "minutes": 6
+    "minutes": 6,
+    "frozen": "9ac7cfcee95d276a"
   },
   {
     "id": "ssat-quant-drill-01",
@@ -27,7 +29,8 @@
     "blurb": "Number operations, algebra, geometry and data, at seventy seconds a question.",
     "covers": ["Quantitative"],
     "questions": 12,
-    "minutes": 14
+    "minutes": 14,
+    "frozen": "d0d017414e8e5818"
   },
   {
     "id": "ssat-reading-drill-01",
@@ -37,7 +40,8 @@
     "blurb": "Two passages, one of them a poem, because SSAT reading mixes nonfiction with fiction and verse.",
     "covers": ["Reading"],
     "questions": 8,
-    "minutes": 8
+    "minutes": 8,
+    "frozen": "152e7bc913384f40"
   },
   {
     "id": "isee-middle-diagnostic-01",
@@ -47,7 +51,8 @@
     "blurb": "All four scored sections plus the essay, at a quarter length. Start here.",
     "covers": ["Verbal", "Quantitative", "Reading", "Mathematics", "Essay"],
     "questions": 37,
-    "minutes": 60
+    "minutes": 60,
+    "frozen": "cba09ba00951c8f9"
   },
   {
     "id": "isee-middle-verbal-01",
@@ -57,7 +62,8 @@
     "blurb": "Synonyms and sentence completions at thirty seconds each, the fastest pace on either exam.",
     "covers": ["Verbal"],
     "questions": 20,
-    "minutes": 10
+    "minutes": 10,
+    "frozen": "1aeb20b1d54d4a9f"
   },
   {
     "id": "isee-middle-qc-drill-01",
@@ -67,7 +73,8 @@
     "blurb": "Easy arithmetic, unfamiliar format. Test several values instead of solving once.",
     "covers": ["Quantitative"],
     "questions": 12,
-    "minutes": 10
+    "minutes": 10,
+    "frozen": "051469ad55fb590d"
   },
   {
     "id": "isee-math-drill-01",
@@ -77,7 +84,8 @@
     "blurb": "Curriculum maths rather than puzzles. This is the section that rewards knowing the material.",
     "covers": ["Mathematics"],
     "questions": 12,
-    "minutes": 10
+    "minutes": 10,
+    "frozen": "3d0872cb4cb12aa1"
   },
   {
     "id": "isee-reading-drill-01",
@@ -87,6 +95,7 @@
     "blurb": "Two informational passages, the kind the ISEE leans on across science and history.",
     "covers": ["Reading"],
     "questions": 8,
-    "minutes": 8
+    "minutes": 8,
+    "frozen": "db8f14e91de498d2"
   }
 ]
