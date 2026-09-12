@@ -104,6 +104,14 @@ near-duplicates to reach a count. A padded mock produces a score the student wil
 
 ## Attempts, review, and history
 
+- An in-progress sitting is snapshotted to `localStorage` under `prep:snapshot:<testId>:<seq>` on
+  every render, every ten seconds, shortly after typing in the essay box, and when the tab is
+  hidden or left. The new snapshot is always written before the previous one is removed, so a
+  crash mid-write leaves the older copy. The intro screen offers Resume or Start over when a
+  snapshot exists; resuming restores answers, flags, per-question timings, the essay text, and the
+  time that was left in the section at the last snapshot, so a hang does not cost clock. Finishing
+  saves the attempt and only then clears the snapshots. If saving fails, a results-phase snapshot
+  stays so a reload retries the save. The home page marks such tests In progress.
 - Every finished test is saved to `localStorage` under `prep:attempts`. The home page reads that
   list: a test with any attempt leaves its exam group and appears under Attempted with every
   sitting's score, a trend line, Review latest and Retake.
@@ -179,22 +187,21 @@ node .claude/scripts/verify-runner.js  # headless browser run of the whole site
 ```
 
 `verify-runner.js` needs Chrome or Edge installed. It runs a short mock start to finish including
-the writing sample, a forced timer expiry, the break screen, the results screen, a second attempt,
-review mode, the Attempted section on the home page and `results.html`. Pass a test id to run a
+the writing sample, a forced timer expiry, the break screen, the results screen, a reload mid-test
+and resume, a second attempt, review mode, the Attempted section on the home page and
+`results.html`. Pass a test id to run a
 different test; pass a full length id to exercise a real break. Look at the screenshots it writes,
 not only the pass line.
 
 ## Known gaps, roughly in order of value
 
-1. **Resume an interrupted test.** A closed tab loses everything. Save progress per section. This
-   matters most for the full length mocks, which run close to three hours.
-2. **Progress over time as a chart.** `results.html` and the results screen list attempts and show
+1. **Progress over time as a chart.** `results.html` and the results screen list attempts and show
    the trend in words; a small chart of repeat attempts would read faster.
-3. **More tests.** An SSAT synonym drill and an ISEE sentence completion drill would round out
+2. **More tests.** An SSAT synonym drill and an ISEE sentence completion drill would round out
    verbal coverage. A second full length mock per exam would let the student sit one cold and one
    after a month of drills. Use `/new-drill` and `/new-mock`.
-4. **A missed-questions review mode**, pulling from saved attempts across sessions.
-5. **Accessibility pass.** Keyboard navigation and focus states exist but have not been tested with
+3. **A missed-questions review mode**, pulling from saved attempts across sessions.
+4. **Accessibility pass.** Keyboard navigation and focus states exist but have not been tested with
    a screen reader.
 
 ## Things deliberately not done

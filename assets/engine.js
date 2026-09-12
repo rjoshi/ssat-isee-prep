@@ -78,9 +78,8 @@ function toast(msg) {
 
 /* ---------- timer ---------- */
 
-function startTimer(seconds, onExpire) {
+function startTimer(seconds, onExpire, total = seconds) {
   stopTimer();
-  const total = seconds;
   state.deadline = Date.now() + seconds * 1000;
   const tick = () => {
     const left = (state.deadline - Date.now()) / 1000;
@@ -160,7 +159,134 @@ function render() {
     writing: renderWriting,
     results: renderResults,
   })[state.phase]();
+  snapshot();
 }
+
+/* ---------- resume snapshots ----------
+   A hung tab or an accidental refresh must not lose a sitting. Every render and every ten seconds
+   the whole in-progress state is written to localStorage under prep:snapshot:<testId>:<seq>. The
+   new snapshot is written first and the older ones removed afterwards, so there is never a moment
+   with nothing saved. The intro screen offers to resume; finishing the test saves the attempt and
+   then clears the snapshots. */
+
+const SNAP_PREFIX = "prep:snapshot:";
+
+function snapshotKeys(testId) {
+  const keys = [];
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(SNAP_PREFIX + testId + ":")) keys.push(k);
+    }
+  } catch (e) {}
+  return keys.sort((a, b) => Number(a.split(":").pop()) - Number(b.split(":").pop()));
+}
+
+function loadSnapshot(testId) {
+  const keys = snapshotKeys(testId);
+  // Newest first. A snapshot that fails to parse, from a write cut short, falls back to the one before.
+  for (let i = keys.length - 1; i >= 0; i--) {
+    try {
+      const s = JSON.parse(localStorage.getItem(keys[i]));
+      if (s && s.testId === testId && s.phase) return s;
+    } catch (e) {}
+  }
+  return null;
+}
+
+function clearSnapshots(testId) {
+  snapshotKeys(testId).forEach((k) => { try { localStorage.removeItem(k); } catch (e) {} });
+}
+
+function snapshot() {
+  if (!state.test || state.reviewing) return;
+  if (!["section", "sectionEnd", "break", "writing", "results"].includes(state.phase)) return;
+  if (state.phase === "results" && state.saved) return;
+  const now = Date.now();
+  const inSection = state.phase === "section";
+  const sec = inSection || state.phase === "sectionEnd" || state.phase === "break" ? currentSection() : null;
+  const snap = {
+    testId: state.test.id,
+    savedAt: now,
+    phase: state.phase,
+    si: state.si,
+    qi: state.qi,
+    answers: state.answers,
+    flags: [...state.flags],
+    qtime: state.qtime,
+    sectionElapsed: Object.assign({}, state.sectionElapsed),
+    writingText: state.writingText,
+    writingChoice: state.writingChoice,
+    writingDone: state.writingDone,
+    // Time is stored as what was left, not as a deadline, so a crash does not eat the clock.
+    remaining: inSection || state.phase === "writing" ? Math.max(0, (state.deadline - now) / 1000) : null,
+    sectionStartedAgo: inSection && sec ? (now - state.sectionElapsed[sec.name]) / 1000 : null,
+    breakElapsed: state.phase === "break" ? (now - state.breakStart) / 1000 : null,
+    qElapsed: inSection && state.qEnteredAt ? (now - state.qEnteredAt) / 1000 : 0,
+  };
+  const old = snapshotKeys(state.test.id);
+  const seq = old.length ? Number(old[old.length - 1].split(":").pop()) + 1 : 1;
+  try {
+    localStorage.setItem(SNAP_PREFIX + state.test.id + ":" + seq, JSON.stringify(snap));
+  } catch (e) {
+    return; // Could not write the new one, so keep whatever is there.
+  }
+  old.forEach((k) => { try { localStorage.removeItem(k); } catch (e) {} });
+}
+
+function describeSnapshot(s) {
+  if (s.phase === "writing") return "in the " + writing().name.toLowerCase();
+  if (s.phase === "results") return "finished, with the scores not yet saved";
+  const sec = sections()[s.si];
+  if (!sec) return "part way through";
+  if (s.phase === "break") return "on the break after " + sec.name;
+  if (s.phase === "sectionEnd") return "at the end of " + sec.name;
+  return "in " + sec.name + ", question " + (s.qi + 1) + " of " + sec.questions.length;
+}
+
+function resumeSnapshot(s) {
+  state.phase = s.phase;
+  state.si = s.si || 0;
+  state.qi = s.qi || 0;
+  state.answers = s.answers || {};
+  state.flags = new Set(s.flags || []);
+  state.qtime = s.qtime || {};
+  state.sectionElapsed = s.sectionElapsed || {};
+  state.writingText = s.writingText || "";
+  state.writingChoice = s.writingChoice || 0;
+  state.writingDone = !!s.writingDone;
+  const now = Date.now();
+
+  if (s.phase === "section") {
+    const sec = currentSection();
+    state.sectionElapsed[sec.name] = now - (s.sectionStartedAgo || 0) * 1000;
+    const q = sec.questions[state.qi];
+    if (q && s.qElapsed) state.qtime[q.id] = (state.qtime[q.id] || 0) + s.qElapsed;
+    render();
+    startTimer(s.remaining || 0, () => {
+      toast("Time is up for this section.");
+      finishSection();
+    }, sec.timeLimitSeconds);
+  } else if (s.phase === "writing") {
+    render();
+    startTimer(s.remaining || 0, () => {
+      toast("Writing time is up.");
+      afterWriting();
+    }, writing().timeLimitSeconds);
+  } else if (s.phase === "break") {
+    render();
+    state.breakStart = now - (s.breakElapsed || 0) * 1000;
+  } else if (s.phase === "results") {
+    showResults();
+  } else {
+    render();
+  }
+  toast("Resumed where you left off.");
+}
+
+setInterval(snapshot, 10000);
+document.addEventListener("visibilitychange", () => { if (document.hidden) snapshot(); });
+window.addEventListener("pagehide", snapshot);
 
 function guessingLine() {
   return penalty() > 0
@@ -186,6 +312,7 @@ function renderIntro() {
   });
   const full = t.format === "full";
   const history = loadAttempts().filter((a) => a.testId === t.id);
+  const snap = state.reviewing ? null : loadSnapshot(t.id);
   if (w) {
     const wrow = `<li><span class="k">${esc(w.name)}</span><span class="v">1 prompt &nbsp;·&nbsp; ${Math.round(
       w.timeLimitSeconds / 60
@@ -222,19 +349,42 @@ function renderIntro() {
         you cannot go back to a section once its time is up.</p>
         <p style="font-size:0.97rem"><strong>Keyboard.</strong> Press 1 to ${maxChoices} to answer,
         left and right arrows to move, F to flag a question, X to clear an answer and leave it blank.</p>
-        <div style="margin-top:1.75rem;display:flex;gap:0.6rem;flex-wrap:wrap">
-          <button class="btn btn-primary" id="begin">Start ${
-            writingFirst() ? esc(w.name) : esc(sections()[0].name)
-          }</button>
-          <a class="btn" href="index.html">All tests</a>
-        </div>
+        ${
+          snap
+            ? `<div class="rule resume" id="resumeCard">
+                <strong>Unfinished attempt.</strong> You were ${esc(describeSnapshot(snap))}, with
+                ${plural(Object.keys(snap.answers || {}).length, "answer")} recorded, saved ${esc(
+                  whenTaken(new Date(snap.savedAt).toISOString())
+                )}. The time that was left in that section is restored, so a crash or a refresh does not
+                cost you any of it.
+                <div style="margin-top:0.9rem;display:flex;gap:0.6rem;flex-wrap:wrap">
+                  <button class="btn btn-primary" id="resume">Resume</button>
+                  <button class="btn" id="startOver">Start over</button>
+                  <a class="btn" href="index.html">All tests</a>
+                </div>
+              </div>`
+            : `<div style="margin-top:1.75rem;display:flex;gap:0.6rem;flex-wrap:wrap">
+                <button class="btn btn-primary" id="begin">Start ${
+                  writingFirst() ? esc(w.name) : esc(sections()[0].name)
+                }</button>
+                <a class="btn" href="index.html">All tests</a>
+              </div>`
+        }
         <p style="font-size:0.9rem;color:var(--muted);margin-top:1.5rem">${plural(
           allQuestions().length, "question"
         )}${w ? " plus the writing sample" : ""}, about ${totalMin} minutes.</p>
       </div>
     </div>`;
-  document.getElementById("begin").onclick = () =>
-    writingFirst() ? enterWriting() : enterSection(0);
+  const begin = document.getElementById("begin");
+  if (begin) begin.onclick = () => (writingFirst() ? enterWriting() : enterSection(0));
+  const resume = document.getElementById("resume");
+  if (resume) resume.onclick = () => resumeSnapshot(snap);
+  const over = document.getElementById("startOver");
+  if (over) over.onclick = () => {
+    if (!confirm("Throw away the unfinished attempt and start this test from the beginning?")) return;
+    clearSnapshots(t.id);
+    render();
+  };
 }
 
 function enterSection(i) {
@@ -517,10 +667,14 @@ function renderWriting() {
   });
   const ta = document.getElementById("essay");
   ta.value = state.writingText;
+  let pending = null;
   ta.oninput = () => {
     state.writingText = ta.value;
     const n = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
     document.getElementById("wc").textContent = plural(n, "word");
+    // Snapshot shortly after typing pauses, so a crash mid-essay loses a sentence at most.
+    clearTimeout(pending);
+    pending = setTimeout(snapshot, 800);
   };
   document.getElementById("submit").onclick = afterWriting;
 }
@@ -535,6 +689,9 @@ function showResults() {
   }
   state.phase = "results";
   render();
+  // The final attempt is saved, so the working copy can go. If saving failed, render() has just
+  // written a results-phase snapshot instead, and a reload will retry the save from it.
+  if (state.saved) clearSnapshots(state.test.id);
 }
 
 /* ---------- saved attempts ---------- */
@@ -939,6 +1096,7 @@ document.addEventListener("keydown", (e) => {
 
 window.addEventListener("beforeunload", (e) => {
   if (state.phase === "section" || state.phase === "writing") {
+    snapshot();
     e.preventDefault();
     e.returnValue = "";
   }

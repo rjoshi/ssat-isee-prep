@@ -220,6 +220,43 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("no history block after one attempt", (await page.eval("document.body.innerHTML.includes('Across ')")) === false);
     await page.shot("06-results");
     const takenAt = await page.eval("state.attempt.takenAt");
+    check("no snapshot left after the attempt is saved", (await page.eval("snapshotKeys(state.test.id).length")) === 0);
+
+    // Crash mid-test: answer a few, reload the page, and the intro must offer to resume.
+    console.log("Resume after reload");
+    await page.goto(base + "test.html?id=" + testId);
+    await sleep(300);
+    await page.eval("state.test.writing = null; document.getElementById('begin').click(); 'ok'");
+    await sleep(150);
+    await page.eval("choose(0); choose(1); choose(0); goto(1); toggleFlag(currentQuestion()); render(); 'ok'");
+    check("snapshot written during the section", (await page.eval("snapshotKeys(state.test.id).length")) === 1);
+    check("exactly one snapshot kept per test", (await page.eval("snapshotKeys(state.test.id).length")) === 1);
+    await sleep(2500);
+    // The clock runs while the page is alive; what must not be lost is the gap after leaving it.
+    const remainingBefore = await page.eval("(state.deadline - Date.now()) / 1000");
+    await page.goto(base + "test.html?id=" + testId);
+    await sleep(300);
+    check("intro offers Resume", await page.eval("!!document.getElementById('resume') && !document.getElementById('begin')"));
+    await page.shot("04b-resume-offer");
+    await page.eval("document.getElementById('resume').click(); 'ok'");
+    await sleep(300);
+    check("resumed into the section", await page.eval("state.phase === 'section' && state.si === 0 && state.qi === 1"));
+    check("answers restored", (await page.eval("Object.keys(state.answers).length")) === 3);
+    check("flag restored", await page.eval("state.flags.size === 1"));
+    const remainingAfter = await page.eval("(state.deadline - Date.now()) / 1000");
+    check("time left restored, not eaten by the gap", Math.abs(remainingBefore - remainingAfter) < 2, [remainingBefore, remainingAfter]);
+    check("clock is running", await page.eval("state.tickHandle !== null"));
+    await page.eval("window.onbeforeunload = null; 'ok'");
+
+    await page.goto(base + "index.html");
+    await sleep(300);
+    check("home page marks the test in progress", (await page.eval("document.querySelectorAll('.length.resume').length")) >= 1);
+
+    await page.goto(base + "test.html?id=" + testId);
+    await sleep(300);
+    await page.eval("document.getElementById('startOver').click(); 'ok'");
+    await sleep(200);
+    check("Start over clears the snapshot", (await page.eval("snapshotKeys(state.test.id).length === 0 && !!document.getElementById('begin')")));
 
     if (!sawBreak) {
       // The default short mock has no break, so exercise the break screen synthetically.
@@ -245,6 +282,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     console.log("Second attempt (fast path)");
     await page.goto(base + "test.html?id=" + testId);
     await sleep(300);
+    // The synthetic break run above may have left a snapshot; discard it first.
+    await page.eval("const o = document.getElementById('startOver'); if (o) { o.click(); } 'ok'");
+    await sleep(150);
     await page.eval(`(() => {
       state.test.writing = null; document.getElementById('begin').click();
       for (let i = 0; i < sections().length; i++) { sections()[i].questions.forEach(q => { state.answers[q.id] = q.answer; }); state.si = i; state.sectionElapsed[sections()[i].name] = Date.now() - 5000; finishSection(); }

@@ -73,6 +73,21 @@ function lengthLabel(t) {
   return "";
 }
 
+/* An unfinished sitting leaves a snapshot under prep:snapshot:<id>:<seq>. Say so on the card. */
+function inProgress(id) {
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k && k.indexOf("prep:snapshot:" + id + ":") === 0) return true;
+    }
+  } catch (e) {}
+  return false;
+}
+
+function resumeTag(t) {
+  return inProgress(t.id) ? ' <span class="length resume">In progress</span>' : "";
+}
+
 function card(t, exam) {
   var chips = (t.covers || []).map(function (c) {
     return '<span class="chip">' + esc(c) + "</span>";
@@ -80,8 +95,8 @@ function card(t, exam) {
   var label = lengthLabel(t);
   return '<li><a class="test-card ' + exam.toLowerCase() + " " + t.kind + (t.format === "full" ? " full" : "") +
     '" href="test.html?id=' + encodeURIComponent(t.id) + '">' +
-    "<h2>" + esc(t.title) + (label ? ' <span class="length">' + label + "</span>" : "") + "</h2>" +
-    "<p>" + esc(t.blurb) + "</p>" +
+    "<h2>" + esc(t.title) + (label ? ' <span class="length">' + label + "</span>" : "") + resumeTag(t) + "</h2>" +
+    "<p>" + (inProgress(t.id) ? "You have an unfinished attempt here. Open the test to resume it. " : "") + esc(t.blurb) + "</p>" +
     (chips ? '<div class="covers">' + chips + "</div>" : "") +
     '<div class="test-meta">' + t.questions + " questions &nbsp;·&nbsp; about " +
     t.minutes + " minutes</div></a></li>";
@@ -115,7 +130,7 @@ function attemptedCard(t, attempts) {
 
   return '<li><div class="test-card attempted ' + t.exam.toLowerCase() + " " + t.kind + '">' +
     '<p class="eyebrow">' + esc(t.exam) + " &nbsp;·&nbsp; " + (t.kind === "mock" ? "Mock" : "Drill") + "</p>" +
-    "<h2>" + esc(t.title) + (label ? ' <span class="length">' + label + "</span>" : "") + "</h2>" +
+    "<h2>" + esc(t.title) + (label ? ' <span class="length">' + label + "</span>" : "") + resumeTag(t) + "</h2>" +
     '<div class="test-meta">' + sorted.length + (sorted.length === 1 ? " attempt" : " attempts") +
     " &nbsp;·&nbsp; latest " + score(latest) + " / " + total +
     " &nbsp;·&nbsp; best " + (penalty ? best.toFixed(2) : best) + " / " + total +
@@ -125,7 +140,7 @@ function attemptedCard(t, attempts) {
     '<div class="actions">' +
     '<a class="btn btn-primary" href="test.html?id=' + encodeURIComponent(t.id) +
       "&attempt=" + encodeURIComponent(latest.takenAt) + '">Review latest</a>' +
-    '<a class="btn" href="test.html?id=' + encodeURIComponent(t.id) + '">Retake</a>' +
+    '<a class="btn" href="test.html?id=' + encodeURIComponent(t.id) + '">' + (inProgress(t.id) ? "Resume" : "Retake") + "</a>" +
     "</div></div></li>";
 }
 

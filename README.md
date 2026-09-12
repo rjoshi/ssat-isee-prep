@@ -36,6 +36,10 @@ accordingly.
   a breakdown by topic so a weak section turns into something specific to practise.
 - Runs full length mocks with the real break: the clock counts up, turns rose when the real break
   would have ended, and nothing moves on until the student presses the button.
+- Saves progress continuously while a test is running. If the page hangs, the tab closes, or the
+  laptop dies, opening the same test again offers **Resume**, with every answer, flag and the essay
+  text back and the section clock at the time it had left. Nothing is lost short of the browser's
+  storage being cleared.
 - Saves each finished attempt in the browser and exports it as JSON to send on. See below.
 - Moves any test that has been taken out of its exam group and into an Attempted section on the
   home page, with every sitting's score, so what is left to do is what is shown. Each attempt can

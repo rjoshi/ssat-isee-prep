@@ -642,3 +642,9 @@ main { padding: 2rem 0 7rem; }
 .essay-details { margin-top: 0.9rem; }
 
 .essay-details summary { cursor: pointer; color: var(--stain); font-weight: 500; }
+
+/* ---------- resume ---------- */
+
+.rule.resume { background: var(--correct-soft); color: var(--ink); margin-top: 1.75rem; }
+
+.test-card h2 .length.resume { color: var(--correct); background: var(--correct-soft); }
