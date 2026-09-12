@@ -191,7 +191,10 @@ the writing sample, a forced timer expiry, the break screen, the results screen,
 and resume, a second attempt, review mode, the Attempted section on the home page and
 `results.html`. Pass a test id to run a
 different test; pass a full length id to exercise a real break. Look at the screenshots it writes,
-not only the pass line.
+not only the pass line. Set `VERIFY_BASE=https://rjoshi.github.io/ssat-isee-prep/` to run the same
+checks against the deployed site instead of a local server, which is the first thing to do when
+someone reports the live site misbehaving. Checks for features not yet deployed fail rather than
+crash, so a run against an older deployment still tells you what does work.
 
 ## Known gaps, roughly in order of value
 

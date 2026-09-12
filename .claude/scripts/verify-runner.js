@@ -117,7 +117,9 @@ function check(label, ok, detail) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 (async () => {
-  const { srv, base } = await serve();
+  // VERIFY_BASE=https://host/path/ runs the same checks against a deployed copy instead.
+  const remote = process.env.VERIFY_BASE;
+  const { srv, base } = remote ? { srv: { close() {} }, base: remote.endsWith("/") ? remote : remote + "/" } : await serve();
   const browser = await launch();
   console.log("Browser: " + browser.exe);
   console.log("Site:    " + base);
@@ -216,10 +218,13 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("results screen", await page.eval("state.phase === 'results'"), await page.eval("state.phase"));
     check("attempt saved to localStorage", await page.eval("state.saved && JSON.parse(localStorage.getItem('prep:attempts')).length === 1"));
     check("review items rendered", (await page.eval("document.querySelectorAll('.review-item').length")) > 0);
-    if (hasWriting) check("writing is readable on results", await page.eval("(document.querySelector('.essay-view') || {}).textContent.includes('written by the verifier')"));
+    if (hasWriting) check("writing is readable on results", await page.eval("!!document.querySelector('.essay-view') && document.querySelector('.essay-view').textContent.includes('written by the verifier')"));
     check("no history block after one attempt", (await page.eval("document.body.innerHTML.includes('Across ')")) === false);
     await page.shot("06-results");
     const takenAt = await page.eval("state.attempt.takenAt");
+    const hasResume = await page.eval("typeof snapshotKeys === 'function'");
+    check("resume support present in the deployed engine", hasResume);
+    if (hasResume) {
     check("no snapshot left after the attempt is saved", (await page.eval("snapshotKeys(state.test.id).length")) === 0);
 
     // Crash mid-test: answer a few, reload the page, and the intro must offer to resume.
@@ -257,6 +262,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     await page.eval("document.getElementById('startOver').click(); 'ok'");
     await sleep(200);
     check("Start over clears the snapshot", (await page.eval("snapshotKeys(state.test.id).length === 0 && !!document.getElementById('begin')")));
+    }
 
     if (!sawBreak) {
       // The default short mock has no break, so exercise the break screen synthetically.
@@ -301,7 +307,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("restored answers", (await page.eval("Object.keys(state.answers).length")) > 0);
     check("retake button present", await page.eval("!!document.querySelector('a[href^=\"test.html?id=\"]')"));
     check("no duplicate save on review", await page.eval("JSON.parse(localStorage.getItem('prep:attempts')).length === 2"));
-    if (hasWriting) check("writing is readable in review mode", await page.eval("(document.querySelector('.essay-view') || {}).textContent.includes('written by the verifier')"));
+    if (hasWriting) check("writing is readable in review mode", await page.eval("!!document.querySelector('.essay-view') && document.querySelector('.essay-view').textContent.includes('written by the verifier')"));
     await page.shot("08-review", true);
 
     console.log("Home page with attempts");
