@@ -327,6 +327,18 @@ function renderIntro() {
         <p class="eyebrow">${esc(t.exam)} ${esc(t.level)} Level</p>
         <h2>${esc(t.title)}</h2>
         <p>${esc(t.description)}</p>
+        ${snap ? `<div class="rule resume" id="resumeCard">
+                <strong>Unfinished attempt.</strong> You were ${esc(describeSnapshot(snap))}, with
+                ${plural(Object.keys(snap.answers || {}).length, "answer")} recorded, saved ${esc(
+                  whenTaken(new Date(snap.savedAt).toISOString())
+                )}. The time that was left in that section is restored, so a crash or a refresh does not
+                cost you any of it.
+                <div style="margin-top:0.9rem;display:flex;gap:0.6rem;flex-wrap:wrap">
+                  <button class="btn btn-primary" id="resume">Resume</button>
+                  <button class="btn" id="startOver">Start over</button>
+                  <a class="btn" href="index.html">All tests</a>
+                </div>
+              </div>` : ""}
         <ul class="facts">${rows.join("")}</ul>
         <p class="rule"><strong>Scoring.</strong> ${guessingLine()}</p>
         ${
@@ -351,18 +363,7 @@ function renderIntro() {
         left and right arrows to move, F to flag a question, X to clear an answer and leave it blank.</p>
         ${
           snap
-            ? `<div class="rule resume" id="resumeCard">
-                <strong>Unfinished attempt.</strong> You were ${esc(describeSnapshot(snap))}, with
-                ${plural(Object.keys(snap.answers || {}).length, "answer")} recorded, saved ${esc(
-                  whenTaken(new Date(snap.savedAt).toISOString())
-                )}. The time that was left in that section is restored, so a crash or a refresh does not
-                cost you any of it.
-                <div style="margin-top:0.9rem;display:flex;gap:0.6rem;flex-wrap:wrap">
-                  <button class="btn btn-primary" id="resume">Resume</button>
-                  <button class="btn" id="startOver">Start over</button>
-                  <a class="btn" href="index.html">All tests</a>
-                </div>
-              </div>`
+            ? ""
             : `<div style="margin-top:1.75rem;display:flex;gap:0.6rem;flex-wrap:wrap">
                 <button class="btn btn-primary" id="begin">Start ${
                   writingFirst() ? esc(w.name) : esc(sections()[0].name)
