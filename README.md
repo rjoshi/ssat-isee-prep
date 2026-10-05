@@ -161,8 +161,8 @@ on another device are not known here until their results file is imported on `re
 
 | Exam | Drills | Covers |
 |---|---|---|
-| SSAT | Analogies, Quantitative, Reading | Verbal, Quantitative, Reading |
-| ISEE | Verbal, Quantitative comparison, Mathematics achievement, Reading | Verbal, both maths sections, Reading |
+| SSAT | Analogies 1 and 2, Synonyms, Quantitative 1 and 2 (pacing), Reading 1 and 2 (stories and poems) | Verbal, Quantitative, Reading |
+| ISEE | Verbal 1 and 2, Quantitative comparison, Mathematics achievement, Reading | Verbal, both maths sections, Reading |
 
 The intended loop is mock first, then drill whatever the mock exposed, then another mock. Each
 card shows the sections it covers as chips, so gaps in coverage are visible at a glance when you

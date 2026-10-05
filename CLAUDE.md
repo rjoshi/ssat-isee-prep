@@ -200,9 +200,12 @@ crash, so a run against an older deployment still tells you what does work.
 
 1. **Progress over time as a chart.** `results.html` and the results screen list attempts and show
    the trend in words; a small chart of repeat attempts would read faster.
-2. **More tests.** An SSAT synonym drill and an ISEE sentence completion drill would round out
-   verbal coverage. A second full length mock per exam would let the student sit one cold and one
-   after a month of drills. Use `/new-drill` and `/new-mock`.
+2. **More tests.** A second full length mock per exam would let the student sit one cold and one
+   after a month of drills. Use `/new-mock`. The second wave of drills (October 2026) was written
+   from the first month's attempts: analogy relationship precision, synonym trap choices, a
+   quantitative pacing drill with three deliberately slow questions, SSAT fiction and poetry, and
+   ISEE verbal at the real thirty second pace. Write further drills the same way, from the
+   pattern of misses in an exported attempts file, never from guesswork.
 3. **A missed-questions review mode**, pulling from saved attempts across sessions.
 4. **Accessibility pass.** Keyboard navigation and focus states exist but have not been tested with
    a screen reader.

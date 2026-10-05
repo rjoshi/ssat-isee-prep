@@ -532,7 +532,9 @@ function renderSection() {
 
   document.getElementById("sectionName").textContent = sec.name;
   document.getElementById("counter").textContent = state.qi + 1 + " / " + sec.questions.length;
-  markQuestionEnter();
+  // Only start the clock on arrival. Answering the last question, flagging or clearing re-renders
+  // the same question, and restarting here used to throw away the time already spent on it.
+  if (!state.qEnteredAt) markQuestionEnter();
 
   app.querySelectorAll(".choice").forEach((b) => {
     b.onclick = () => choose(Number(b.dataset.i));

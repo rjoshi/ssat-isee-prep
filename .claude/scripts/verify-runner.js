@@ -180,6 +180,12 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
         for (let k = 1; k < qs.length; k++) { goto(k); if (k % 3 !== 0) choose((k % qs[k].choices.length)); }
         goto(0); toggleFlag(currentQuestion()); render(); return 'ok'; })()`);
       if (i === 0) await page.shot("04-question");
+      if (i === 0) {
+        // Time spent on the last question before answering it must be kept, not reset by the re-render.
+        await page.eval("goto(currentSection().questions.length - 1); state.qEnteredAt = Date.now() - 5000; choose(0); 'ok'");
+        const lastQ = await page.eval("(() => { const qs = currentSection().questions; markQuestionExit(); markQuestionEnter(); return state.qtime[qs[qs.length - 1].id] || 0; })()");
+        check("last question keeps its time when answered", lastQ >= 5, lastQ);
+      }
       const answered = await page.eval("Object.keys(state.answers).filter(id => currentSection().questions.some(q => q.id === id)).length");
       check("section " + (i + 1) + " records answers", answered > 0, answered);
 
@@ -264,7 +270,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     check("Start over clears the snapshot", (await page.eval("snapshotKeys(state.test.id).length === 0 && !!document.getElementById('begin')")));
     }
 
-    if (!sawBreak) {
+    // The synthetic break needs a second section to move into; a one-section drill has none.
+    if (!sawBreak && n > 1) {
       // The default short mock has no break, so exercise the break screen synthetically.
       console.log("Break screen (synthetic)");
       await page.goto(base + "test.html?id=" + testId);

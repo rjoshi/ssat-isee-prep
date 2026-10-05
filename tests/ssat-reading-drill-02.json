@@ -1,0 +1,119 @@
+{
+  "id": "ssat-reading-drill-02",
+  "exam": "SSAT",
+  "level": "Middle",
+  "title": "Reading 2: stories and poems",
+  "description": "Twelve questions on a short story and a poem, at the real SSAT pace of a minute each. SSAT reading always includes fiction and poetry, and that is where the questions on inference, tone and point of view live. Two rules for the choices. An answer must be supported by the words on the page, not merely possible. And be wary of extreme words, such as furious, hostile, always or never, when the passage itself is quiet.",
+  "scoring": {
+    "wrongPenalty": 0.25
+  },
+  "sections": [
+    {
+      "name": "Reading",
+      "timeLimitSeconds": 720,
+      "passages": {
+        "p1": [
+          "My sister Priya learned to ride a bicycle the summer she turned nine, and she did it entirely to spite me.",
+          "I had told her, at the breakfast table and in front of our parents, that she would never manage it. I said it the way older brothers say things, carelessly, the way you might kick a pebble without looking where it lands. I was twelve and had been riding for years, and it did not occur to me that a sentence could be a dare.",
+          "For the next three weeks she was in the lane behind our house every evening. She fell into the hedge, onto the gravel, and once, memorably, into the Hendersons' compost bin. She did not cry where anyone could see. She wheeled the bicycle back to the top of the slope and went again.",
+          "I watched some of it from my bedroom window. I would like to say I went down and helped. I did not. I told myself she wanted to do it alone, which was true, and that it was none of my business, which was not.",
+          "On the last evening of the third week she rode the whole length of the lane, turned at the bottom without putting a foot down, and rode back up. She stopped beneath my window and looked up at it. She did not wave. She did not need to.",
+          "I have thought about that look for twenty years. It was not triumph, exactly. It was closer to a receipt."
+        ],
+        "p2": [
+          "Moving Day",
+          "The rooms are louder now that they are empty. / My footsteps argue with the bare wood floor, / and every corner I walk past repeats me / a half a second after, like a child.",
+          "I measured myself here, in pencil, on the doorframe, / eleven lines that climb toward the ceiling. / The painters come on Monday. They'll be careful. / They will not know the lines are anything.",
+          "My mother calls my name from the front step. / The car is packed. The engine's running. Fine. / I touch the lowest line, the one from when / I had to be held up to reach the frame,",
+          "and then I go, and do not shut the door, / because a house should have a way to breathe, / and because shutting it would make it true."
+        ]
+      },
+      "questions": [
+        {
+          "id": "RL1", "passage": "p1", "topic": "structure",
+          "stem": "The story is told from the point of view of",
+          "choices": ["an adult remembering something from childhood", "Priya, many years later", "a neighbour who watched both children", "a twelve-year-old describing events as they happen", "the children's mother"],
+          "answer": 0,
+          "explanation": "The narrator is Priya's older brother, and the last paragraph says he has thought about her look for twenty years. So he is an adult looking back. The choice about a twelve-year-old describing events as they happen is the trap: he was twelve at the time, but he is telling the story long afterwards, which is why he can judge his younger self."
+        },
+        {
+          "id": "RL2", "passage": "p1", "topic": "inference",
+          "stem": "The narrator compares his remark at breakfast to kicking \"a pebble without looking where it lands\" in order to suggest that the remark was",
+          "choices": ["meant to hurt Priya as much as possible", "a joke that everyone at the table enjoyed", "made without any thought for what it might cause", "whispered so that their parents would not hear", "the first of many arguments that summer"],
+          "answer": 2,
+          "explanation": "Kicking a pebble without looking is careless, not cruel, and the same sentence says he spoke carelessly. The choice about hurting Priya as much as possible is far stronger than anything in the text, which is the extreme-language trap. The remark was made in front of their parents, which rules out the choice about whispering."
+        },
+        {
+          "id": "RL3", "passage": "p1", "topic": "inference",
+          "stem": "The narrator says he told himself that Priya's practice \"was none of my business, which was not.\" This suggests that he",
+          "choices": ["had been forbidden by his parents to help", "could not ride well enough to teach her", "was angry that Priya had ignored his advice", "thought Priya should have asked him for help", "now believes he should have helped or encouraged her"],
+          "answer": 4,
+          "explanation": "He admits the excuse was false: it was his business, because his remark had started the whole thing. The sentences just before it, \"I would like to say I went down and helped. I did not,\" confirm the regret. He had been riding for years, so the choice about not riding well enough contradicts the text, and nothing mentions parents forbidding anything."
+        },
+        {
+          "id": "RL4", "passage": "p1", "topic": "detail",
+          "stem": "According to the story, Priya practised every evening mainly because she",
+          "choices": ["was told to by her parents", "wanted to prove her brother wrong", "needed to ride to school in the autumn", "saw that her friends could already ride", "enjoyed the falls more than the riding"],
+          "answer": 1,
+          "explanation": "The first sentence says she learned to ride \"entirely to spite me,\" and the next paragraph explains the remark she was answering. School and friends are reasonable reasons a child might learn, which is why they are offered, but the story never mentions them. On a detail question, the answer is in the text, not in what usually happens."
+        },
+        {
+          "id": "RL5", "passage": "p1", "topic": "tone and purpose",
+          "stem": "The narrator's attitude toward his younger self is best described as",
+          "choices": ["proud", "openly hostile", "indifferent", "honestly regretful", "envious"],
+          "answer": 3,
+          "explanation": "He admits he did not help, calls his own excuse untrue, and still thinks about that evening twenty years later. That is honest regret. Openly hostile is far too strong for a narrator who is quietly critical of himself, and indifferent cannot describe someone who has thought about it for twenty years."
+        },
+        {
+          "id": "RL6", "passage": "p1", "topic": "inference",
+          "stem": "The final sentence, \"It was closer to a receipt,\" suggests that Priya's look",
+          "choices": ["asked her brother to pay for the bicycle", "showed that she was furious and wanted revenge", "recorded, without any need for words, that the dare had been answered", "meant that she would never ride again", "invited her brother to ride with her"],
+          "answer": 2,
+          "explanation": "A receipt is proof that something has been settled. Priya's look settles the dare: he said she could not, and she has shown she could, with no need to wave or speak. The choice about paying for the bicycle takes the word receipt literally. The choice about fury is too extreme, and the narrator says plainly that it was not even triumph."
+        },
+        {
+          "id": "RL7", "passage": "p2", "topic": "main idea",
+          "stem": "The speaker of the poem is best described as",
+          "choices": ["a painter preparing a house for its new owners", "a parent watching a child grow up", "a child visiting a house for the first time", "a builder checking an empty house", "a young person leaving a childhood home for good"],
+          "answer": 4,
+          "explanation": "The rooms are empty, the car is packed, a mother is calling from the step, and the speaker grew up being measured on the doorframe. That is a young person moving out of the home of their childhood. The painters are mentioned, but as people who will arrive after the speaker has gone."
+        },
+        {
+          "id": "RL8", "passage": "p2", "topic": "vocabulary in context",
+          "stem": "In the first stanza, the corners that repeat the speaker \"a half a second after\" refer to",
+          "choices": ["the echo of footsteps in an empty room", "a younger child following the speaker", "memories of games once played in the house", "a mirror hanging in the hallway", "the speaker's shadow on the wall"],
+          "answer": 0,
+          "explanation": "The stanza is about sound: the rooms are louder now, the footsteps argue with the bare floor, and something repeats them a moment later. That is an echo, which an empty room produces. The words like a child are a comparison, so the choice about a younger child takes the image literally."
+        },
+        {
+          "id": "RL9", "passage": "p2", "topic": "inference",
+          "stem": "The line \"They will not know the lines are anything\" suggests that the speaker",
+          "choices": ["thinks the painters are careless and rude", "wants the lines measured again before leaving", "worries that the painters are being paid too little", "is troubled that marks full of meaning will be painted over as if they were nothing", "has asked the painters to keep the lines"],
+          "answer": 3,
+          "explanation": "The line before it says the painters will be careful, so the speaker is not blaming them. The point is that to a stranger, eleven pencil marks are just marks on a frame, while to the speaker they are a record of growing up. The choice calling the painters careless and rude contradicts the text and is far too strong."
+        },
+        {
+          "id": "RL10", "passage": "p2", "topic": "tone and purpose",
+          "stem": "In the third stanza, the word \"Fine.\" most likely shows that the speaker",
+          "choices": ["is completely happy to be leaving", "is accepting, without enthusiasm, that it is time to go", "is angry with the mother for hurrying", "thinks the car is in good working order", "is describing the weather"],
+          "answer": 1,
+          "explanation": "The car is packed and the engine is running: there is no more time. Fine, said after that and followed by a full stop, is the word people use when they give in to something they would rather not do. Completely happy is too strong for a poem full of loss, and so is angry; nothing else in the poem is aimed at the mother."
+        },
+        {
+          "id": "RL11", "passage": "p2", "topic": "detail",
+          "stem": "According to the poem, the lowest pencil line was drawn when the speaker",
+          "choices": ["was too small to reach the doorframe without being lifted", "was first learning to write", "was eleven years old", "had just painted the doorframe", "first moved into the house"],
+          "answer": 0,
+          "explanation": "The speaker touches \"the lowest line, the one from when / I had to be held up to reach the frame.\" Being held up means being lifted. The choice of eleven years old comes from the eleven lines in the second stanza, which count marks, not years. Moving in is a reasonable guess that the poem never states."
+        },
+        {
+          "id": "RL12", "passage": "p2", "topic": "inference",
+          "stem": "The last line suggests that the speaker leaves the door open mainly because",
+          "choices": ["the painters will need to get in on Monday", "the mother asked for it to be left open", "closing it would make the leaving feel final", "the speaker plans to come back for something", "the house is too warm"],
+          "answer": 2,
+          "explanation": "The poem gives two reasons. The first, that a house should have a way to breathe, is fanciful. The second comes last and carries the weight: shutting the door would make it true, meaning the leaving would become real. The painters are coming, but the poem never connects them to the door."
+        }
+      ]
+    }
+  ]
+}

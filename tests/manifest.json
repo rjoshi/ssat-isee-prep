@@ -56,6 +56,50 @@
     "frozen": "152e7bc913384f40"
   },
   {
+    "id": "ssat-analogy-drill-02",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Analogies 2",
+    "blurb": "Five traps, four questions each: same topic instead of same relationship, strong and mild words reversed, lacking something, parts at the wrong size, and purpose against association.",
+    "covers": ["Verbal"],
+    "questions": 20,
+    "minutes": 10,
+    "frozen": "0ff678a2edd9aa53"
+  },
+  {
+    "id": "ssat-synonym-drill-01",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Synonyms",
+    "blurb": "Every wrong choice is a trap the SSAT really uses: a sound-alike, the opposite, a near neighbour, or the stem's other meaning.",
+    "covers": ["Verbal"],
+    "questions": 20,
+    "minutes": 10,
+    "frozen": "37af57dcc0ac538d"
+  },
+  {
+    "id": "ssat-quant-drill-02",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Quantitative 2: pacing",
+    "blurb": "Three deliberately slow questions hide early in the set. The skill is spotting them at ninety seconds and moving on to the easy points behind them.",
+    "covers": ["Quantitative"],
+    "questions": 20,
+    "minutes": 24,
+    "frozen": "f56606793158273e"
+  },
+  {
+    "id": "ssat-reading-drill-02",
+    "exam": "SSAT",
+    "kind": "drill",
+    "title": "Reading 2",
+    "blurb": "A short story and a poem, which is where questions on inference, tone and point of view live.",
+    "covers": ["Reading"],
+    "questions": 12,
+    "minutes": 12,
+    "frozen": "d43289b77909219e"
+  },
+  {
     "id": "isee-middle-full-01",
     "exam": "ISEE",
     "kind": "mock",
@@ -88,6 +132,17 @@
     "questions": 20,
     "minutes": 10,
     "frozen": "1aeb20b1d54d4a9f"
+  },
+  {
+    "id": "isee-middle-verbal-02",
+    "exam": "ISEE",
+    "kind": "drill",
+    "title": "Verbal 2",
+    "blurb": "Ten synonyms and ten sentence completions at thirty seconds each. Find the clue word before reading the choices.",
+    "covers": ["Verbal"],
+    "questions": 20,
+    "minutes": 10,
+    "frozen": "e4a7a1ab27479421"
   },
   {
     "id": "isee-middle-qc-drill-01",
